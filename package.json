@@ -1,0 +1,11 @@
+{
+  "name": "hypercore-modules",
+  "version": "1.0.0",
+  "description": "putting together hypercore modules to save timeseries-data from sensors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "julian",
+  "license": "MIT"
+}
