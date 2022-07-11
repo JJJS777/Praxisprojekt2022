@@ -11,7 +11,7 @@ async function start () {
 
   // Create our first Hypercore, saving blocks to the 'main' directory.
   // We'll wrap it in a Promises interface, to make the walkthrough more readable.
-  const core = toPromises(hypercore('./main', {
+  const core = toPromises(hypercore('./mainMuon', {
     valueEncoding: 'utf-8' // The blocks will be UTF-8 strings.
   }))
 
