@@ -1,5 +1,5 @@
 'use strict' //benötigt?
 
-const testMsg = require('./corestore');
+const test = require('./corestore');
 
-testMsg();
+test.corestoreInit();
