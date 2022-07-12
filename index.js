@@ -1,5 +1,13 @@
 'use strict' //benötigt?
 
-const test = require('./corestore');
+const hypercore = require('./hypercore');
+const corestore = require('./corestore');
 
-test.corestoreInit()
+
+
+hypercore()
+corestore()
+
+
+
+

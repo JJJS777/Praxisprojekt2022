@@ -1,28 +1,38 @@
 const chalk = require('chalk')
-const hypercore = require('hypercore')
+const Hypercore = require('hypercore')
+const ram = require('random-access-memory')
 const { toPromises } = require('hypercore-promisifier')
 
 
-async function core () {
+async function core() {
 
   // Step 1: Create our initial Hypercore.
   console.log(chalk.green('Step 1: Create the initial Hypercore\n'))
 
-  // Create our first Hypercore, saving blocks to the 'main' directory.
-  // We'll wrap it in a Promises interface, to make the walkthrough more readable.
-  const core = toPromises(hypercore('./main', {
-    valueEncoding: 'utf-8' // The blocks will be UTF-8 strings.
-  }))
 
-  // Append two new blocks to the core.
-  await core.append(['hello', 'world from muon'])
+  try {
+    const core = new Hypercore((filename) => {
+      // filename will be one of: data, bitfield, tree, signatures, key, secret_key
+      // the data file will contain all your data concatenated.
+      filename = 'test-core-1'
 
-  // After the append, we can see that the length has updated.
-  console.log('Length of the first core:', core.length) // Will be 2.
+      // just store all files in ram by returning a random-access-memory instance
+      return ram()
+    })
 
-  // And we can read out the blocks.
-  console.log('First block:', await core.get(0))
-  console.log('Second block:', await core.get(1))
+    // Append two new blocks to the core.
+    await core.append(['hello', 'world from 777'])
+
+    // After the append, we can see that the length has updated.
+    console.log('Length of the first core:', core.length) // Will be 2.
+
+    console.log(core)
+    await core.close()
+
+  } catch (error) {
+    console.error('Error in creating Hypercore', error)
+  }
+
 }
 
 module.exports = core
