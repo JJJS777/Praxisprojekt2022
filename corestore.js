@@ -16,6 +16,7 @@ async function corestoreInit() {
   die Zusammen braucht man ein hypercore oder wird der von corestore bzw. corestoreNetworker inizialisiert*/
 
   console.log(core1);
+  console.log("corestoreInit ausgeführt")
 
   // load an existing hypercore
   //const core2 = store.get({ key: Buffer(...) })

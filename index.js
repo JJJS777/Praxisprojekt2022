@@ -2,4 +2,4 @@
 
 const test = require('./corestore');
 
-test.corestoreInit();
+test.corestoreInit()
