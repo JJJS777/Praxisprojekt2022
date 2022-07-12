@@ -11,14 +11,7 @@ async function core() {
 
 
   try {
-    const core = new Hypercore((filename) => {
-      // filename will be one of: data, bitfield, tree, signatures, key, secret_key
-      // the data file will contain all your data concatenated.
-      filename = 'test-core-1'
-
-      // just store all files in ram by returning a random-access-memory instance
-      return ram()
-    })
+    const core = new Hypercore('./my-hypercore')
 
     // Append two new blocks to the core.
     await core.append(['hello', 'world from 777'])

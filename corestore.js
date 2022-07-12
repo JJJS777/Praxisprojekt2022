@@ -9,12 +9,9 @@ async function corestore() {
 
   try {
     //ggf. mit random-access-memory oder random-access-storage als Argument arbeiten
-    const store = new Corestore(ram)
+    const store = new Corestore('./my-storage')
     await store.ready()
-
-    //key from first Core
-    const coreKey = await core()
-
+    
     // loads hypercore
     const testCore = store.get({name: 'test-core-1'})
   } catch (error) {
