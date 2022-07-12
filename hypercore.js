@@ -20,6 +20,7 @@ async function core() {
     console.log('Length of the first core:', core.length) // Will be 2.
 
     await core.close()
+    return core.key
 
   } catch (error) {
     console.error('Error in creating Hypercore', error)
