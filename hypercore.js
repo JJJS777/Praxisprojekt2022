@@ -21,7 +21,7 @@ async function core() {
     console.log(core)
 
     await core.close()
-    return core.key
+    return core
 
   } catch (error) {
     console.error('Error in creating Hypercore', error)
