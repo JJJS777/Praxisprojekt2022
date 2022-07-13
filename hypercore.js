@@ -1,8 +1,6 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
 const ram = require('random-access-memory')
-const { toPromises } = require('hypercore-promisifier')
-
 
 async function core() {
 
@@ -11,7 +9,8 @@ async function core() {
 
 
   try {
-    const core = new Hypercore('./my-hypercore')
+    /**Creating Hypercore Instance */
+    const core = new Hypercore('./my-hypercore', this.key, { createIfMissing: true, valueEncoding: 'json' })
 
     // Append two new blocks to the core.
     await core.append(['hello', 'world from 777'])
