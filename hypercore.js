@@ -18,6 +18,8 @@ async function core() {
     // After the append, we can see that the length has updated.
     console.log('Length of the first core:', core.length) // Will be 2.
 
+    console.log(core)
+
     await core.close()
     return core.key
 
