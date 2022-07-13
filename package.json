@@ -9,9 +9,12 @@
   "author": "julian",
   "license": "MIT",
   "dependencies": {
+    "-": "^0.0.1",
     "@corestore/networker": "^1.2.1",
     "chalk": "^4.1.0",
+    "D": "^1.0.0",
     "hypercore-promisifier": "^1.0.3",
+    "hyperswarm": "^3.0.4",
     "random-access-memory": "^4.1.0"
   },
   "devDependencies": {

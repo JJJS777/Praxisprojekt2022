@@ -6,6 +6,8 @@ const hc = require('./hypercore')
 
 async function corestore() {
 
+  
+
   try {
 
     /**Creating / Loading Hypercore by calling Hypercore-Module */

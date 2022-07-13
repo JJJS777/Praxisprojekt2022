@@ -1,1 +1,0 @@
-//**Using Hyperswarm directly involves some nuances and can be particularly complex when dealing with multiple Hypercores (or multi-core structures like Hyperdrive). Therefore, we recommend using the Corestore Networker module along with Corestore to make life easier.**//
