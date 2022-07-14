@@ -2,10 +2,12 @@ const chalk = require('chalk')
 const Hypercore = require('hypercore')
 const ram = require('random-access-memory')
 const Hyperbee = require('hyperbee')
+const readCPU = require('./readMuonCPU');
+
 
 start()
 
-async function start () {
+async function start() {
   // A Hyperbee is stored as an embedded index within a single Hypercore.
   const core = new Hypercore(ram)
 
@@ -17,36 +19,28 @@ async function start () {
   await db.ready()
 
 
-  
-/**Beispiel */
-  // Key/value pairs can be inserted with the `put` method.
-  await db.put('a', 'b')
-  await db.put('c', 'd')
+  for (var i = 0; i < 5; i++) {
 
-  // You can do large, bulk insertions with the `batch` method.
-  // A Batch object mirrors the Hyperbee API.
-  const b = db.batch()
-  await b.put('e', 'f')
-  await b.put('g', 'h')
-
-  // When a batch is flushed, it's atomically committed to the Hyperbee.
-  await b.flush()
-
-  // KV-pairs can be deleted with the `del` method.
-  await db.del('c')
+      const returnValues = await readCPU()
+      // dateTime = returnValues.date
+      // temprature = returnValues.temp
+      await db.put(returnValues.date, returnValues.temp)
+      console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
+    
+    await sleep(5000)
+  }
 
   console.log(chalk.green('Reading KV-pairs with the \'get\' method:\n'))
-
-  // KV-pairs can be read with the `get` method.
-  console.log('Value for \'a\':', (await db.get('a')).value)
-  console.log('Value for \'e\':', (await db.get('e')).value)
-  console.log('Value for \'c\' (deleted):', await db.get('c'))
-
-  console.log(chalk.green('\nReading KV-pairs with \'createReadStream\':\n'))
 
   // createReadStream can be used to yield KV-pairs in sorted order.
   // createReadStream returns a ReadableStream that supports async iteration.
   for await (const { key, value } of db.createReadStream()) {
     console.log(`${key} -> ${value}`)
   }
+}
+
+async function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
