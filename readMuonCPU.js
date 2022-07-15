@@ -6,7 +6,6 @@ echo "GPU_$(/opt/vc/bin/vcgencmd measure_temp), CPU_temp: $((cpu/1000))'C" */
 
 async function getCPUtemperature () {
   // Exec output contains both stderr and stdout outputs
-  await exec ('')
   const dateTimeOutput = await exec('echo "Date $(date +"%d.%m.%y"), Time $(date +"%T")"')
   const temperatureOutput = await exec('echo "GPU_$(/opt/vc/bin/vcgencmd measure_temp)"')
 
