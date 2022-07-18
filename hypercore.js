@@ -1,11 +1,12 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
 const ram = require('random-access-memory')
+const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 
 async function core() {
 
   // Step 1: Create our initial Hypercore.
-  console.log(chalk.green('Step 1: Create the initial Hypercore\n'))
+  console.log(chalk.green(soloCoreLoggo + 'Step 1: Create the initial Hypercore\n'))
 
 
   try {
@@ -16,7 +17,7 @@ async function core() {
     await core.append(['hello', 'world from 777'])
 
     // After the append, we can see that the length has updated.
-    console.log('Length of the first core:', core.length) // Will be 2.
+    console.log( soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
 
     await core.close()
     return core
