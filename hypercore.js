@@ -10,6 +10,12 @@ const Hyperswarm = require('hyperswarm')
  * 
 */
 
+
+/**Wie wird die query implementiert? erst DB runterladen und dann query oder querie schicken 
+ * wie sendet man queries durch ein Hypercore Netzwerk
+ * unterschied zwischen join-on-topic und join-on-key?
+*/
+
 coreX()
 
 async function coreX() {
@@ -20,26 +26,52 @@ async function coreX() {
 
   try {
     /**Creating Hypercore Instance */
-    const core = new Hypercore('./my-hypercore', this.key, { createIfMissing: true, valueEncoding: 'json' })
+    const core = new Hypercore(ram, this.key, { createIfMissing: true, valueEncoding: 'utf-8' })
     const swarmClient = new Hyperswarm()
 
-    console.log(soloCoreLoggo + core.key + core.keyPair)
+    // /**Loading remote Hypercore */
+    // // It accepts LevelDB-style key/value encoding options.
+    // const db = new Hyperbee(hypercore(ram), {
+    //   keyEncoding: 'utf-8',
+    //   valueEncoding: 'utf-8'
+    // })
+    // await db.ready()
+    await core.ready()
 
+    console.log(soloCoreLoggo + "Core Key: " + core.key.toString("base64") + " Core-Key-Pair: " + core.keyPair.publicKey.toString("base64"))
 
     swarmClient.on('connection', (conn, peerInfo) => {
       conn.on('data', data => console.log('client got message:', data.toString()))
-      console.log(soloCoreLoggo + peerInfo.publicKey + peerInfo.topics)
+      console.log(soloCoreLoggo + "peerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "peerInfo.topics: " + peerInfo.topics.toString("base64"))
       conn.write('hello from client-node3, can is send queries over this chennel?')
     })
 
     const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
     swarmClient.join(topic, { server: false, client: true })
     await swarmClient.flush() // Waits for the swarm to connect to pending peers.
-
     // After this point, both client and server should have connections
+
+
 
     // After the append, we can see that the length has updated.
     console.log(soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
+
+
+    // // The createReadStream method accepts LevelDB-style gt, lt, gte, lte, limit, and reverse options.
+    // const streams = [
+    //   ['First 10', db.createReadStream({ limit: 10 })],
+    //   ['Last 10, reversed', db.createReadStream({ limit: 10, reverse: true })],
+    //   ['Between \'a\' and \'d\', non-inclusive', db.createReadStream({ gt: 'a', lt: 'd' })],
+    //   ['Between \'a\' and \'d\', inclusive', db.createReadStream({ gte: 'a', lte: 'd' })],
+    //   ['Between \'e\' and \'f\', inclusive, reversed', db.createReadStream({ gte: 'e', lte: 'f', reverse: true })]
+    // ]
+
+    // for (const [name, stream] of streams) {
+    //   console.log(chalk.green('\n' + name + ':\n'))
+    //   for await (const { key, value } of stream) {
+    //     console.log(`${key} -> ${value}`)
+    //   }
+    // }
 
     await core.close()
 

@@ -5,6 +5,7 @@ const Hyperbee = require('hyperbee')
 const readCPU = require('./readMuonCPU');
 const beeLoggo = 'LOGGO FROM BEE-CORE: '
 const Hyperswarm = require('hyperswarm')
+const net = require('net')
 
 
 /**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1 und 2 
@@ -21,7 +22,7 @@ async function start() {
   const swarmServer = new Hyperswarm()
 
   await core.ready()
-  console.log( beeLoggo + " KEY: " + core.keyclear + " KEY-Pair: " + core.keyPair + " discoveryKey: " + core.discoveryKey)
+  console.log( beeLoggo + " KEY: " + core.key.toString("base64") + " KEY-Pair: " + core.keyPair.publicKey.toString("base64") + " discoveryKey: " + core.discoveryKey.toString("base64"))
 
   // It accepts LevelDB-style key/value encoding options.
   const db = new Hyperbee(core, {
@@ -34,7 +35,7 @@ async function start() {
   swarmServer.on('connection', (conn, peerInfo) => {
     // swarm1 will receive server connections
     conn.write('this is a server connection')
-    console.log(beeLoggo + peerInfo.publicKey + peerInfo.topics)
+    console.log(beeLoggo + peerInfo.publicKey.toString("base64") + peerInfo.topics.toString("base64"))
     conn.on('data', data => console.log('server got message:', data.toString()))
     conn.end()
   })
@@ -42,6 +43,9 @@ async function start() {
   const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
   const discovery = swarmServer.join(topic, { server: true, client: false })
   await discovery.flushed() // Waits for the topic to be fully announced on the DHT
+  
+  core.replicate( false )
+
 
   // After this point, both client and server should have connections
 
