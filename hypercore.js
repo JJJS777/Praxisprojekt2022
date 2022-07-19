@@ -4,8 +4,7 @@ const ram = require('random-access-memory')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
-const remoteKey = 'QwYKgRwP3XlLWr2FqxaoJTOzAT0Gd5f8V2TLGc1XdNU='
-
+const remoteKey = 'T+q/GH4gdYCVXzLwMTLHBO4ptTUndKwxUehNRDveJ0g='
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3- x 
  * 
@@ -37,19 +36,22 @@ async function coreX() {
     const remoteCore = new Hypercore(remoteKey)
 
     // It accepts LevelDB-style key/value encoding options.
-    const db = new Hyperbee( remoteCore, {
+    const db = new Hyperbee(remoteCore, {
       keyEncoding: 'utf-8',
       valueEncoding: 'utf-8'
     })
     await db.ready()
     await core.ready()
 
-    console.log(soloCoreLoggo + "\nCore Key: " + core.key.toString("base64") + "\nCore-Key-Pair: " + core.keyPair.publicKey.toString("base64"))
+    console.log(soloCoreLoggo + "\nCore Key: " + core.key.toString("base64") + "\nCore-Key-Pair: "
+      + core.keyPair.publicKey.toString("base64"))
 
     swarmClient.on('connection', (conn, peerInfo) => {
       conn.on('data', data => console.log('\n\nclient got message:', data.toString()))
-      console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
-      console.log('\nswarm got a client connection:', conn.remotePublicKey, conn.publicKey, conn.handshakeHash)
+      console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64")
+        + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
+      console.log('\nswarm got a client connection:', "\n", conn.remotePublicKey.toString("base64"),
+        "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
       conn.write('\nhello from client-node3, can is send queries over this chennel?')
     })
 
@@ -62,7 +64,7 @@ async function coreX() {
     console.log(soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
 
     // The createReadStream method accepts LevelDB-style gt, lt, gte, lte, limit, and reverse options.
-    const streams = [['First 10', db.createReadStream({ limit: 10 })] ]
+    const streams = [['First 10', db.createReadStream({ limit: 10 })]]
 
     for (const [name, stream] of streams) {
       console.log(chalk.green('\n' + name + ':\n'))

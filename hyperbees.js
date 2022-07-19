@@ -22,7 +22,8 @@ async function start() {
   const swarmServer = new Hyperswarm()
 
   await core.ready()
-  console.log( beeLoggo + "\nKEY: " + core.key.toString("base64"), "\nKEY-Pair: " + core.keyPair.publicKey.toString("base64") + "\ndiscoveryKey: " + core.discoveryKey.toString("base64"))
+  console.log(beeLoggo + "\nKEY: " + core.key.toString("base64"), "\nKEY-Pair: " + core.keyPair.publicKey.toString("base64")
+    + "\ndiscoveryKey: " + core.discoveryKey.toString("base64"))
 
   // It accepts LevelDB-style key/value encoding options.
   const db = new Hyperbee(core, {
@@ -34,10 +35,12 @@ async function start() {
   swarmServer.on('connection', (conn, peerInfo) => {
     // swarm1 will receive server connections
     conn.write('\n\n****this is a server connection*****')
-    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
-    console.log('\nswarm got a server connection:', conn.remotePublicKey, conn.publicKey, conn.handshakeHash)
+    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: "
+      + peerInfo.topics.toString("base64"))
+    console.log('\nswarm got a server connection:', "\n", conn.remotePublicKey.toString("base64"),
+      "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
     conn.on('data', data => console.log('server got message:', data.toString()))
-    connection.on('error', err => console.error('1 CONN ERR:', err))
+    conn.on('error', err => console.error('1 CONN ERR:', err))
     conn.end()
   })
   /**JOIN-ON-KEY */
@@ -75,7 +78,7 @@ async function start() {
 
   /**TESTING END */
 
-  core.replicate( false )
+  core.replicate(false)
 }
 
 async function sleep(ms) {
