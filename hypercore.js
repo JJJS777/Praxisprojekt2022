@@ -16,6 +16,8 @@ const remoteKey = '1QcUQAXvHPH2rpPtt0HJxTm1sjMIfsSLHuzksJSm5zg='
 /**Wie wird die query implementiert? erst DB runterladen und dann query oder querie schicken 
  * wie sendet man queries durch ein Hypercore Netzwerk
  * unterschied zwischen join-on-topic und join-on-key?
+ * 
+ * NEXT mit KEY DB finden und con Client daten abfragen....
 */
 
 coreX()
