@@ -35,14 +35,11 @@ async function start() {
     // swarm1 will receive server connections
     conn.write('\n\n****this is a server connection*****')
     console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
-    console.log('\nswarm got a server connection:', connection.remotePublicKey, connection.publicKey, connection.handshakeHash)
+    console.log('\nswarm got a server connection:', conn.remotePublicKey, conn.publicKey, conn.handshakeHash)
     conn.on('data', data => console.log('server got message:', data.toString()))
     connection.on('error', err => console.error('1 CONN ERR:', err))
     conn.end()
   })
-
-  console.log('A Map containing all connected peers:', swarmServer.peers)
-
   /**JOIN-ON-KEY */
   // const discoveryOnKey = swarmServer.join(publicKey)
   // await discoveryOnKey.flushed()
@@ -53,7 +50,8 @@ async function start() {
   const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
   const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
   await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
-  // After this point, both client and server should have connections
+  console.log('A Map containing all connected peers:', swarmServer.peers)
+
 
   for (var i = 0; i < 5; i++) {
     const returnValues = await readCPU()

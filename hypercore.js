@@ -4,7 +4,7 @@ const ram = require('random-access-memory')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
-//const remoteKey = ''
+const remoteKey = 'QwYKgRwP3XlLWr2FqxaoJTOzAT0Gd5f8V2TLGc1XdNU='
 
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3- x 
@@ -49,7 +49,7 @@ async function coreX() {
     swarmClient.on('connection', (conn, peerInfo) => {
       conn.on('data', data => console.log('\n\nclient got message:', data.toString()))
       console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
-      console.log('\nswarm got a client connection:', connection.remotePublicKey, connection.publicKey, connection.handshakeHash)
+      console.log('\nswarm got a client connection:', conn.remotePublicKey, conn.publicKey, conn.handshakeHash)
       conn.write('\nhello from client-node3, can is send queries over this chennel?')
     })
 
