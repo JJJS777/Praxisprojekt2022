@@ -4,9 +4,9 @@ const ram = require('random-access-memory')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
-const remoteKey = 'T+q/GH4gdYCVXzLwMTLHBO4ptTUndKwxUehNRDveJ0g='
+//const remoteKey = 'T+q/GH4gdYCVXzLwMTLHBO4ptTUndKwxUehNRDveJ0g='
 
-/**IMPEMENTIERUNG DER NODES: Nodes 3- x 
+/**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
  * 
 */
@@ -16,7 +16,7 @@ const remoteKey = 'T+q/GH4gdYCVXzLwMTLHBO4ptTUndKwxUehNRDveJ0g='
  * wie sendet man queries durch ein Hypercore Netzwerk
  * unterschied zwischen join-on-topic und join-on-key?
  * 
- * NEXT mit KEY DB finden und con Client daten abfragen....
+ * NEXT Daten aus Sensor-Server-Node-1 lesen!!
 */
 
 coreX()
@@ -29,7 +29,7 @@ async function coreX() {
 
   try {
     /**Creating Hypercore Instance */
-    const core = new Hypercore('./node-x', this.key, { createIfMissing: true, valueEncoding: 'utf-8' })
+    const core = new Hypercore('./node-3', this.key, { createIfMissing: true, valueEncoding: 'utf-8' })
     const swarmClient = new Hyperswarm()
 
     /**Loading remote Hypercore */

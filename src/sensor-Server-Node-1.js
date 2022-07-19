@@ -1,14 +1,11 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
-const ram = require('random-access-memory')
 const Hyperbee = require('hyperbee')
-const readCPU = require('./readMuonCPU');
+const readCPU = require('./helper/readMuonCPU');
 const beeLoggo = 'LOGGO FROM BEE-CORE: '
 const Hyperswarm = require('hyperswarm')
-const net = require('net')
 
-
-/**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1 und 2 
+/**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1
  * 
  * 
  * 
@@ -18,7 +15,7 @@ start()
 
 async function start() {
   // A Hyperbee is stored as an embedded index within a single Hypercore.
-  const core = new Hypercore('./Sensor-Server-Node-Y')
+  const core = new Hypercore('./Sensor-Server-Node-1')
   const swarmServer = new Hyperswarm()
 
   await core.ready()
@@ -41,8 +38,11 @@ async function start() {
       "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
     conn.on('data', data => console.log('server got message:', data.toString()))
     conn.on('error', err => console.error('1 CONN ERR:', err))
+    console.log('A Map containing all connected peers:', swarmServer.peers)
     conn.end()
   })
+
+  
   /**JOIN-ON-KEY */
   // const discoveryOnKey = swarmServer.join(publicKey)
   // await discoveryOnKey.flushed()
@@ -53,7 +53,6 @@ async function start() {
   const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
   const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
   await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
-  console.log('A Map containing all connected peers:', swarmServer.peers)
 
 
   for (var i = 0; i < 5; i++) {
