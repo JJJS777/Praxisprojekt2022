@@ -18,11 +18,11 @@ start()
 
 async function start() {
   // A Hyperbee is stored as an embedded index within a single Hypercore.
-  const core = new Hypercore(ram)
+  const core = new Hypercore('./Sensor-Server-Node-Y')
   const swarmServer = new Hyperswarm()
 
   await core.ready()
-  console.log( beeLoggo + " KEY: " + core.key.toString("base64") + " KEY-Pair: " + core.keyPair.publicKey.toString("base64") + " discoveryKey: " + core.discoveryKey.toString("base64"))
+  console.log( beeLoggo + "\nKEY: " + core.key.toString("base64"), "\nKEY-Pair: " + core.keyPair.publicKey.toString("base64") + "\ndiscoveryKey: " + core.discoveryKey.toString("base64"))
 
   // It accepts LevelDB-style key/value encoding options.
   const db = new Hyperbee(core, {
@@ -33,15 +33,26 @@ async function start() {
 
   swarmServer.on('connection', (conn, peerInfo) => {
     // swarm1 will receive server connections
-    conn.write('this is a server connection')
-    console.log(beeLoggo + "peerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "peerInfo.topics: " + peerInfo.topics.toString("base64"))
+    conn.write('\n\n****this is a server connection*****')
+    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
+    console.log('\nswarm got a server connection:', connection.remotePublicKey, connection.publicKey, connection.handshakeHash)
     conn.on('data', data => console.log('server got message:', data.toString()))
+    connection.on('error', err => console.error('1 CONN ERR:', err))
     conn.end()
   })
 
+  console.log('A Map containing all connected peers:', swarmServer.peers)
+
+  /**JOIN-ON-KEY */
+  // const discoveryOnKey = swarmServer.join(publicKey)
+  // await discoveryOnKey.flushed()
+
+
+
+  /**JOIN-ON-TOPIC */
   const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
-  const discovery = swarmServer.join(topic, { server: true, client: false })
-  await discovery.flushed() // Waits for the topic to be fully announced on the DHT
+  const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
+  await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
   // After this point, both client and server should have connections
 
   for (var i = 0; i < 5; i++) {
