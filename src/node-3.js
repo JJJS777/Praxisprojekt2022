@@ -1,6 +1,5 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
-const ram = require('random-access-memory')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
@@ -17,8 +16,12 @@ const Hyperbee = require('hyperbee')
  * unterschied zwischen join-on-topic und join-on-key?
  * 
  * NEXT Daten aus Sensor-Server-Node-1 lesen!!
+ * woran liegt es? 
+ * wird der db der falsch key übergeben?
+ * funktioniert die Methode zum auslesen der DB nicht?
+ * Oder ist gar dei DB im Netztwerk nicht verfügbar - s. video "replicate"? 
+ * 
 */
-
 coreX()
 
 async function coreX() {
@@ -52,6 +55,7 @@ async function coreX() {
         + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
       console.log('\nswarm got a client connection:', "\n", conn.remotePublicKey.toString("base64"),
         "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
+        console.log('A Map containing all connected peers:', swarmClient.peers)
       conn.write('\nhello from client-node3, can is send queries over this chennel?')
     })
 
