@@ -5,7 +5,7 @@ const Hypercore = require('hypercore')
 const chalk = require('chalk')
 const node3Loggo = 'LOGGO FROM NODE-3: '
 
-const sharedPublicKey = Buffer.alloc(32).fill('2eaec82cb1f9f420fa1adee6f62cbec824c90debd945b6eea2f1ab10300abf5b')
+const sharedPublicKey = Buffer.alloc(32).fill('a7ef23ba79850d513beb92de843edf5fe595fb473f286fa738ac70ff2edbacaf')
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
@@ -30,15 +30,17 @@ async function core3() {
 
   try {
     const storeNode3 = new Corestore('./Node-3')
+    await storeNode3.ready()
     const core = storeNode3.get(sharedPublicKey)
+    await core.ready()
     const swarmClient = new Hyperswarm()
 
-    // // It accepts LevelDB-style key/value encoding options.
-    // const db = new Hyperbee(core, {
-    //   keyEncoding: 'utf-8',
-    //   valueEncoding: 'utf-8'
-    // })
-    // await db.ready()
+    // It accepts LevelDB-style key/value encoding options.
+    const db = new Hyperbee(core, {
+      keyEncoding: 'utf-8',
+      valueEncoding: 'utf-8'
+    })
+    await db.ready()
 
     console.log(node3Loggo + "\nCore Key: " + core.key.toString('hex'))
 
