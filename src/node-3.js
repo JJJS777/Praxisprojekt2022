@@ -1,10 +1,9 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
-const ram = require('random-access-memory')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
-//const remoteKey = 'T+q/GH4gdYCVXzLwMTLHBO4ptTUndKwxUehNRDveJ0g='
+const remotePublicKey = 'ebc32e538b3bfdac925d19f02f4800a497a474a910fce47805a6330ea6e3a8b5'
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
@@ -17,11 +16,15 @@ const Hyperbee = require('hyperbee')
  * unterschied zwischen join-on-topic und join-on-key?
  * 
  * NEXT Daten aus Sensor-Server-Node-1 lesen!!
+ * woran liegt es? 
+ * wird der db der falsch key übergeben?
+ * funktioniert die Methode zum auslesen der DB nicht?
+ * Oder ist gar dei DB im Netztwerk nicht verfügbar - s. video "replicate"? 
+ * KEY Chaos: welches ist der richtige Public-Key? wie teilen zwei Nodes den gleichen Key?
 */
+core3()
 
-coreX()
-
-async function coreX() {
+async function core3() {
 
   // Step 1: Create our initial Hypercore.
   console.log(chalk.green(soloCoreLoggo + 'Step 1: Create the initial Hypercore\n'))
@@ -29,14 +32,11 @@ async function coreX() {
 
   try {
     /**Creating Hypercore Instance */
-    const core = new Hypercore('./node-3', this.key, { createIfMissing: true, valueEncoding: 'utf-8' })
+    const core = new Hypercore('./Node-3', Buffer.alloc(32).fill(remotePublicKey), { createIfMissing: true, valueEncoding: 'utf-8' })
     const swarmClient = new Hyperswarm()
 
-    /**Loading remote Hypercore */
-    const remoteCore = new Hypercore(remoteKey)
-
     // It accepts LevelDB-style key/value encoding options.
-    const db = new Hyperbee(remoteCore, {
+    const db = new Hyperbee(core, {
       keyEncoding: 'utf-8',
       valueEncoding: 'utf-8'
     })
@@ -48,10 +48,14 @@ async function coreX() {
 
     swarmClient.on('connection', (conn, peerInfo) => {
       conn.on('data', data => console.log('\n\nclient got message:', data.toString()))
+
       console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64")
         + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
-      console.log('\nswarm got a client connection:', "\n", conn.remotePublicKey.toString("base64"),
-        "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
+
+      console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString("base64"),
+        "\npublicKey: ", conn.publicKey.toString("base64"), "\nhandshakeHash: ", conn.handshakeHash.toString("base64"))
+      console.log('A Map containing all connected peers:', swarmClient.peers)
+
       conn.write('\nhello from client-node3, can is send queries over this chennel?')
     })
 
