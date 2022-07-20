@@ -46,50 +46,47 @@ async function core3() {
       + core.keyPair.publicKey.toString('hex'))
 
 
-    // swarmClient.on('connection', (socket, peerInfo) => {
-    //   socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
-    //   core.replicate(socket)
-
-    //   // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
-    //   //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
-
-    //   // console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
-    //   //   "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
-    //   // console.log('A Map containing all connected peers:', swarmClient.peers)
-
-    //   socket.write('\nhello from client-node3, can is send queries over this chennel?')
-    // })
-
-
-    // /**JOIN-ON-TOPIC */
-    // const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
-    // swarmClient.join(topic, { server: false, client: true })
-    // await swarmClient.flush() // Waits for the swarm to connect to pending peers.
-    // // After this point, both client and server should have connections
-
-
-    /**JOIN-ON-KEY -> Look-up*/
-    swarmClient.on('connection', socket => {
+    /**JOIN-ON-TOPIC */
+    swarmClient.on('connection', (socket, peerInfo) => {
+      socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
       core.replicate(socket)
+
+      // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
+      //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
+
+      // console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
+      //   "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
+      // console.log('A Map containing all connected peers:', swarmClient.peers)
+
       socket.write('\nhello from client-node3, can is send queries over this chennel?')
-
-      console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
-
-      console.log(chalk.green(node3Loggo + 'Reading KV-pairs with the \'get\' method:\n'))
-      for await (const { key, value } of db.createReadStream()) {
-        if (key = null) {
-          console.log('DB empty')
-        } else {
-          console.log(`${key} -> ${value}`)
-        }
-      }
-
     })
-    swarmClient.join(core.discoveryKey, { server: false, client: true })
-    await swarmClient.flush()
+
+    const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
+    swarmClient.join(topic, { server: false, client: true })
+    await swarmClient.flush() // Waits for the swarm to connect to pending peers.
+    // After this point, both client and server should have connections
+
+
+    // /**JOIN-ON-KEY -> Look-up*/
+    // swarmClient.on('connection', socket => {
+    //   core.replicate(socket)
+    //   socket.write('\nhello from client-node3, can is send queries over this chennel?')
+
+    // })
+    // swarmClient.join(core.discoveryKey, { server: false, client: true })
+    // await swarmClient.flush()
 
     // After the append, we can see that the length has updated.
+    console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
 
+    console.log(chalk.green(node3Loggo + 'Reading KV-pairs with the \'get\' method:\n'))
+    for await (const { key, value } of db.createReadStream()) {
+      if (key = null) {
+        console.log('DB empty')
+      } else {
+        console.log(`${key} -> ${value}`)
+      }
+    }
 
     await core.close()
 
