@@ -72,21 +72,24 @@ async function core3() {
     swarmClient.on('connection', socket => {
       core.replicate(socket)
       socket.write('\nhello from client-node3, can is send queries over this chennel?')
+
+      console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
+
+      console.log(chalk.green(node3Loggo + 'Reading KV-pairs with the \'get\' method:\n'))
+      for await (const { key, value } of db.createReadStream()) {
+        if (key = null) {
+          console.log('DB empty')
+        } else {
+          console.log(`${key} -> ${value}`)
+        }
+      }
+
     })
     swarmClient.join(core.discoveryKey, { server: false, client: true })
     await swarmClient.flush()
 
     // After the append, we can see that the length has updated.
-    console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
 
-    console.log(chalk.green(node3Loggo + 'Reading KV-pairs with the \'get\' method:\n'))
-    for await (const { key, value } of db.createReadStream()) {
-      if (key = null) {
-        console.log('DB empty')
-      } else {
-        console.log(`${key} -> ${value}`)
-      }
-    }
 
     await core.close()
 

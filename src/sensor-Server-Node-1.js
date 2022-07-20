@@ -53,6 +53,7 @@ async function start() {
   // const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
   // const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
   // await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
+  // await swarmServer.flush()
 
 
   /**JOIN-ON-KEY -> announce*/
@@ -63,9 +64,10 @@ async function start() {
   })
 
   const discoveryOnKey = swarmServer.join(core.discoveryKey, { server: true, client: false })
+  await swarmServer.flush()
   await discoveryOnKey.flushed()
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 2; i++) {
     const returnValues = await readCPU()
     // dateTime = returnValues.date
     // temprature = returnValues.temp
