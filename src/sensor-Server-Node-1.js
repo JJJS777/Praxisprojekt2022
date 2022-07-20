@@ -1,10 +1,12 @@
 const chalk = require('chalk')
-const Hypercore = require('hypercore')
 const Hyperbee = require('hyperbee')
+const Hypercore = require('hypercore')
+const Hyperswarm = require('hyperswarm')
+const Corestore = require('corestore')
 const readCPU = require('./helper/readMuonCPU');
 const beeLoggo = 'LOGGO FROM BEE-CORE: '
-const Hyperswarm = require('hyperswarm')
-const net = require('net')
+const sharedPublicKey = Buffer.alloc(32).fill('2eaec82cb1f9f420fa1adee6f62cbec824c90debd945b6eea2f1ab10300abf5b')
+
 
 /**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1
  * 
@@ -16,12 +18,13 @@ start()
 
 async function start() {
   // A Hyperbee is stored as an embedded index within a single Hypercore.
-  const core = new Hypercore('./Sensor-Server-Node-1')
-  const swarmServer = new Hyperswarm()
 
+  const store = new Corestore('./Sensor-Server-Node-1')
+  await store.ready()
+  const core = store.get({key: sharedPublicKey})
   await core.ready()
-  console.log(beeLoggo + "\nKEY: " + core.key.toString('hex'), "\nKEY-Pair: " + core.keyPair.publicKey.toString('hex')
-    + "\ndiscoveryKey: " + core.discoveryKey.toString('hex'))
+
+  const swarmServer = new Hyperswarm()
 
   // It accepts LevelDB-style key/value encoding options.
   const db = new Hyperbee(core, {
@@ -30,10 +33,12 @@ async function start() {
   })
   await db.ready()
 
+  console.log(beeLoggo + "\nKEY: " + core.key.toString('hex') + "\ndiscoveryKey: " + core.discoveryKey.toString('hex'))
+
   /**JOIN-ON-TOPIC */
   swarmServer.on('connection', (socket, peerInfo) => {
     core.replicate(socket)
-    socket.write('\n\n****this is a server connection*****')
+    //socket.write('\n\n****this is a server connection*****')
 
     // console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
     //   + peerInfo.topics.toString('hex'))
