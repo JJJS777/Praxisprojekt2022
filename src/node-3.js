@@ -32,7 +32,7 @@ async function core3() {
 
   try {
     /**Creating Hypercore Instance */
-    const core = new Hypercore('./node-3', Buffer.alloc(32).fill(remotePublicKey), { createIfMissing: true, valueEncoding: 'utf-8' })
+    const core = new Hypercore('./Node-3', Buffer.alloc(32).fill(remotePublicKey), { createIfMissing: true, valueEncoding: 'utf-8' })
     const swarmClient = new Hyperswarm()
 
     // It accepts LevelDB-style key/value encoding options.
