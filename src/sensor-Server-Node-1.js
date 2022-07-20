@@ -34,8 +34,8 @@ async function start() {
     conn.write('\n\n****this is a server connection*****')
     console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: "
       + peerInfo.topics.toString("base64"))
-    console.log('\nswarm got a server connection:', "\n", conn.remotePublicKey.toString("base64"),
-      "\n", conn.publicKey.toString("base64"), "\n", conn.handshakeHash.toString("base64"))
+    console.log('\nswarm got a server connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString("base64"),
+      "\npublicKey: ", conn.publicKey.toString("base64"), "\nhandshakeHash: ", conn.handshakeHash.toString("base64"))
     conn.on('data', data => console.log('server got message:', data.toString()))
     conn.on('error', err => console.error('1 CONN ERR:', err))
     console.log('A Map containing all connected peers:', swarmServer.peers)
