@@ -33,12 +33,12 @@ async function core3() {
     const core = storeNode3.get(sharedPublicKey)
     const swarmClient = new Hyperswarm()
 
-    // It accepts LevelDB-style key/value encoding options.
-    const db = new Hyperbee(core, {
-      keyEncoding: 'utf-8',
-      valueEncoding: 'utf-8'
-    })
-    await db.ready()
+    // // It accepts LevelDB-style key/value encoding options.
+    // const db = new Hyperbee(core, {
+    //   keyEncoding: 'utf-8',
+    //   valueEncoding: 'utf-8'
+    // })
+    // await db.ready()
 
     console.log(node3Loggo + "\nCore Key: " + core.key.toString('hex'))
 

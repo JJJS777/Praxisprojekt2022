@@ -21,7 +21,7 @@ async function start() {
 
   const store = new Corestore('./Sensor-Server-Node-1')
   await store.ready()
-  const core = store.get({key: sharedPublicKey})
+  const core = store.get({name: 'fml'})
   await core.ready()
 
   const swarmServer = new Hyperswarm()
