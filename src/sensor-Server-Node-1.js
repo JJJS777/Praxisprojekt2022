@@ -30,34 +30,35 @@ async function start() {
   })
   await db.ready()
 
-  swarmServer.on('connection', (conn, peerInfo) => {
-    // swarm1 will receive server connections
-    conn.write('\n\n****this is a server connection*****')
-    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
-      + peerInfo.topics.toString('hex'))
-    console.log('\nswarm got a server connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
-      "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
-    conn.on('data', data => console.log('server got message:', data.toString()))
-    conn.on('error', err => console.error('1 CONN ERR:', err))
-    console.log('A Map containing all connected peers:', swarmServer.peers)
+  // swarmServer.on('connection', (socket, peerInfo) => {
+  //   socket.write('\n\n****this is a server connection*****')
 
-    core.replicate(conn)
+  //   // console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
+  //   //   + peerInfo.topics.toString('hex'))
 
-    conn.end()
-  })
+  //   // console.log('\nswarm got a server connection:', "\nremotePublicKey: ", socket.remotePublicKey.toString('hex'),
+  //   //   "\npublicKey: ", socket.publicKey.toString('hex'), "\nhandshakeHash: ", socket.handshakeHash.toString('hex'))
+
+  //   //console.log('A Map containing all connected peers:', swarmServer.peers)
+
+  //   socket.on('data', data => console.log('server got message:', data.toString()))
+  //   socket.on('error', err => console.error('1 CONN ERR:', err))
+
+  //   core.replicate(socket)
+
+  //   socket.end()
+  // })
+
+  // /**JOIN-ON-TOPIC */
+  // const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
+  // const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
+  // await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
 
 
-  /**JOIN-ON-KEY */
-  // const discoveryOnKey = swarmServer.join(publicKey)
-  // await discoveryOnKey.flushed()
-
-
-
-  /**JOIN-ON-TOPIC */
-  const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes
-  const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
-  await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
-
+  /**JOIN-ON-KEY -> announce*/
+  swarmOnKey.on('connection', socket => core.replicate(socket))
+  const discoveryOnKey = swarmOnKey.join(core.discoveryKey, { server: true, client: false })
+  await discoveryOnKey.flushed()
 
   for (var i = 0; i < 5; i++) {
     const returnValues = await readCPU()

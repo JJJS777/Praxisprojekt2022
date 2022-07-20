@@ -3,7 +3,7 @@ const Hypercore = require('hypercore')
 const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
-const remotePublicKey = 'ebc32e538b3bfdac925d19f02f4800a497a474a910fce47805a6330ea6e3a8b5'
+const remotePublicKey = '75f01e6210ac64bab59091587185e63785251150946e0d5adc29f59f537f1dea'
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
@@ -46,37 +46,43 @@ async function core3() {
       + core.keyPair.publicKey.toString('hex'))
 
 
-    swarmClient.on('connection', (conn, peerInfo) => {
-      conn.on('data', data => console.log('\n\nclient got message:', data.toString()))
+    // swarmClient.on('connection', (socket, peerInfo) => {
+    //   socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
+    //   core.replicate(socket)
 
-      console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
-        + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
+    //   // console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
+    //   //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
 
-      console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
-        "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
-      console.log('A Map containing all connected peers:', swarmClient.peers)
+    //   // console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
+    //   //   "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
+    //   // console.log('A Map containing all connected peers:', swarmClient.peers)
 
-      conn.write('\nhello from client-node3, can is send queries over this chennel?')
+    //   socket.write('\nhello from client-node3, can is send queries over this chennel?')
+    // })
 
-      core.replicate(conn)
-    })
 
-    const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
-    swarmClient.join(topic, { server: false, client: true })
-    await swarmClient.flush() // Waits for the swarm to connect to pending peers.
-    // After this point, both client and server should have connections
+    // /**JOIN-ON-TOPIC */
+    // const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
+    // swarmClient.join(topic, { server: false, client: true })
+    // await swarmClient.flush() // Waits for the swarm to connect to pending peers.
+    // // After this point, both client and server should have connections
+
+
+    /**JOIN-ON-KEY -> Look-up*/
+    swarmClient.on('connection', socket => core.replicate(socket))
+    swarmClient.join(core.discoveryKey, { server: false, client: true })
 
     // After the append, we can see that the length has updated.
     console.log(soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
 
     console.log(chalk.green(soloCoreLoggo + 'Reading KV-pairs with the \'get\' method:\n'))
     for await (const { key, value } of db.createReadStream()) {
-      if(key = null){
+      if (key = null) {
         console.log('DB empty')
-      }else{
+      } else {
         console.log(`${key} -> ${value}`)
       }
-      
+
     }
 
     await core.close()
