@@ -56,8 +56,8 @@ async function start() {
 
 
   /**JOIN-ON-KEY -> announce*/
-  swarmOnKey.on('connection', socket => core.replicate(socket))
-  const discoveryOnKey = swarmOnKey.join(core.discoveryKey, { server: true, client: false })
+  swarmServer.on('connection', socket => core.replicate(socket))
+  const discoveryOnKey = swarmServer.join(core.discoveryKey, { server: true, client: false })
   await discoveryOnKey.flushed()
 
   for (var i = 0; i < 5; i++) {
