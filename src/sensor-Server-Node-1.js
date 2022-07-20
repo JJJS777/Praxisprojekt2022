@@ -32,6 +32,7 @@ async function start() {
 
   /**JOIN-ON-TOPIC */
   swarmServer.on('connection', (socket, peerInfo) => {
+    core.replicate(socket)
     socket.write('\n\n****this is a server connection*****')
 
     // console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
@@ -44,10 +45,6 @@ async function start() {
 
     socket.on('data', data => console.log('server got message:', data.toString()))
     socket.on('error', err => console.error('1 CONN ERR:', err))
-
-    core.replicate(socket)
-
-    socket.end()
   })
 
 

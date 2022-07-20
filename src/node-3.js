@@ -48,8 +48,8 @@ async function core3() {
 
     /**JOIN-ON-TOPIC */
     swarmClient.on('connection', (socket, peerInfo) => {
-      socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
       core.replicate(socket)
+      socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
 
       // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
       //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
