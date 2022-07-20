@@ -1,6 +1,6 @@
 const chalk = require('chalk')
 const Hypercore = require('hypercore')
-const soloCoreLoggo = 'LOGGO FROM SOLO-CORE-APP: '
+const node3Loggo = 'LOGGO FROM NODE-3: '
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
 const remotePublicKey = '75f01e6210ac64bab59091587185e63785251150946e0d5adc29f59f537f1dea'
@@ -27,7 +27,7 @@ core3()
 async function core3() {
 
   // Step 1: Create our initial Hypercore.
-  console.log(chalk.green(soloCoreLoggo + 'Step 1: Create the initial Hypercore\n'))
+  console.log(chalk.green(node3Loggo + 'Step 1: Create the initial Hypercore\n'))
 
 
   try {
@@ -42,7 +42,7 @@ async function core3() {
     })
     await db.ready()
 
-    console.log(soloCoreLoggo + "\nCore Key: " + core.key.toString('hex') + "\nCore-Key-Pair: "
+    console.log(node3Loggo + "\nCore Key: " + core.key.toString('hex') + "\nCore-Key-Pair: "
       + core.keyPair.publicKey.toString('hex'))
 
 
@@ -50,7 +50,7 @@ async function core3() {
     //   socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
     //   core.replicate(socket)
 
-    //   // console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
+    //   // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
     //   //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
 
     //   // console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
@@ -69,20 +69,23 @@ async function core3() {
 
 
     /**JOIN-ON-KEY -> Look-up*/
-    swarmClient.on('connection', socket => core.replicate(socket))
+    swarmClient.on('connection', socket => {
+      core.replicate(socket)
+      socket.write('\nhello from client-node3, can is send queries over this chennel?')
+    })
     swarmClient.join(core.discoveryKey, { server: false, client: true })
+    await swarmClient.flush()
 
     // After the append, we can see that the length has updated.
-    console.log(soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
+    console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
 
-    console.log(chalk.green(soloCoreLoggo + 'Reading KV-pairs with the \'get\' method:\n'))
+    console.log(chalk.green(node3Loggo + 'Reading KV-pairs with the \'get\' method:\n'))
     for await (const { key, value } of db.createReadStream()) {
       if (key = null) {
         console.log('DB empty')
       } else {
         console.log(`${key} -> ${value}`)
       }
-
     }
 
     await core.close()
