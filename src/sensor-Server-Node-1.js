@@ -4,6 +4,7 @@ const Hyperbee = require('hyperbee')
 const readCPU = require('./helper/readMuonCPU');
 const beeLoggo = 'LOGGO FROM BEE-CORE: '
 const Hyperswarm = require('hyperswarm')
+const net = require('net')
 
 /**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1
  * 
@@ -19,8 +20,8 @@ async function start() {
   const swarmServer = new Hyperswarm()
 
   await core.ready()
-  console.log(beeLoggo + "\nKEY: " + core.key.toString("base64"), "\nKEY-Pair: " + core.keyPair.publicKey.toString("base64")
-    + "\ndiscoveryKey: " + core.discoveryKey.toString("base64"))
+  console.log(beeLoggo + "\nKEY: " + core.key.toString('hex'), "\nKEY-Pair: " + core.keyPair.publicKey.toString('hex')
+    + "\ndiscoveryKey: " + core.discoveryKey.toString('hex'))
 
   // It accepts LevelDB-style key/value encoding options.
   const db = new Hyperbee(core, {
@@ -32,17 +33,20 @@ async function start() {
   swarmServer.on('connection', (conn, peerInfo) => {
     // swarm1 will receive server connections
     conn.write('\n\n****this is a server connection*****')
-    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64") + "\npeerInfo.topics: "
-      + peerInfo.topics.toString("base64"))
-    console.log('\nswarm got a server connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString("base64"),
-      "\npublicKey: ", conn.publicKey.toString("base64"), "\nhandshakeHash: ", conn.handshakeHash.toString("base64"))
+    console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
+      + peerInfo.topics.toString('hex'))
+    console.log('\nswarm got a server connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
+      "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
     conn.on('data', data => console.log('server got message:', data.toString()))
     conn.on('error', err => console.error('1 CONN ERR:', err))
     console.log('A Map containing all connected peers:', swarmServer.peers)
+
+    core.replicate(conn)
+
     conn.end()
   })
 
-  
+
   /**JOIN-ON-KEY */
   // const discoveryOnKey = swarmServer.join(publicKey)
   // await discoveryOnKey.flushed()
@@ -74,10 +78,6 @@ async function start() {
   // for await (const { key, value } of db.createReadStream()) {
   //   console.log(`${key} -> ${value}`)
   // }
-
-  /**TESTING END */
-
-  core.replicate(false)
 }
 
 async function sleep(ms) {

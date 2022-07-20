@@ -41,22 +41,24 @@ async function core3() {
       valueEncoding: 'utf-8'
     })
     await db.ready()
-    await core.ready()
 
-    console.log(soloCoreLoggo + "\nCore Key: " + core.key.toString("base64") + "\nCore-Key-Pair: "
-      + core.keyPair.publicKey.toString("base64"))
+    console.log(soloCoreLoggo + "\nCore Key: " + core.key.toString('hex') + "\nCore-Key-Pair: "
+      + core.keyPair.publicKey.toString('hex'))
+
 
     swarmClient.on('connection', (conn, peerInfo) => {
       conn.on('data', data => console.log('\n\nclient got message:', data.toString()))
 
-      console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString("base64")
-        + "\npeerInfo.topics: " + peerInfo.topics.toString("base64"))
+      console.log(soloCoreLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
+        + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
 
-      console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString("base64"),
-        "\npublicKey: ", conn.publicKey.toString("base64"), "\nhandshakeHash: ", conn.handshakeHash.toString("base64"))
+      console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
+        "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
       console.log('A Map containing all connected peers:', swarmClient.peers)
 
       conn.write('\nhello from client-node3, can is send queries over this chennel?')
+
+      core.replicate(conn)
     })
 
     const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
@@ -67,14 +69,14 @@ async function core3() {
     // After the append, we can see that the length has updated.
     console.log(soloCoreLoggo + 'Length of the first core:', core.length) // Will be 2.
 
-    // The createReadStream method accepts LevelDB-style gt, lt, gte, lte, limit, and reverse options.
-    const streams = [['First 10', db.createReadStream({ limit: 10 })]]
-
-    for (const [name, stream] of streams) {
-      console.log(chalk.green('\n' + name + ':\n'))
-      for await (const { key, value } of stream) {
+    console.log(chalk.green(soloCoreLoggo + 'Reading KV-pairs with the \'get\' method:\n'))
+    for await (const { key, value } of db.createReadStream()) {
+      if(key = null){
+        console.log('DB empty')
+      }else{
         console.log(`${key} -> ${value}`)
       }
+      
     }
 
     await core.close()
