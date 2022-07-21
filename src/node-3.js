@@ -4,6 +4,7 @@ const Corestore = require('corestore')
 const Hypercore = require('hypercore')
 const chalk = require('chalk')
 const node3Loggo = 'LOGGO FROM NODE-3: '
+var sharedPublicKey = null
 
 /**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
@@ -38,7 +39,7 @@ async function core3() {
   try {
     const storeNode3 = new Corestore('./Node-3')
     await storeNode3.ready()
-    const core = storeNode3.get({name: 'node-3-corestore'})
+    const core = storeNode3.get({ name: 'node-3-corestore' })
     await core.ready()
     const swarmClient = new Hyperswarm()
 
@@ -48,49 +49,19 @@ async function core3() {
     /**JOIN-ON-TOPIC */
     swarmClient.on('connection', (socket, peerInfo) => {
       socket.on('data', data => {
-        const sharedPublicKey = data
+        sharedPublicKey = data
         console.log('\n\nclient got message, this is the publickey from Sensor-Node: ', data.toString('hex'))
       })
       socket.on('error', err => console.error('1 CONN ERR:', err))
 
-      // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
-      //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
-
-      // console.log('\nswarm got a client connection:', "\nremotePublicKey: ", conn.remotePublicKey.toString('hex'),
-      //   "\npublicKey: ", conn.publicKey.toString('hex'), "\nhandshakeHash: ", conn.handshakeHash.toString('hex'))
-      // console.log('A Map containing all connected peers:', swarmClient.peers)
-
-      socket.write('\nhello from client-node3, can is send queries over this chennel?')
+      socket.pipe(core.replicate(true)).pipe(socket)
+      socket.write(core.key)
     })
 
     const topic = Buffer.alloc(32).fill('sensor data') // A topic must be 32 bytes   
     swarmClient.join(topic, { server: false, client: true })
     await swarmClient.flush() // Waits for the swarm to connect to pending peers.
     // After this point, both client and server should have connections
-
-    const remoteCore = storeNode3.get({key: sharedPublicKey})
-    await remoteCore.ready()
-
-    // It accepts LevelDB-style key/value encoding options.
-    const db = new Hyperbee(remoteCore, {
-      keyEncoding: 'utf-8',
-      valueEncoding: 'utf-8'
-    })
-    await db.ready()
-
-    const range = remoteCore.download()
-    await range.downloaded()
-
-    console.log(range)
-
-    // /**JOIN-ON-KEY -> Look-up*/
-    // swarmClient.on('connection', socket => {
-    //   core.replicate(socket)
-    //   socket.write('\nhello from client-node3, can is send queries over this chennel?')
-
-    // })
-    // swarmClient.join(core.discoveryKey, { server: false, client: true })
-    // await swarmClient.flush()
 
     // After the append, we can see that the length has updated.
     console.log(node3Loggo + 'Length of the first core:', core.length) // Will be 2.
@@ -110,3 +81,35 @@ async function core3() {
     console.error('Error in creating Hypercore', error)
   }
 }
+
+async function loadRemoteCore(remoteCoreId) {
+  const remoteCore = storeNode3.get({ key: remoteCoreId })
+  await remoteCore.ready()
+
+  // It accepts LevelDB-style key/value encoding options.
+  const db = new Hyperbee(remoteCore, {
+    keyEncoding: 'utf-8',
+    valueEncoding: 'utf-8'
+  })
+  await db.ready()
+  console.log('Remote Core Readable: ' + remoteCore.readable)
+
+  return remoteCore
+}
+
+    // /**Implementierung von  const range = core.download([range]) */
+    // const range = remoteCore.download()
+    // await range.downloaded()
+    // console.log(range)
+
+
+/**Implementierung von const stream = core.replicate(isInitiatorOrReplicationStream)  */
+
+    // /**JOIN-ON-KEY -> Look-up*/
+    // swarmClient.on('connection', socket => {
+    //   core.replicate(socket)
+    //   socket.write('\nhello from client-node3, can is send queries over this chennel?')
+
+    // })
+    // swarmClient.join(core.discoveryKey, { server: false, client: true })
+    // await swarmClient.flush()

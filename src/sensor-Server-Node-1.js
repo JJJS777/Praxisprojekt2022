@@ -5,7 +5,7 @@ const Hyperswarm = require('hyperswarm')
 const Corestore = require('corestore')
 const readCPU = require('./helper/readMuonCPU');
 const beeLoggo = 'LOGGO FROM BEE-CORE: '
-const sharedPublicKey = Buffer.alloc(32).fill('2eaec82cb1f9f420fa1adee6f62cbec824c90debd945b6eea2f1ab10300abf5b')
+var sharedPublicKey = null
 
 
 /**IMPEMENTIERUNG DER NODES: Sensor-Server-Node-1
@@ -21,7 +21,7 @@ async function start() {
 
   const store = new Corestore('./Sensor-Server-Node-1')
   await store.ready()
-  const core = store.get({name: 'fml'})
+  const core = store.get({ name: 'fml' })
   await core.ready()
 
   const swarmServer = new Hyperswarm()
@@ -39,16 +39,12 @@ async function start() {
   swarmServer.on('connection', (socket, peerInfo) => {
     socket.write(core.key)
 
-    // console.log(beeLoggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex') + "\npeerInfo.topics: "
-    //   + peerInfo.topics.toString('hex'))
-
-    // console.log('\nswarm got a server connection:', "\nremotePublicKey: ", socket.remotePublicKey.toString('hex'),
-    //   "\npublicKey: ", socket.publicKey.toString('hex'), "\nhandshakeHash: ", socket.handshakeHash.toString('hex'))
-
-    //console.log('A Map containing all connected peers:', swarmServer.peers)
-
-    socket.on('data', data => console.log('server got message:', data.toString()))
+    socket.on('data', data => {
+      sharedPublicKey = data
+      console.log('hello from client-node3, this is my Core-Key: ', data.toString('hex'))
+    })
     socket.on('error', err => console.error('1 CONN ERR:', err))
+    socket.pipe(new Hypercore(sharedPublicKey).replicate(false)).pipe(socket)
   })
 
 
@@ -56,6 +52,25 @@ async function start() {
   const discoveryOnTopic = swarmServer.join(topic, { server: true, client: false })
   await discoveryOnTopic.flushed() // Waits for the topic to be fully announced on the DHT
   await swarmServer.flush()
+
+  for (var i = 0; i < 2; i++) {
+    const returnValues = await readCPU()
+    // dateTime = returnValues.date
+    // temprature = returnValues.temp
+    await db.put(returnValues.date, returnValues.temp)
+    console.log(beeLoggo + "PUT Date: " + returnValues.date + " and " + returnValues.temp)
+    // After the append, we can see that the length has updated.
+    console.log(beeLoggo + 'Length of the first core:', core.length)
+    await sleep(5000)
+  }
+
+}
+
+async function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
 
 
   // /**JOIN-ON-KEY -> announce*/
@@ -69,18 +84,10 @@ async function start() {
   // await swarmServer.flush()
   // await discoveryOnKey.flushed()
 
-  for (var i = 0; i < 2; i++) {
-    const returnValues = await readCPU()
-    // dateTime = returnValues.date
-    // temprature = returnValues.temp
-    await db.put(returnValues.date, returnValues.temp)
-    console.log(beeLoggo + "PUT Date: " + returnValues.date + " and " + returnValues.temp)
-    // After the append, we can see that the length has updated.
-    console.log(beeLoggo + 'Length of the first core:', core.length)
-    await sleep(5000)
-  }
 
-  /**TESTING START */
+
+
+/**TESTING START */
   // createReadStream can be used to yield KV-pairs in sorted order.
   // createReadStream returns a ReadableStream that supports async iteration.
 
@@ -88,10 +95,3 @@ async function start() {
   // for await (const { key, value } of db.createReadStream()) {
   //   console.log(`${key} -> ${value}`)
   // }
-}
-
-async function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
