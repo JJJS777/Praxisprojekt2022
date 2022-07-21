@@ -5,8 +5,6 @@ const Hypercore = require('hypercore')
 const chalk = require('chalk')
 const node3Loggo = 'LOGGO FROM NODE-3: '
 
-const sharedPublicKey = Buffer.alloc(32).fill('a7ef23ba79850d513beb92de843edf5fe595fb473f286fa738ac70ff2edbacaf')
-
 /**IMPEMENTIERUNG DER NODES: Nodes 3
  * 
  * 
@@ -23,6 +21,15 @@ const sharedPublicKey = Buffer.alloc(32).fill('a7ef23ba79850d513beb92de843edf5fe
  * funktioniert die Methode zum auslesen der DB nicht?
  * Oder ist gar dei DB im Netztwerk nicht verfügbar - s. video "replicate"? 
  * KEY Chaos: welches ist der richtige Public-Key? wie teilen zwei Nodes den gleichen Key?
+ * 
+ * core mit dem Pubilc Key laden und dann ...
+ * const range = core.download([range]) 
+ * const stream = core.replicate(isInitiatorOrReplicationStream) 
+ * 
+ * was der untschied zwischen download und replicate?
+ * 
+ * 
+ * corestore.networker?
 */
 core3()
 
@@ -31,24 +38,20 @@ async function core3() {
   try {
     const storeNode3 = new Corestore('./Node-3')
     await storeNode3.ready()
-    const core = storeNode3.get(sharedPublicKey)
+    const core = storeNode3.get({name: 'node-3-corestore'})
     await core.ready()
     const swarmClient = new Hyperswarm()
-
-    // It accepts LevelDB-style key/value encoding options.
-    const db = new Hyperbee(core, {
-      keyEncoding: 'utf-8',
-      valueEncoding: 'utf-8'
-    })
-    await db.ready()
 
     console.log(node3Loggo + "\nCore Key: " + core.key.toString('hex'))
 
 
     /**JOIN-ON-TOPIC */
     swarmClient.on('connection', (socket, peerInfo) => {
-      core.replicate(socket)
-      socket.on('data', data => console.log('\n\nclient got message:', data.toString()))
+      socket.on('data', data => {
+        const sharedPublicKey = data
+        console.log('\n\nclient got message, this is the publickey from Sensor-Node: ', data.toString('hex'))
+      })
+      socket.on('error', err => console.error('1 CONN ERR:', err))
 
       // console.log(node3Loggo + "\npeerInfo.publicKey: " + peerInfo.publicKey.toString('hex')
       //   + "\npeerInfo.topics: " + peerInfo.topics.toString('hex'))
@@ -65,6 +68,20 @@ async function core3() {
     await swarmClient.flush() // Waits for the swarm to connect to pending peers.
     // After this point, both client and server should have connections
 
+    const remoteCore = storeNode3.get({key: sharedPublicKey})
+    await remoteCore.ready()
+
+    // It accepts LevelDB-style key/value encoding options.
+    const db = new Hyperbee(remoteCore, {
+      keyEncoding: 'utf-8',
+      valueEncoding: 'utf-8'
+    })
+    await db.ready()
+
+    const range = remoteCore.download()
+    await range.downloaded()
+
+    console.log(range)
 
     // /**JOIN-ON-KEY -> Look-up*/
     // swarmClient.on('connection', socket => {
