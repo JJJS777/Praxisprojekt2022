@@ -9,7 +9,7 @@ async function sensorServerNode1() {
     const core = new Hypercore('./sensor-Server-Node-1')
     await core.ready()
 
-    console.log('Server-Public-Key: ' + core.key.toString('hex'))
+    console.log(chalk.red('Server-Public-Key: ') + core.key.toString('hex'))
 
     // Append two new blocks to the core.
     await core.append(['hello', 'world', 'from', 'server'])
@@ -18,9 +18,8 @@ async function sensorServerNode1() {
     console.log('Length of the first core:', core.length)
 
     swarm.on('connection', (socket, peerInfo) => {
-        socket.write(core.key)
+        core.replicate(socket)
     })
-    const topic = Buffer.alloc(32).fill('test') // A topic must be 32 bytes
-    const discovery = swarm.join(topic, { server: true, client: false })
-    await discovery.flushed() // Waits for the topic to be fully announced on the DHT
+    swarm.join(core.discoveryKey, { server: true, client: false })
+    swarm.flush()
 }

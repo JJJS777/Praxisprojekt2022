@@ -1,34 +1,22 @@
 const Hypercore = require('hypercore')
 const Hyperswarm = require('hyperswarm')
-
-
+const chalk = require('chalk')
 
 
 node3()
 
 async function node3() {
-    var remotePublicKey = null
+    var remotePublicKey = '6d358152d1964f725b19e406c9a2a0e22b207b4861ca2c50c13649320f9bfb8a'
+    const core = new Hypercore('./node-3', Buffer.from(remotePublicKey, 'hex'))
+    core.ready
+    console.log(chalk.green('Local-public-key: ') + core.key.toString('hex'))
+
     const swarm = new Hyperswarm()
-
     swarm.on('connection', (socket, peerInfo) => {
-        socket.on('data', data => {
-            remotePublicKey = data
-            console.log('Remote-public-key: ' + remotePublicKey.key.toString('hex'))
-        })
+        core.replicate(socket)
     })
 
-    const topic = Buffer.alloc(32).fill('test') // A topic must be 32 bytes
-    swarm.join(topic, { server: false, client: true })
-    await swarm.flush() // Waits for the swarm to connect to pending peers.
-    // After this point, both client and server should have connections
-
-
-    const core = new Hypercore('./node3', remotePublicKey, {
-        valueEncoding: 'utf-8',
-        sparse: true, // When replicating, don't eagerly download all blocks.
-    })
-    await core.ready()
-
-    console.log('Local-public-key: ' + core.key.toString('hex'))
-
+    swarm.join(core.discoveryKey, { server: false, client: true })
+    console.log('Requesting core:', core.key.toString('hex'))
+    await swarm.flush()
 }
