@@ -1,7 +1,8 @@
 // Client
 
 const Hyperswarm = require('hyperswarm')
-const Hypercore = require("hypercore")
+const Hypercore = require('hypercore')
+const Hyperbee = require('hyperbee')
 const chalk = require('chalk')
 const KEY = 'b6bfef1450c8467926efc3e22b8376504d2433f87ea60b02dab76ed43e4615d9'// Insert the key served by your server here (as string)
 
