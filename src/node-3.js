@@ -3,7 +3,7 @@
 const Hyperswarm = require('hyperswarm')
 const Hypercore = require("hypercore")
 const chalk = require('chalk')
-const KEY = '84478400b1ccfd27bbb5d0bb627920737cf107f53d7333031c08b60a9ea6124a'// Insert the key served by your server here (as string)
+const KEY = 'b6bfef1450c8467926efc3e22b8376504d2433f87ea60b02dab76ed43e4615d9'// Insert the key served by your server here (as string)
 
 node3()
 
