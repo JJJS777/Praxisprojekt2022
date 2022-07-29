@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-29T13:27:17.011Z" agent="5.0 (Macintosh)" etag="cO5ndY5683KosMNN4vYF" version="20.2.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-07-29T13:31:17.286Z" agent="5.0 (Macintosh)" etag="6pzOPzAI_IrmImfIaJ_5" version="20.2.2" type="github" pages="2">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
-    <mxGraphModel dx="617" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="812" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,7 +56,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="Hypercore">
-    <mxGraphModel dx="670" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="857" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -95,6 +95,15 @@
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-14" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="450" y="290" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mYdC2qalN-g83nR6YLBW-1" value="Optionen" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="110" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mYdC2qalN-g83nR6YLBW-2" value="Option 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="270" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mYdC2qalN-g83nR6YLBW-3" value="Option 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="80" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
