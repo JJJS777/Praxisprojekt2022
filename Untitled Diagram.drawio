@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-02T15:12:11.753Z" agent="5.0 (Macintosh)" etag="Ka3DIVtr8QN1GTxf4ANy" version="20.2.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-08-02T15:39:26.188Z" agent="5.0 (Macintosh)" etag="YkGluNf0VcrXxYwvDI4x" version="20.2.2" type="github" pages="3">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -109,7 +109,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="1203" dy="286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1359" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -132,7 +132,7 @@
           <mxGeometry x="-150" y="100" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JAHHq9PrO2_97utlqQtJ-4" value="Hyperswarm DHT" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="-320" y="60" width="10" height="160" as="geometry" />
+          <mxGeometry x="-310" y="70" width="10" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
