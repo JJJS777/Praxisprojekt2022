@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-03T07:16:38.614Z" agent="5.0 (Macintosh)" etag="KZ5kUANJ5VH59JrkqUbK" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-03T11:51:33.316Z" agent="5.0 (Macintosh)" etag="6KLFLob3RF3XHY6ysnwQ" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -135,7 +135,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="1444" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2013" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -181,11 +181,26 @@
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="yDLoRIvNL7hG9R2Gn2BZ-14" source="yDLoRIvNL7hG9R2Gn2BZ-4" target="yDLoRIvNL7hG9R2Gn2BZ-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-19" value="&lt;div align=&quot;left&quot;&gt;Sensor-Node&#39;s: &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;Write your measured values in Hyperbee&lt;/li&gt;&lt;li&gt;should also be able to query the measured data of other sensor nodes&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-19" value="&lt;div align=&quot;left&quot;&gt;Sensor-Node&#39;s: &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;Write measured values in Hyperbee&lt;/li&gt;&lt;li&gt;should also be able to query the measured data of other sensor nodes&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-800" y="260" width="260" height="100" as="geometry" />
         </mxCell>
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-20" value="&lt;div align=&quot;left&quot;&gt;Node&#39;s: &lt;br&gt;&lt;ul&gt;&lt;li&gt;query the measured data of sensor nodes&lt;/li&gt;&lt;li&gt;contribute to load sharing in the network&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-510" y="260" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="hv78FTbzO6wwOHshBAjz-2" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="970" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="hv78FTbzO6wwOHshBAjz-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="hv78FTbzO6wwOHshBAjz-2">
+          <mxGeometry y="40" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hv78FTbzO6wwOHshBAjz-4" value="Core initializing w/ PK from Node 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="hv78FTbzO6wwOHshBAjz-2">
+          <mxGeometry y="70" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hv78FTbzO6wwOHshBAjz-5" value="Core initializing w/ PK from Node 4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="hv78FTbzO6wwOHshBAjz-2">
+          <mxGeometry y="100" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hv78FTbzO6wwOHshBAjz-6" value="Core initializing w/ PK from Node 5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="hv78FTbzO6wwOHshBAjz-2">
+          <mxGeometry y="130" width="260" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
