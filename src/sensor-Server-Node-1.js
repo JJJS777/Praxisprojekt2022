@@ -3,12 +3,14 @@ const readGPU = require('./helper/readMuonCPU')
 const Hypercore = require('hypercore')
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
+const SHARED_PUBLIC_KEY = '6c51268c8194b05f7f8cbb3cab4869726033d7997a38edadb86f40f63b82fa39'
+
 
 sensorServerNode1()
 
 async function sensorServerNode1() {
     const swarm = new Hyperswarm()
-    const core = new Hypercore('./sensor-Server-Node-1')
+    const core = new Hypercore('./sensor-Server-Node-1', Buffer.from(SHARED_PUBLIC_KEY, "hex"))
     const bee = new Hyperbee(core, {keyEncoding: "utf-8", valueEncoding: "utf-8"} )
     await core.ready()
 

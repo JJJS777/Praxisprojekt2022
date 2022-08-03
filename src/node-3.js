@@ -4,12 +4,12 @@ const Hyperswarm = require('hyperswarm')
 const Hypercore = require('hypercore')
 const Hyperbee = require('hyperbee')
 const chalk = require('chalk')
-const KEY = '6c51268c8194b05f7f8cbb3cab4869726033d7997a38edadb86f40f63b82fa39'// Insert the key served by your server here (as string)
+const SHARED_PUBLIC_KEY = '6c51268c8194b05f7f8cbb3cab4869726033d7997a38edadb86f40f63b82fa39'
 
 node3()
 
 async function node3() {
-  const core = new Hypercore('./node-3', Buffer.from(KEY, "hex"))
+  const core = new Hypercore('./node-3', Buffer.from(SHARED_PUBLIC_KEY, "hex"))
   const bee = new Hyperbee(core, {keyEncoding: "utf-8", valueEncoding: "utf-8"} )
   await core.ready()
 
