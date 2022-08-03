@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-03T07:02:30.580Z" agent="5.0 (Macintosh)" etag="dzvHwBnPrV5hGOvXZZVT" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-03T07:16:38.614Z" agent="5.0 (Macintosh)" etag="KZ5kUANJ5VH59JrkqUbK" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -106,21 +106,21 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="1598" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3911" dy="2348" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="O5x1GRH74DmKK4106a0T-1" value="&lt;div&gt;&lt;b&gt;Sensor-Node 1&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 2 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;mehrere HC -&amp;gt; Corestore benötigt? &lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="940" y="50" width="350" height="210" as="geometry" />
+          <mxGeometry x="180" y="70" width="350" height="210" as="geometry" />
         </mxCell>
         <mxCell id="O5x1GRH74DmKK4106a0T-2" value="&lt;div&gt;Node 3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;benötigt Key von Sensor-Node 1 HC und Senor-Node 2 HC um auf HB zugreifen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1370" y="50" width="270" height="120" as="geometry" />
+          <mxGeometry x="610" y="70" width="270" height="120" as="geometry" />
         </mxCell>
         <mxCell id="O5x1GRH74DmKK4106a0T-3" value="&lt;div&gt;&lt;b&gt;Sensor-Node 2&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 1 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="940" y="330" width="350" height="210" as="geometry" />
+          <mxGeometry x="180" y="350" width="350" height="210" as="geometry" />
         </mxCell>
         <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1330" y="325" width="440" height="220" as="geometry" />
+          <mxGeometry x="570" y="345" width="440" height="220" as="geometry" />
         </mxCell>
         <mxCell id="JAHHq9PrO2_97utlqQtJ-1" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-630" y="100" width="160" height="60" as="geometry" />
