@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T14:21:28.426Z" agent="5.0 (Macintosh)" etag="a8Dfw4ZyM5Cnqj8nZp5O" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T14:21:47.884Z" agent="5.0 (Macintosh)" etag="sSLDIy-phj5U_a0ZuMLM" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,7 +186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4009" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4359" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -317,7 +317,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-75" value="(1) Need Sensor-Data &lt;br&gt;from Sensor-Node 1 and&lt;br&gt;calls method to init HC&lt;br&gt;with PK from Sensor-Node 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-74">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-75" value="Need Sensor-Data &lt;br&gt;from Sensor-Node 1 and&lt;br&gt;calls method to init HC&lt;br&gt;with PK from Sensor-Node 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-74">
           <mxGeometry x="0.0021" y="3" relative="1" as="geometry">
             <mxPoint x="17" y="-12" as="offset" />
           </mxGeometry>
