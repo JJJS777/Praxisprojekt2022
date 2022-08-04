@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T11:44:15.038Z" agent="5.0 (Macintosh)" etag="YgSZnCSZWAfjqJcR02-p" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T11:47:26.449Z" agent="5.0 (Macintosh)" etag="tJkzSKhebT8jI0T9xvYw" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,10 +186,13 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4494" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4272" dy="734" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-32" value="Join on Topic: Discovery Key&lt;br&gt;dynamically adds a new Hypercore to the replication stream" style="shape=umlFrame;whiteSpace=wrap;html=1;width=521;height=52;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="-3211" y="578" width="751" height="822" as="geometry" />
+        </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-30" value="Join on Topic: Discovery Key" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="-3211" y="140" width="750" height="350" as="geometry" />
         </mxCell>
@@ -316,8 +319,8 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-22" target="x7AMFaH7mYMsXKSdwF_M-27">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-1750" y="590" />
-              <mxPoint x="-1200" y="590" />
+              <mxPoint x="-3111" y="690" />
+              <mxPoint x="-2561" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -326,7 +329,7 @@
             <mxPoint x="5" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-22" target="x7AMFaH7mYMsXKSdwF_M-28">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-22" target="x7AMFaH7mYMsXKSdwF_M-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-19" value="&lt;div style=&quot;font-size: 8px;&quot;&gt;Start announcing &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;/div&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-18">
@@ -334,18 +337,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-22" target="x7AMFaH7mYMsXKSdwF_M-28">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-21" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-20">
-          <mxGeometry x="-0.0948" y="-1" relative="1" as="geometry">
-            <mxPoint x="13" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-22" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-1830" y="690" width="160" height="60" as="geometry" />
+          <mxGeometry x="-3191" y="790" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-27" target="x7AMFaH7mYMsXKSdwF_M-28">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-27" target="x7AMFaH7mYMsXKSdwF_M-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-24" value="Start lookup &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;br style=&quot;font-size: 8px;&quot;&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-23">
@@ -353,22 +348,23 @@
             <mxPoint x="-42" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-25" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-27" target="x7AMFaH7mYMsXKSdwF_M-28">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-26" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-25">
-          <mxGeometry x="-0.0397" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-27" value="Node 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-1280" y="690" width="160" height="60" as="geometry" />
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-27" value="Sensor-Node 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2641" y="790" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-28" value="Hyperswarm DHT" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="-1480" y="620" width="10" height="180" as="geometry" />
+          <mxGeometry x="-2841" y="720" width="10" height="650" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-29" value="Join on Topic: Discovery Key&lt;br&gt;dynamically adds a new Hypercore to the replication stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-1685" y="530" width="420" height="30" as="geometry" />
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-33" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-3190.5" y="900" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-34" value="Sensor-Node 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2640.5" y="900" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-35" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-3190.5" y="959" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-36" value="Sensor-Node 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2640.5" y="959" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
