@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T14:15:20.665Z" agent="5.0 (Macintosh)" etag="5ZVcEEBSKW0kjFQMZRb-" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T14:21:28.426Z" agent="5.0 (Macintosh)" etag="a8Dfw4ZyM5Cnqj8nZp5O" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,7 +186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4209" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4009" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -474,6 +474,72 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-81" value="Replicate data /w live updates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-80">
           <mxGeometry x="-0.1492" y="-2" relative="1" as="geometry">
             <mxPoint x="30" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;startArrow=none;startFill=0;endArrow=classic;endFill=1;curved=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-82" target="x7AMFaH7mYMsXKSdwF_M-84">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3250" y="1255" />
+              <mxPoint x="-3250" y="1339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-98" value="writes sensor &lt;br&gt;Data to DB" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-97">
+          <mxGeometry x="-0.0015" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-82" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-3191" y="1240" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-83" value="Corestore" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="-3191" y="1300" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-84" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-83">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;startArrow=none;startFill=0;endArrow=classic;endFill=1;curved=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-85" target="x7AMFaH7mYMsXKSdwF_M-88">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2410" y="1255" />
+              <mxPoint x="-2410" y="1365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-94" value="queries data from&lt;br&gt;written by sensor-node 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-93">
+          <mxGeometry x="-0.0423" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-85" value="Sensor-Node 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2641" y="1240" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-86" value="Corestore" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="-2641" y="1300" width="160" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-87" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-86">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-88" value="Remote Hypercore (PK Sensor-Node 1)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-86">
+          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-91" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=8;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-3031" y="1260" as="sourcePoint" />
+            <mxPoint x="-2641" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-92" value="connection established" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-91">
+          <mxGeometry x="0.0603" y="-3" relative="1" as="geometry">
+            <mxPoint x="-12" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-95" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-84" target="x7AMFaH7mYMsXKSdwF_M-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-96" value="Receiving Data updates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-95">
+          <mxGeometry x="0.0969" y="-1" relative="1" as="geometry">
+            <mxPoint x="-19" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
