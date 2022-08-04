@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T11:31:11.693Z" agent="5.0 (Macintosh)" etag="ADm4takzOwRXCd_vkAuU" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T11:37:45.154Z" agent="5.0 (Macintosh)" etag="-bwBamMNJFjSCpTmXJxi" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -146,6 +146,11 @@
         <mxCell id="uXaq-UF1QE-Ey5h3a9tN-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-13" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-9">
+          <mxGeometry x="-0.0948" y="-1" relative="1" as="geometry">
+            <mxPoint x="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="JAHHq9PrO2_97utlqQtJ-1" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-660" y="120" width="160" height="60" as="geometry" />
         </mxCell>
@@ -159,6 +164,11 @@
         </mxCell>
         <mxCell id="uXaq-UF1QE-Ey5h3a9tN-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-14" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-10">
+          <mxGeometry x="-0.0397" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="JAHHq9PrO2_97utlqQtJ-2" value="Node 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-110" y="120" width="160" height="60" as="geometry" />
