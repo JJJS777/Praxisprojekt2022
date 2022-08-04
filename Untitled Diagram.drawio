@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T15:25:33.632Z" agent="5.0 (Macintosh)" etag="vlVThQEBtS-jZrF7uQfq" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T15:25:37.479Z" agent="5.0 (Macintosh)" etag="7xrOoT2hNdC-7qCVlmxc" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -190,7 +190,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-32" value="Join on Topic: Sensor-Data&lt;br&gt;dynamically adds a new Hypercore to the replication stream" style="shape=umlFrame;whiteSpace=wrap;html=1;width=521;height=52;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" vertex="1" parent="1">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-32" value="Join on Topic: Sensor-Data&lt;br&gt;dynamically adds a new Hypercore to the replication stream" style="shape=umlFrame;whiteSpace=wrap;html=1;width=521;height=52;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="-3211" y="690" width="751" height="770" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-30" value="Join on Topic: Discovery Key&lt;br&gt;Sensor-Node 1 und Node 3 bilden den Swarm" style="shape=umlFrame;whiteSpace=wrap;html=1;width=181;height=40;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" vertex="1" parent="1">
