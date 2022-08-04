@@ -1,19 +1,11 @@
 const chalk = require('chalk')
 const readGPU = require('./helper/readMuonCPU')
-const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
+const Networker = require('@corestore/networker')
 const { once } = require("events");
 const PUBLIC_KEY_SENSOR_NODE = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
-//const core = new Hypercore('./sensor-Server-Node-1', Buffer.from(SHARED_PUBLIC_KEY, "hex"))
 
-
-//**Init Corestore first time Node is startet */
-// const coreStore = initCoreStore('1')
-// async function initCoreStore(nodeNumber) {
-//   const store = new Corestore('./sensor-Server-Node-' + nodeNumber)
-//   return store
-// }
 
 //**Run Node Programm */
 sensorNode('1')
@@ -21,10 +13,11 @@ sensorNode('1')
 //**Programm Logic */
 async function sensorNode(nodeNumber) {
   const localStore = new Corestore('./sensor-Server-Node-' + nodeNumber)
+  await localStore.ready()
   const localCore = await localStore.get({ name: 'Local-Sensor-Core' })
   await localCore.ready()
   const localBee = await initHyperbee(localCore)
-  const swarm = new Hyperswarm()
+  const networker = new Networker(localStore)
 
   //**DEBUG MSG: Local Hypercore is Initialized */
   console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
@@ -42,12 +35,28 @@ async function sensorNode(nodeNumber) {
   }
 
   //**Connect to DHT */
-  swarm.on('connection', (socket, peerInfo) => {
-    localCore.replicate(socket)
+  // Start announcing or lookup up a discovery key on the DHT.
+  await networker.configure(localCore.discoveryKey, { announce: true, lookup: true, flush: true })
+
+  // Is the networker "swarming" the given core?
+  if (networker.joined(localCore.discoveryKey) == true) {
+    console.log('Networker swarmed the given Core...')
+  } else {
+    console.log('Networker faild to swarm the given Core...')
+  }
+
+  // Has the networker attempted to connect to all known peers of the core?
+  if (networker.flushed(localCore.discoveryKey) == true) {
+    console.log('Networker has attempted to connect to all known peers of the core...')
+  } else {
+    console.log('Networker hasnt attempted to connect to all known peers of the core...')
+  }
+
+  console.log('The list of currently-connected peers: ', networker.peers)
+  networker.on('peer-add', peer => {
+    console.log('Peer:', peer, 'has been added')
   })
-  const topic = Buffer.alloc(32).fill('hello world') // A topic must be 32 bytes
-  const discovery = swarm.join(topic, { server: true, client: false })
-  await discovery.flushed() // Waits for the topic to be fully announced on the DHT
+
 
   await queryRemoteNode(localStore, swarm)
 }
