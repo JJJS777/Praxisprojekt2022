@@ -4,7 +4,7 @@ const Hypercore = require('hypercore')
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
-const PUBLIC_KEY_SENSOR_NODE = '6c51268c8194b05f7f8cbb3cab4869726033d7997a38edadb86f40f63b82fa39'
+const PUBLIC_KEY_SENSOR_NODE = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
 //const core = new Hypercore('./sensor-Server-Node-1', Buffer.from(SHARED_PUBLIC_KEY, "hex"))
 
 
@@ -30,7 +30,7 @@ async function sensorNode(nodeNumber) {
   console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
 
   //** write GPU data in local Hyperbee */
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 2; i++) {
     const returnValues = await readGPU()
     // dateTime = returnValues.date
     // temprature = returnValues.temp
@@ -45,11 +45,11 @@ async function sensorNode(nodeNumber) {
   swarm.on('connection', (socket, peerInfo) => {
     localCore.replicate(socket)
   })
-  swarm.join(localCore.discoveryKey, { server: true, client: false })
-  swarm.flush()
+  const topic = Buffer.alloc(32).fill('hello world') // A topic must be 32 bytes
+  const discovery = swarm.join(topic, { server: true, client: false })
+  await discovery.flushed() // Waits for the topic to be fully announced on the DHT
 
-  await queryRemoteNode(localStore, swarm)
-
+  //await queryRemoteNode(localStore, swarm)
 }
 
 
@@ -66,6 +66,7 @@ async function initHyperbee(core) {
   return bee
 }
 
+//**Join Network in CLient-Mode to query Data */
 async function queryRemoteNode(localStore, swarm) {
   //**KLÄREN: Neuen Hyperswarm init oder kann man den bereits init swarm nutzen? */
 
@@ -80,8 +81,10 @@ async function queryRemoteNode(localStore, swarm) {
   swarm.on('connection', (socket, peerInfo) => {
     remoteCore.replicate(socket)
   })
-  swarm.join(remoteCore.discoveryKey, { server: false, client: true })
-  swarm.flush()
+  const topic = Buffer.alloc(32).fill('hello world') // A topic must be 32 bytes
+  swarm.join(topic, { server: false, client: true })
+  await swarm.flush() // Waits for the swarm to connect to pending peers.
+
 
   // Ensure we are connected to at least 1 peer (else getting simply returns null)
   if (remoteBee.feed.writable || remoteBee.feed.peers.length) {
