@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T11:40:16.036Z" agent="5.0 (Macintosh)" etag="9f97cWphiIJkCBYf6k3j" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T11:41:41.233Z" agent="5.0 (Macintosh)" etag="Z97UeRt5IWi_iPlAPMcm" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -367,8 +367,8 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-28" value="Hyperswarm DHT" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="-1480" y="530" width="10" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-29" value="Join on Topic: Discovery Key" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-1560" y="490" width="170" height="30" as="geometry" />
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-29" value="Join on Topic: Discovery Key&lt;br&gt;dynamically adds a new Hypercore to the replication stream" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1560" y="460" width="170" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
