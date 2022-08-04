@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T14:14:37.030Z" agent="5.0 (Macintosh)" etag="iUM7VPeLTkETFIyhjcfj" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T14:15:20.665Z" agent="5.0 (Macintosh)" etag="5ZVcEEBSKW0kjFQMZRb-" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -470,6 +470,11 @@
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-80" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=8;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-59" target="x7AMFaH7mYMsXKSdwF_M-64">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-81" value="Replicate data /w live updates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-80">
+          <mxGeometry x="-0.1492" y="-2" relative="1" as="geometry">
+            <mxPoint x="30" y="2" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
