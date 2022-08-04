@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T12:37:09.741Z" agent="5.0 (Macintosh)" etag="obQYHVcIuZpSy5RCafRW" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T12:37:30.316Z" agent="5.0 (Macintosh)" etag="b4DnAmKxcdBC2M2YhQCE" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -336,7 +336,7 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-40" target="x7AMFaH7mYMsXKSdwF_M-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-6" value="Replicate data /w live update" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-5">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-6" value="Replicate data /w live updates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-5">
           <mxGeometry x="-0.0948" y="-1" relative="1" as="geometry">
             <mxPoint x="13" as="offset" />
           </mxGeometry>
@@ -352,7 +352,7 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-44" target="x7AMFaH7mYMsXKSdwF_M-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-11" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-10">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-11" value="Replicate data /w live updates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="x7AMFaH7mYMsXKSdwF_M-10">
           <mxGeometry x="-0.0397" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
