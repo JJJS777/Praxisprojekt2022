@@ -52,13 +52,13 @@ async function sensorNode(nodeNumber) {
     console.log('Networker hasnt attempted to connect to all known peers of the core...')
   }
 
+  await queryRemoteNode(localStore)
+
   console.log('The list of currently-connected peers: ', networker.peers)
   networker.on('peer-add', peer => {
     console.log('Peer:', peer, 'has been added')
   })
 
-
-  await queryRemoteNode(localStore, swarm)
 }
 
 
@@ -76,7 +76,7 @@ async function initHyperbee(core) {
 }
 
 //**Join Network in CLient-Mode to query Data */
-async function queryRemoteNode(localStore, swarm) {
+async function queryRemoteNode(localStore) {
   //**KLÄREN: Neuen Hyperswarm init oder kann man den bereits init swarm nutzen? */
 
   /**Init Remote Hypercore */
@@ -85,15 +85,6 @@ async function queryRemoteNode(localStore, swarm) {
 
   //**Load Data from Remote Hyperbee */
   const remoteBee = await initHyperbee(remoteCore)
-
-  //**Connect to DHT */
-  swarm.on('connection', (socket, peerInfo) => {
-    remoteCore.replicate(socket)
-  })
-  const topic = Buffer.alloc(32).fill('hello world') // A topic must be 32 bytes
-  swarm.join(topic, { server: false, client: true })
-  await swarm.flush() // Waits for the swarm to connect to pending peers.
-
 
   // Ensure we are connected to at least 1 peer (else getting simply returns null)
   if (remoteBee.feed.writable || remoteBee.feed.peers.length) {
