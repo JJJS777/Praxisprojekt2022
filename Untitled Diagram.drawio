@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T11:55:51.207Z" agent="5.0 (Macintosh)" etag="dFosU4ogEX2SQuGW0mJ5" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T12:21:57.848Z" agent="5.0 (Macintosh)" etag="yFevO6VPInJb48TPddyY" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,7 +186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3725" dy="317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3899" dy="367" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -194,7 +194,7 @@
           <mxGeometry x="-3211" y="578" width="751" height="822" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-30" value="Join on Topic: Discovery Key" style="shape=umlFrame;whiteSpace=wrap;html=1;width=120;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="-3211" y="140" width="750" height="350" as="geometry" />
+          <mxGeometry x="-3211" y="140" width="750" height="290" as="geometry" />
         </mxCell>
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-14" value="Netzwork (Share the same Public Key)" style="swimlane;" parent="1" vertex="1">
           <mxGeometry x="-800" y="395" width="740" height="505" as="geometry" />
@@ -372,7 +372,7 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-43" value="Corestore" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="-2641" y="340" width="160" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-44" value="Remote Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-43">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-44" value="Remote Hypercore (PK Sensor-Node 1)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-43">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-45" value="&lt;div&gt;Local Hypercore: Hypercore initialized with &lt;b&gt;new &lt;/b&gt;Keypair&lt;/div&gt;&lt;div&gt;Remote Hypercore: Hypercore initialized with &lt;b&gt;remote public key&lt;/b&gt; to read data&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
