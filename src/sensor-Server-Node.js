@@ -1,9 +1,9 @@
 const chalk = require('chalk')
 const readGPU = require('./helper/readMuonCPU')
-const Hypercore = require('hypercore')
 const Hyperswarm = require('hyperswarm')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
+const { once } = require("events");
 const PUBLIC_KEY_SENSOR_NODE = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
 //const core = new Hypercore('./sensor-Server-Node-1', Buffer.from(SHARED_PUBLIC_KEY, "hex"))
 
@@ -49,7 +49,7 @@ async function sensorNode(nodeNumber) {
   const discovery = swarm.join(topic, { server: true, client: false })
   await discovery.flushed() // Waits for the topic to be fully announced on the DHT
 
-  //await queryRemoteNode(localStore, swarm)
+  await queryRemoteNode(localStore, swarm)
 }
 
 
