@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-04T14:00:36.265Z" agent="5.0 (Macintosh)" etag="9P3wdQGUaJIQ2-gI7MKb" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-04T14:02:08.220Z" agent="5.0 (Macintosh)" etag="eM1LwI1vVBiPhY2A2YHx" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -186,7 +186,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3984" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3748" dy="273" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -308,11 +308,11 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-33" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-3191" y="950" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;startArrow=none;startFill=0;endArrow=classic;endFill=1;curved=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-36" target="x7AMFaH7mYMsXKSdwF_M-57">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontSize=8;startArrow=none;startFill=0;endArrow=classic;endFill=1;curved=1;" edge="1" parent="1" source="x7AMFaH7mYMsXKSdwF_M-36" target="x7AMFaH7mYMsXKSdwF_M-55">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-2420" y="965" />
-              <mxPoint x="-2420" y="1075" />
+              <mxPoint x="-2420" y="1023" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -423,13 +423,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-55" value="Corestore" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="-2641" y="1010" width="160" height="78" as="geometry" />
+          <mxGeometry x="-2641" y="1010" width="160" height="52" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-56" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-55">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-57" value="Remote Hypercore (PK Sensor-Node 1)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=8;" vertex="1" parent="x7AMFaH7mYMsXKSdwF_M-55">
-          <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-58" value="Corestore" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="-3191" y="1210" width="160" height="78" as="geometry" />
