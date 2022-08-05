@@ -4,7 +4,7 @@ const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
 const Networker = require('@corestore/networker')
 const { once } = require("events");
-const PUBLIC_KEY_SENSOR_NODE = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
+const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
 
 
 //**Run Node Programm */
@@ -22,21 +22,25 @@ async function sensorNode(nodeNumber) {
   //**DEBUG MSG: Local Hypercore is Initialized */
   console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
 
-  //** write GPU data in local Hyperbee */
-  for (var i = 0; i < 2; i++) {
-    const returnValues = await readGPU()
-    // dateTime = returnValues.date
-    // temprature = returnValues.temp
-    await localBee.put(returnValues.date, returnValues.temp)
-    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
-    // After the append, we can see that the length has updated.
-    console.log('Length of the first core:', localCore.length)
-    await sleep(5000)
-  }
+  // //** write GPU data in local Hyperbee */
+  // for (var i = 0; i < 2; i++) {
+  //   const returnValues = await readGPU()
+  //   // dateTime = returnValues.date
+  //   // temprature = returnValues.temp
+  //   await localBee.put(returnValues.date, returnValues.temp)
+  //   console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
+  //   // After the append, we can see that the length has updated.
+  //   console.log('Length of the first core:', localCore.length)
+  //   await sleep(5000)
+  // }
+
+  localCore.append('Hello')
+  localCore.append('from')
+  localCore.append('Sensor Node 2')
 
   //**Connect to DHT */
   // Start announcing or lookup up a discovery key on the DHT.
-  await networker.configure(localCore.discoveryKey, { announce: true, lookup: true, flush: true })
+  await networker.configure(localCore.discoveryKey, { announce: true, lookup: false, flush: true })
 
   // Is the networker "swarming" the given core?
   if (networker.joined(localCore.discoveryKey) == true) {
@@ -52,7 +56,7 @@ async function sensorNode(nodeNumber) {
     console.log('Networker hasnt attempted to connect to all known peers of the core...')
   }
 
-  await queryRemoteNode(localStore)
+  //await queryRemoteNode(localStore)
 
   console.log('The list of currently-connected peers: ', networker.peers)
   networker.on('peer-add', peer => {
@@ -80,7 +84,7 @@ async function queryRemoteNode(localStore) {
   //**KLÄREN: Neuen Hyperswarm init oder kann man den bereits init swarm nutzen? */
 
   /**Init Remote Hypercore */
-  const remoteCore = localStore.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE, "hex"))
+  const remoteCore = localStore.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE_2, "hex"))
   remoteCore.ready()
 
   //**Load Data from Remote Hyperbee */
