@@ -4,57 +4,38 @@ const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
 const Networker = require('@corestore/networker')
 const { once } = require("events");
-const PUBLIC_KEY_SENSOR_NODE_1 = '9c9f0245a770412ba9bd157bf64d75f3fdfc8a3575a5b3c6fa5f551c470e6d3d' // Node on 777
-const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Moun
+const PUBLIC_KEY_SENSOR_NODE_1 = 'f0624f8354f8b565119ce43f6ac4327c8d758d3643c02c2b7587073d9447103a' // Node on Muon bzw. 777 for testing
+const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
 
 
 node('3')
 
 async function node(number) {
 
+  const store = new Corestore('./node-' + number)
   try {
-    const store = new Corestore('./node-' + number)
     await store.ready()
   } catch (error) {
     console.error(error)
   }
 
+  const sensorCore1 = store.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE_1, "hex"))
+
   try {
-    const sensorCore1 = store.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE_1, "hex"))
     await sensorCore1.ready()
-    console.log('Remote Core with ID: ' + sensorCore1 + ' has been Initialized')
+    console.log('Remote Core with Discovery Key: ' + sensorCore1.discoveryKey.toString('hex') + ' has been Initialized')
+    console.log('Local Core is writeable: ' + sensorCore1.writable)
+    console.log('Local Core is readable: ' + sensorCore1.readable)
   } catch (error) {
     console.error(error)
   }
 
-  try {
-    const networker = new Networker(store)
 
+  const networker = new Networker(store)
+  try {
     //**Connect to DHT */
     // Start announcing or lookup up a discovery key on the DHT.
-    await networker.configure(sensorCore1.discoveryKey, { announce: true, lookup: true })
-  } catch (error) {
-    console.error(error)
-  }
-
-  // Is the networker "swarming" the given core?
-  if (networker.joined(sensorCore1.discoveryKey) == true) {
-    console.log('Networker swarmed the given Core...')
-  } else {
-    console.log('Networker faild to swarm the given Core...')
-  }
-
-  // Has the networker attempted to connect to all known peers of the core?
-  if (networker.flushed(sensorCore1.discoveryKey) == true) {
-    console.log('Networker has attempted to connect to all known peers of the core...')
-  } else {
-    console.log('Networker hasnt attempted to connect to all known peers of the core...')
-  }
-
-  console.log('The list of currently-connected peers: ', networker.peers)
-
-  try {
-    console.log('Read Remote Core Sensor Node 2: ' + await sensorCore1.get(0) + await sensorCore1.get(1) + await sensorCore1.get(2))
+    await networker.configure(sensorCore1.discoveryKey, { announce: false, lookup: true })
   } catch (error) {
     console.error(error)
   }

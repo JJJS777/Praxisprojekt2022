@@ -4,65 +4,64 @@ const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
 const Networker = require('@corestore/networker')
 const { once } = require("events");
-const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb'
+const PUBLIC_KEY_SENSOR_NODE_1 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb' // Node on Muon
+const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb' // Node on Pi 
 
 
 //**Run Node Programm */
-sensorNode('2')
+sensorNode('777')
 
 //**Programm Logic */
 async function sensorNode(nodeNumber) {
   const localStore = new Corestore('./sensor-Server-Node-' + nodeNumber)
-  await localStore.ready()
+  try {
+    await localStore.ready()
+  } catch (error) {
+    console.error(error)
+  }
+
   const localCore = await localStore.get({ name: 'Local-Sensor-Core' })
-  await localCore.ready()
-  const localBee = await initHyperbee(localCore)
+  try {
+    await localCore.ready()
+    //**DEBUG MSG: Local Hypercore is Initialized */
+    console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
+    console.log('Local Core is writeable: ' + localCore.writable)
+    console.log('Local Core is readable: ' + localCore.readable)
+    console.log('Local Cores Discovery Key: ' + localCore.discoveryKey.toString('hex'))
+  } catch (error) {
+    console.error(error)
+  }
+
   const networker = new Networker(localStore)
-
-  //**DEBUG MSG: Local Hypercore is Initialized */
-  console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
-
-  // //** write GPU data in local Hyperbee */
-  // for (var i = 0; i < 2; i++) {
-  //   const returnValues = await readGPU()
-  //   // dateTime = returnValues.date
-  //   // temprature = returnValues.temp
-  //   await localBee.put(returnValues.date, returnValues.temp)
-  //   console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
-  //   // After the append, we can see that the length has updated.
-  //   console.log('Length of the first core:', localCore.length)
-  //   await sleep(5000)
-  // }
 
   localCore.append('Hello')
   localCore.append('from')
   localCore.append('Sensor Node 2')
 
-  //**Connect to DHT */
-  // Start announcing or lookup up a discovery key on the DHT.
-  await networker.configure(localCore.discoveryKey, { announce: true, lookup: false, flush: true })
+  try {
+    //**Connect to DHT */
+    // Start announcing or lookup up a discovery key on the DHT.
+    await networker.configure(localCore.discoveryKey, { announce: true, lookup: false, flush: true })
 
-  // Is the networker "swarming" the given core?
-  if (networker.joined(localCore.discoveryKey) == true) {
-    console.log('Networker swarmed the given Core...')
-  } else {
-    console.log('Networker faild to swarm the given Core...')
+    // Is the networker "swarming" the given core?
+    if (networker.joined(localCore.discoveryKey) == true) {
+      console.log('Networker swarmed the given Core...')
+    } else {
+      console.log('Networker faild to swarm the given Core...')
+    }
+
+    // Has the networker attempted to connect to all known peers of the core?
+    if (networker.flushed(localCore.discoveryKey) == true) {
+      console.log('Networker has attempted to connect to all known peers of the core...')
+    } else {
+      console.log('Networker hasnt attempted to connect to all known peers of the core...')
+    }
+
+    console.log('The list of currently-connected peers: ', networker.peers)
+
+  } catch (error) {
+    console.error(error)
   }
-
-  // Has the networker attempted to connect to all known peers of the core?
-  if (networker.flushed(localCore.discoveryKey) == true) {
-    console.log('Networker has attempted to connect to all known peers of the core...')
-  } else {
-    console.log('Networker hasnt attempted to connect to all known peers of the core...')
-  }
-
-  //await queryRemoteNode(localStore)
-
-  console.log('The list of currently-connected peers: ', networker.peers)
-  networker.on('peer-add', peer => {
-    console.log('Peer:', peer, 'has been added')
-  })
-
 }
 
 
