@@ -8,7 +8,7 @@ const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe4224
 
 
 //**Run Node Programm */
-sensorNode('1')
+sensorNode('2')
 
 //**Programm Logic */
 async function sensorNode(nodeNumber) {
