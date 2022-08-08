@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-08T08:25:30.712Z" agent="5.0 (Macintosh)" etag="_fiO4sHeFwhR6vOjeUbD" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-08T08:41:13.156Z" agent="5.0 (Macintosh)" etag="DsqlVnJMrBaOdUGVVO35" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -56,7 +56,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="Hypercore">
-    <mxGraphModel dx="670" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,16 +82,16 @@
           <mxGeometry x="110" y="170" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-11" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="450" y="350" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="350" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-12" value="Hyperbee" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="450" y="170" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="170" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-13" value="Hypercore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="450" y="230" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="230" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-14" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="450" y="290" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="290" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mYdC2qalN-g83nR6YLBW-1" value="Optionen" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="110" y="80" width="160" height="60" as="geometry" />
@@ -100,13 +100,13 @@
           <mxGeometry x="270" y="80" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mYdC2qalN-g83nR6YLBW-3" value="Option 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="450" y="80" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="80" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="2013" dy="2072" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1773" dy="1756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -122,7 +122,7 @@
         <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="570" y="345" width="440" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-2">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-580" y="250" />
@@ -130,23 +130,23 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-2" value="Share the same PK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-1">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-2" value="Share the same PK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="uXaq-UF1QE-Ey5h3a9tN-1" vertex="1" connectable="0">
           <mxGeometry x="-0.001" y="-2" relative="1" as="geometry">
             <mxPoint x="3" y="8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-8" value="&lt;div style=&quot;font-size: 8px;&quot;&gt;Start announcing &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;/div&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-7">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-8" value="&lt;div style=&quot;font-size: 8px;&quot;&gt;Start announcing &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;/div&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-7" vertex="1" connectable="0">
           <mxGeometry x="0.0155" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-13" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-9">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-13" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-9" vertex="1" connectable="0">
           <mxGeometry x="-0.0948" y="-1" relative="1" as="geometry">
             <mxPoint x="13" as="offset" />
           </mxGeometry>
@@ -154,18 +154,18 @@
         <mxCell id="JAHHq9PrO2_97utlqQtJ-1" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="-660" y="120" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-6" value="Start lookup &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;br style=&quot;font-size: 8px;&quot;&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-3">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-6" value="Start lookup &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;br style=&quot;font-size: 8px;&quot;&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-3" vertex="1" connectable="0">
           <mxGeometry x="-0.4038" y="2" relative="1" as="geometry">
             <mxPoint x="-42" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-14" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="uXaq-UF1QE-Ey5h3a9tN-10">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-14" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-10" vertex="1" connectable="0">
           <mxGeometry x="-0.0397" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -176,17 +176,17 @@
         <mxCell id="JAHHq9PrO2_97utlqQtJ-4" value="Hyperswarm DHT" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-310" y="50" width="10" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-4" value="Join on Topic: Discovery Key" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-4" value="Join on Topic: Discovery Key" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-390" y="10" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-5" value="v" style="html=1;" vertex="1" parent="1">
+        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-5" value="v" style="html=1;" parent="1" vertex="1">
           <mxGeometry x="-800" y="-30" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4131" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4659" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
