@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-08T08:19:45.514Z" agent="5.0 (Macintosh)" etag="LsbROIpii8xHRlkPpDC6" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-08T08:24:10.943Z" agent="5.0 (Macintosh)" etag="1HUhju9NB8GZmVsD1EKr" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -244,20 +244,17 @@
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-20" value="&lt;div align=&quot;left&quot;&gt;Node&#39;s: &lt;br&gt;&lt;ul&gt;&lt;li&gt;query the measured data of sensor nodes&lt;/li&gt;&lt;li&gt;contribute to load sharing in the network&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-510" y="260" width="260" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-2" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="-800" y="970" width="260" height="160" as="geometry" />
+        <mxCell id="hv78FTbzO6wwOHshBAjz-2" value="Corestore&#xa;Sensor-Node 1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="949" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
+        <mxCell id="hv78FTbzO6wwOHshBAjz-4" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-4" value="Core initializing w/ PK from Node 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
+        <mxCell id="hv78FTbzO6wwOHshBAjz-3" value="Core initializing w/ PK from Sensor-Node 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
           <mxGeometry y="70" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-5" value="Core initializing w/ PK from Node 4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
+        <mxCell id="hv78FTbzO6wwOHshBAjz-5" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
           <mxGeometry y="100" width="260" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-6" value="Core initializing w/ PK from Node 5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
-          <mxGeometry y="130" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -404,7 +401,7 @@
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-45" value="&lt;div&gt;Local Hypercore: Hypercore initialized with &lt;b&gt;new &lt;/b&gt;Keypair&lt;/div&gt;&lt;div&gt;Remote Hypercore: Hypercore initialized with &lt;b&gt;remote public key&lt;/b&gt; to read data&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" parent="1" vertex="1">
-          <mxGeometry x="-3211" y="80" width="281" height="30" as="geometry" />
+          <mxGeometry x="-3211" y="650" width="281" height="30" as="geometry" />
         </mxCell>
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-46" value="Corestore" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="-3191" y="850" width="160" height="52" as="geometry" />
@@ -527,6 +524,18 @@
           <mxGeometry x="0.0969" y="-1" relative="1" as="geometry">
             <mxPoint x="-19" y="-4" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-1" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-450" y="949" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-2" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+          <mxGeometry y="40" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+          <mxGeometry y="70" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-4" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+          <mxGeometry y="100" width="260" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
