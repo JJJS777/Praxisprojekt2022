@@ -8,7 +8,7 @@ const PUBLIC_KEY_SENSOR_NODE_1 = '0adbd825e8491b5fcc11562ee4fefb1cc24f3101e8acb7
 const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
 
 
-node('3')
+node()
 
 async function node(number) {
 

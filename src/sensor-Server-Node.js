@@ -9,7 +9,7 @@ const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe4224
 
 
 //**Run Node Programm */
-sensorNode('777')
+sensorNode()
 
 //**Programm Logic */
 async function sensorNode(nodeNumber) {
@@ -41,7 +41,7 @@ async function sensorNode(nodeNumber) {
   try {
     //**Connect to DHT */
     // Start announcing or lookup up a discovery key on the DHT.
-    await networker.configure(localCore.discoveryKey, { announce: true, lookup: false, flush: true })
+    await networker.configure(localCore.discoveryKey, { announce: true, lookup: true, flush: true })
 
     // Is the networker "swarming" the given core?
     if (networker.joined(localCore.discoveryKey) == true) {
