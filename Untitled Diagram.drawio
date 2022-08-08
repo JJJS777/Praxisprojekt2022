@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-08T08:41:13.156Z" agent="5.0 (Macintosh)" etag="DsqlVnJMrBaOdUGVVO35" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-08T08:42:56.001Z" agent="5.0 (Macintosh)" etag="LjJzM9oGlKnzCNBSphEF" version="20.2.2" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -101,6 +101,21 @@
         </mxCell>
         <mxCell id="mYdC2qalN-g83nR6YLBW-3" value="Option 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="430" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H91OHPO0gdRgHUgm59LL-1" value="Option 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H91OHPO0gdRgHUgm59LL-2" value="Hypertrie" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="170" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H91OHPO0gdRgHUgm59LL-3" value="Hypercore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="230" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H91OHPO0gdRgHUgm59LL-4" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="290" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H91OHPO0gdRgHUgm59LL-5" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="350" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
