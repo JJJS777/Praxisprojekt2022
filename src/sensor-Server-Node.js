@@ -76,9 +76,7 @@ async function sensorNode(nodeNumber) {
     }
   })
 
-  const message = 'Hello I am Sensor-Node-' + Number
-
-  console.log(message)
+  const message = 'Hello this is a msg from Sensor-Node-' + nodeNumber
   ext.broadcast(message)
 
 }
