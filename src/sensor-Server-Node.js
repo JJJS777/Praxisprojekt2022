@@ -57,11 +57,30 @@ async function sensorNode(nodeNumber) {
       console.log('Networker hasnt attempted to connect to all known peers of the core...')
     }
 
-    console.log('The list of currently-connected peers: ', networker.peers)
-
+    networker.on('peer-add', peer => {
+      console.log('Node has been added: ' + peer.remotePublicKey)
+      console.log('The list of currently-connected peers: ', networker.peers)
+    })
   } catch (error) {
     console.error(error)
   }
+
+  const ext = await networker.registerExtension({
+    encoding: 'utf-8',
+    onmessage(message, peer) {
+      // called when a message is received from a peer
+      // will be decoded using the encoding you provide
+    },
+    onerror(err) {
+      // called in case of an decoding error
+    }
+  })
+
+  const message = 'Hello I am Sensor-Node-' + Number
+
+  console.log(message)
+  ext.broadcast(message)
+
 }
 
 

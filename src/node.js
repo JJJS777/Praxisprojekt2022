@@ -59,7 +59,18 @@ async function node(number) {
 
     })
 
-
+    const ext = await networker.registerExtension({
+      encoding: 'utf-8',
+      onmessage(message, peer) {
+        // called when a message is received from a peer
+        // will be decoded using the encoding you provide
+        console.log(message)
+      },
+      onerror(err) {
+        // called in case of an decoding error
+        console.log(err)
+      }
+    })
 
 
   } catch (error) {
