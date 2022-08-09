@@ -6,10 +6,10 @@ const Hyperswarm = require('hyperswarm')
 const pump = require('pump')
 const { once } = require("events");
 const PUBLIC_KEY_SENSOR_NODE_1 = 'c16e3bc3a12030828b0aa3b4e9fcaee161f4689c86c0737a4b2859fe729c38f7' // Node on Muon bzw. 777 for testing
-const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
+const PUBLIC_KEY_SENSOR_NODE_2 = '2f638ce90a4b387a24493449af432e1da7c1f88db04de4dc2e12fd4998c78863' // Node on Pi
 
 
-node()
+node('777')
 
 async function node(number) {
 
@@ -23,8 +23,10 @@ async function node(number) {
   // Create a new swarm instance.
   const swarm = new Hyperswarm()
 
+  console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_1, swarm)
-  //await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_2)
+  console.log('\n\nDATA FROM SENOR NODE 2:')
+  await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_2, swarm)
 
   console.log("finished")
 }
@@ -81,6 +83,6 @@ async function remoteSensor(coreStore, remotePublicKey, swarm) {
 
 async function initHyperbee(core) {
   const bee = new Hyperbee(core, { keyEncoding: "utf-8", valueEncoding: "utf-8" })
-  await bee.ready
+  bee.ready
   return bee
 }
