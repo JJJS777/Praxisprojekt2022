@@ -2,7 +2,7 @@
 const chalk = require('chalk')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
-const Networker = require('@corestore/networker')
+const Hyperswarm = require('hyperswarm')
 const { once } = require("events");
 const PUBLIC_KEY_SENSOR_NODE_1 = '0adbd825e8491b5fcc11562ee4fefb1cc24f3101e8acb76d582812965b688f48' // Node on Muon bzw. 777 for testing
 const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
@@ -30,52 +30,24 @@ async function node(number) {
     console.error(error)
   }
 
+  //**Connecting to Hyperswam */
+  // Create a new swarm instance.
+  const swarm = new Hyperswarm()
 
-  const networker = new Networker(store)
-  try {
-    //**Connect to DHT */
-    // Start announcing or lookup up a discovery key on the DHT.
-    await networker.configure(sensorCore1.discoveryKey, { announce: true, lookup: true })
+  // Replicate whenever a new connection is created.
+  swarm.on('connection', (connection, peerInfo) => {
+    pump(
+      connection,
+      sensorCore1.replicate({ initiator: peerInfo.client }),
+      connection
+    )
+  })
 
-    // Is the networker "swarming" the given core?
-    if (networker.joined(sensorCore1.discoveryKey) == true) {
-      console.log('Networker swarmed the given Core...')
-    } else {
-      console.log('Networker faild to swarm the given Core...')
-    }
-
-    // Has the networker attempted to connect to all known peers of the core?
-    if (networker.flushed(sensorCore1.discoveryKey) == true) {
-      console.log('Networker has attempted to connect to all known peers of the core...')
-    } else {
-      console.log('Networker hasnt attempted to connect to all known peers of the core...')
-    }
-
-    // Peer events and information.
-    console.log(networker.peers) // Outputs an array of peer objects.
-    networker.on('peer-add', peer => {
-      console.log('new peer added: ' + peer.publicKey)
-      console.log('The list of currently-connected peers: ', networker.peers)
-
-    })
-
-    const ext = await networker.registerExtension({
-      encoding: 'utf-8',
-      onmessage(message, peer) {
-        // called when a message is received from a peer
-        // will be decoded using the encoding you provide
-        console.log(message)
-      },
-      onerror(err) {
-        // called in case of an decoding error
-        console.log(err)
-      }
-    })
-
-
-  } catch (error) {
-    console.error(error)
-  }
+  // Start swarming the hypercore.
+  swarm.join(sensorCore1.discoveryKey, {
+    announce: true,
+    lookup: true
+  })
 
   console.log(await sensorCore1.get(0))
   console.log(await sensorCore1.get(1))
