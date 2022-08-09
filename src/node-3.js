@@ -4,7 +4,8 @@ const Hyperswarm = require('hyperswarm')
 const Hypercore = require('hypercore')
 const Hyperbee = require('hyperbee')
 const chalk = require('chalk')
-const KEY = '6c51268c8194b05f7f8cbb3cab4869726033d7997a38edadb86f40f63b82fa39'// Insert the key served by your server here (as string)
+const { once } = require("events");
+const KEY = ''// Insert the key served by your server here (as string)
 
 node3()
 
@@ -14,7 +15,9 @@ async function node3() {
   await core.ready()
 
   const swarm = new Hyperswarm()
-  swarm.on('connection', socket => core.replicate(socket))
+  swarm.on('connection', (socket, peerInfo) => {
+    console.log(peerInfo)
+    core.replicate(socket)})
   swarm.join(core.discoveryKey, { server: false, client: true })
 
   console.log(chalk.green('Local-Public-Key: '), core.key.toString('hex'))

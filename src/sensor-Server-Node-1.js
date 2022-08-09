@@ -14,7 +14,7 @@ async function sensorServerNode1() {
 
     console.log(chalk.red('Server-Public-Key: ' + core.key.toString('hex')))
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 2; i++) {
         const returnValues = await readGPU()
         // dateTime = returnValues.date
         // temprature = returnValues.temp
@@ -26,6 +26,7 @@ async function sensorServerNode1() {
       }
 
     swarm.on('connection', (socket, peerInfo) => {
+        console.log(peerInfo)
         core.replicate(socket)
     })
     swarm.join(core.discoveryKey, { server: true, client: false })
