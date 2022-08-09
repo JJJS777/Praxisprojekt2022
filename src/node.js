@@ -50,9 +50,22 @@ async function node(number) {
     lookup: true
   })
 
-  console.log(await sensorCore1.get(0))
-  console.log(await sensorCore1.get(1))
-  console.log(await sensorCore1.get(2))
+  const bee = await initHyperbee(sensorCore1)
+
+  // Ensure we are connected to at least 1 peer (else getting simply returns null)
+  if (bee.feed.writable || bee.feed.peers.length) {
+    console.log("Writable or already found peers for core");
+  } else {
+    console.log("Waiting for peers to connect");
+    const [peer] = await once(bee.feed, "peer-add");
+    console.log("Connected to peer", peer.remotePublicKey);
+  }
+  console.log((await bee.get(2)))
+
+  const readStream = await bee.createReadStream()
+  for await (const entry of readStream) {
+    console.log(entry)
+  }
 
 
   console.log("finished")
