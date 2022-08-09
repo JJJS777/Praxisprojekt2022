@@ -3,8 +3,9 @@ const chalk = require('chalk')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
+const pump = require('pump')
 const { once } = require("events");
-const PUBLIC_KEY_SENSOR_NODE_1 = '0adbd825e8491b5fcc11562ee4fefb1cc24f3101e8acb76d582812965b688f48' // Node on Muon bzw. 777 for testing
+const PUBLIC_KEY_SENSOR_NODE_1 = '8e154dffeba9e063a219066ee6bbe1a7dd0cb5ed1bb69e927bd94b75c5101c52' // Node on Muon bzw. 777 for testing
 const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
 
 
@@ -35,11 +36,11 @@ async function node(number) {
   const swarm = new Hyperswarm()
 
   // Replicate whenever a new connection is created.
-  swarm.on('connection', (connection, peerInfo) => {
+  swarm.on('connection', (socket, peerInfo) => {
     pump(
-      connection,
+      socket,
       sensorCore1.replicate({ initiator: peerInfo.client }),
-      connection
+      socket
     )
   })
 
