@@ -2,7 +2,8 @@ const chalk = require('chalk')
 const readGPU = require('./helper/readMuonCPU')
 const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
-const Networker = require('@corestore/networker')
+const Hyperswarm = require('hyperswarm')
+const pump = require('pump')
 const { once } = require("events");
 const PUBLIC_KEY_SENSOR_NODE_1 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb' // Node on Muon
 const PUBLIC_KEY_SENSOR_NODE_2 = 'a468b9ae1f0ba0bb5f4d69979c65226c5e3516debe422460c104fca219b19bbb' // Node on Pi 
@@ -32,52 +33,27 @@ async function sensorNode(nodeNumber) {
     console.error(error)
   }
 
-  const networker = new Networker(localStore)
-
   localCore.append('Hello')
   localCore.append('from')
   localCore.append('Sensor Node 2')
 
-  try {
-    //**Connect to DHT */
-    // Start announcing or lookup up a discovery key on the DHT.
-    await networker.configure(localCore.discoveryKey, { announce: true, lookup: true, flush: true })
-
-    // Is the networker "swarming" the given core?
-    if (networker.joined(localCore.discoveryKey) == true) {
-      console.log('Networker swarmed the given Core...')
-    } else {
-      console.log('Networker faild to swarm the given Core...')
-    }
-
-    // Has the networker attempted to connect to all known peers of the core?
-    if (networker.flushed(localCore.discoveryKey) == true) {
-      console.log('Networker has attempted to connect to all known peers of the core...')
-    } else {
-      console.log('Networker hasnt attempted to connect to all known peers of the core...')
-    }
-
-    networker.on('peer-add', peer => {
-      console.log('Node has been added: ' + peer.remotePublicKey)
-      console.log('The list of currently-connected peers: ', networker.peers)
-    })
-  } catch (error) {
-    console.error(error)
-  }
-
-  const ext = await networker.registerExtension({
-    encoding: 'utf-8',
-    onmessage(message, peer) {
-      // called when a message is received from a peer
-      // will be decoded using the encoding you provide
-    },
-    onerror(err) {
-      // called in case of an decoding error
-    }
+  /**Connect to DHT */
+  const swarm = new Hyperswarm()
+  // Replicate whenever a new connection is created.
+  swarm.on('connection', (socket, peerInfo) => {
+    pump(
+      socket,
+      localCore.replicate({ initiator: peerInfo.client }),
+      socket
+    )
   })
 
-  const message = 'Hello this is a msg from Sensor-Node-' + nodeNumber
-  ext.broadcast(message)
+  // Start swarming the hypercore.
+  swarm.join(localCore.discoveryKey, {
+    announce: true,
+    lookup: true
+  })
+  swarm.flush()
 
 }
 
