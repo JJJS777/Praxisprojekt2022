@@ -5,7 +5,7 @@ const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const pump = require('pump')
 const { once } = require("events");
-const PUBLIC_KEY_SENSOR_NODE_1 = '8e154dffeba9e063a219066ee6bbe1a7dd0cb5ed1bb69e927bd94b75c5101c52' // Node on Muon bzw. 777 for testing
+const PUBLIC_KEY_SENSOR_NODE_1 = '6669e1a3842dec506cfec7b38492bf000cb23f7a027960c22e7cbd40b41ea099' // Node on Muon bzw. 777 for testing
 const PUBLIC_KEY_SENSOR_NODE_2 = '' // Node on Pi
 
 
@@ -20,7 +20,7 @@ async function node(number) {
     console.error(error)
   }
 
-  const sensorCore1 = store.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE_1, "hex"))
+  const sensorCore1 = store.get(Buffer.from(PUBLIC_KEY_SENSOR_NODE_1, "hex"), { valueEncoding: 'utf-8' })
 
   try {
     await sensorCore1.ready()
@@ -39,7 +39,7 @@ async function node(number) {
   swarm.on('connection', (socket, peerInfo) => {
     pump(
       socket,
-      sensorCore1.replicate({ initiator: peerInfo.client }),
+      sensorCore1.replicate(peerInfo.client),
       socket
     )
   })

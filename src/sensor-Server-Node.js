@@ -21,7 +21,7 @@ async function sensorNode(nodeNumber) {
     console.error(error)
   }
 
-  const localCore = await localStore.get({ name: 'Local-Sensor-Core' })
+  const localCore = await localStore.get({ name: 'Local-Sensor-Core',   valueEncoding: 'utf-8'})
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
