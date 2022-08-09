@@ -21,7 +21,7 @@ async function sensorNode(nodeNumber) {
     console.error(error)
   }
 
-  const localCore = await localStore.get({ name: 'Local-Sensor-Core',   valueEncoding: 'utf-8'})
+  const localCore = await localStore.get({ name: 'Local-Sensor-Core', valueEncoding: 'utf-8' })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
@@ -33,9 +33,17 @@ async function sensorNode(nodeNumber) {
     console.error(error)
   }
 
-  localCore.append('Hello')
-  localCore.append('from')
-  localCore.append('Sensor Node 2')
+
+  const bee = await initHyperbee(localCore)
+  for (var i = 0; i < 5; i++) {
+    const returnValues = await readGPU()
+    await bee.put(returnValues.date, returnValues.temp)
+    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
+    // After the append, we can see that the length has updated.
+    console.log('Length of the first core:', localCore.length)
+    await sleep(5000)
+  }
+
 
   /**Connect to DHT */
   const swarm = new Hyperswarm()
@@ -67,7 +75,7 @@ async function sleep(ms) {
 
 async function initHyperbee(core) {
   const bee = new Hyperbee(core, { keyEncoding: "utf-8", valueEncoding: "utf-8" })
-  await bee.ready
+  bee.ready
   return bee
 }
 
