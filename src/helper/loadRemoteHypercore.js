@@ -17,15 +17,6 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) 
 
     //**Connecting to Hyperswam */
 
-    // Replicate whenever a new connection is created.
-    swarm.on('connection', (socket, peerInfo) => {
-        pump(
-            socket,
-            sensorCore.replicate(peerInfo.client),
-            socket
-        )
-    })
-
     // Start swarming the hypercore.
     swarm.join(sensorCore.discoveryKey, {
         announce: true,

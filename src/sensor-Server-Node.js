@@ -10,11 +10,9 @@ const initHyperbee = require('./helper/initHyperbee')
 
 
 
-
 //**Run Node Programm */
 sensorNode()
 
-//**Programm Logic */
 async function sensorNode(nodeNumber) {
   const localStore = new Corestore('./sensor-Server-Node-' + nodeNumber)
   try {
@@ -53,7 +51,7 @@ async function sensorNode(nodeNumber) {
   swarm.on('connection', (socket, peerInfo) => {
     pump(
       socket,
-      localCore.replicate(peerInfo.client),
+      localStore.replicate(peerInfo.client),
       socket
     )
   })
@@ -65,8 +63,8 @@ async function sensorNode(nodeNumber) {
   })
   swarm.flush()
 
-  // console.log('\n\nDATA FROM SENOR NODE 1:')
-  // await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
+  console.log('\n\nDATA FROM SENOR NODE 1:')
+  await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
 }
 
