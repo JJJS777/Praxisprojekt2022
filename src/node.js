@@ -25,8 +25,10 @@ async function node(number) {
 
   console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_1, swarm)
-  console.log('\n\nDATA FROM SENOR NODE 2:')
-  await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_2, swarm)
+
+  //**TODO */
+  // console.log('\n\nDATA FROM SENOR NODE 2:')
+  // await remoteSensor(store, PUBLIC_KEY_SENSOR_NODE_2, swarm)
 
   console.log("finished")
 }
@@ -73,12 +75,10 @@ async function remoteSensor(coreStore, remotePublicKey, swarm) {
     console.log("Connected to peer", peer.remotePublicKey.toString('hex'));
   }
 
-  const readStream = await bee.createReadStream()
+  const readStream = await bee.createReadStream({ live: false, limit: 5 })
   for await (const entry of readStream) {
     console.log(entry)
   }
-  //console.log((await bee.get("block #10")))
-  console.log(readStream)
 }
 
 async function initHyperbee(core) {
