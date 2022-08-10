@@ -2,9 +2,7 @@
 const chalk = require('chalk')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
-const pump = require('pump')
 const remoteSensor = require('./helper/loadRemoteHypercore')
-const { once } = require("events");
 require('dotenv').config();
 
 node()

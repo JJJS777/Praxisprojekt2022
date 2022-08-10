@@ -1,12 +1,13 @@
 const chalk = require('chalk')
 const readGPU = require('./helper/readMuonCPU')
-const Hyperbee = require('hyperbee')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const pump = require('pump')
 const { once } = require("events");
 require('dotenv').config();
+const initHyperbee = require('./helper/initHyperbee')
+
 
 
 

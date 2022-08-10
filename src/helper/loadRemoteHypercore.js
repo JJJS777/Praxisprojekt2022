@@ -1,6 +1,6 @@
-const Hyperbee = require('hyperbee')
 const pump = require('pump')
 const { once } = require("events");
+const initHyperbee = require('./initHyperbee')
 
 
 module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) {
@@ -48,10 +48,4 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) 
     for await (const entry of readStream) {
         console.log(entry)
     }
-}
-
-async function initHyperbee(core) {
-    const bee = new Hyperbee(core, { keyEncoding: "utf-8", valueEncoding: "utf-8" })
-    bee.ready
-    return bee
 }
