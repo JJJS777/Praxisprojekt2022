@@ -65,8 +65,8 @@ async function sensorNode(nodeNumber) {
   swarm.flush()
 
 
-  console.log('\n\nDATA FROM SENOR NODE 1:')
-  await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
+  // console.log('\n\nDATA FROM SENOR NODE 1:')
+  // await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
 }
 

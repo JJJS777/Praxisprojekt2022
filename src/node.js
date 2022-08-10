@@ -7,7 +7,7 @@ const remoteSensor = require('./helper/loadRemoteHypercore')
 const { once } = require("events");
 require('dotenv').config();
 
-node('777')
+node()
 
 async function node(number) {
   console.log(process.env.PUBLIC_KEY_SENSOR_NODE_1)
@@ -26,8 +26,8 @@ async function node(number) {
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
   //**TODO */
-  // console.log('\n\nDATA FROM SENOR NODE 2:')
-  // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2, swarm)
+  console.log('\n\nDATA FROM SENOR NODE 2:')
+  await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2, swarm)
 
   console.log("finished")
 }
