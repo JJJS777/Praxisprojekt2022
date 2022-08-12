@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-08T08:42:56.001Z" agent="5.0 (Macintosh)" etag="LjJzM9oGlKnzCNBSphEF" version="20.2.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-12T07:45:53.110Z" agent="5.0 (Macintosh)" etag="TyA8Jnh0RmSX8Cv1jqkQ" version="20.2.3" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
-    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,7 +56,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="Hypercore">
-    <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1261" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -81,7 +81,7 @@
         <mxCell id="43YB2q3m0qKI83pl-AG2-10" value="High-level Data Structures" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="110" y="170" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="43YB2q3m0qKI83pl-AG2-11" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
+        <mxCell id="43YB2q3m0qKI83pl-AG2-11" value="Hyperswarm" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="430" y="350" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="43YB2q3m0qKI83pl-AG2-12" value="Hyperbee" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
@@ -99,23 +99,38 @@
         <mxCell id="mYdC2qalN-g83nR6YLBW-2" value="Option 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="270" y="80" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mYdC2qalN-g83nR6YLBW-3" value="Option 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
+        <mxCell id="mYdC2qalN-g83nR6YLBW-3" value="Option 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="430" y="80" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H91OHPO0gdRgHUgm59LL-1" value="Option 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="H91OHPO0gdRgHUgm59LL-1" value="Option 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="80" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H91OHPO0gdRgHUgm59LL-2" value="Hypertrie" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="H91OHPO0gdRgHUgm59LL-2" value="Hyperbee" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="170" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H91OHPO0gdRgHUgm59LL-3" value="Hypercore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="H91OHPO0gdRgHUgm59LL-3" value="Hypercore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="230" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H91OHPO0gdRgHUgm59LL-4" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="H91OHPO0gdRgHUgm59LL-4" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="290" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H91OHPO0gdRgHUgm59LL-5" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="H91OHPO0gdRgHUgm59LL-5" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="590" y="350" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LGBoZu-ThHH1ndbxJvS--1" value="Corestore-Networker" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="350" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LGBoZu-ThHH1ndbxJvS--2" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="290" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LGBoZu-ThHH1ndbxJvS--3" value="Hypercore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="230" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LGBoZu-ThHH1ndbxJvS--4" value="Hypertrie" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="170" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LGBoZu-ThHH1ndbxJvS--5" value="Option 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="750" y="80" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
