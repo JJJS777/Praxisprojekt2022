@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-15T13:36:51.638Z" agent="5.0 (Macintosh)" etag="FGeISgVjAkiDvqD_BfSw" version="20.2.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-15T13:40:38.444Z" agent="5.0 (Macintosh)" etag="yFQHoHhGh2SQFofCgaeK" version="20.2.3" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -136,7 +136,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="4194" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2857" dy="1455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -170,11 +170,23 @@
         <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
           <mxGeometry x="390" y="275" width="440" height="220" as="geometry" />
         </mxCell>
+        <mxCell id="zq-1FAf6qNrCpeyFuoFa-2" value="Corestore" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-2340" y="-980" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="zq-1FAf6qNrCpeyFuoFa-3" value="HC w/ Hyperbee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
+          <mxGeometry y="30" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zq-1FAf6qNrCpeyFuoFa-4" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
+          <mxGeometry y="60" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zq-1FAf6qNrCpeyFuoFa-5" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
+          <mxGeometry y="90" width="160" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3978" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3859" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -226,7 +238,7 @@
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="yDLoRIvNL7hG9R2Gn2BZ-14" source="yDLoRIvNL7hG9R2Gn2BZ-4" target="yDLoRIvNL7hG9R2Gn2BZ-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-19" value="&lt;div align=&quot;left&quot;&gt;Sensor-Node&#39;s: &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;Write measured values in Hyperbee&lt;/li&gt;&lt;li&gt;should also be able to query the measured data of other sensor nodes&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-19" value="&lt;div align=&quot;left&quot;&gt;Sensor-Node&#39;s: &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;Write measured values in Hyperbee, which sits on top of the local HC. Only the Node how has the Private Key (owns the HC) can write Data&lt;br&gt;&lt;/li&gt;&lt;li&gt;should also be able to query the measured data of other sensor nodes&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-800" y="260" width="260" height="100" as="geometry" />
         </mxCell>
         <mxCell id="yDLoRIvNL7hG9R2Gn2BZ-20" value="&lt;div align=&quot;left&quot;&gt;Node&#39;s: &lt;br&gt;&lt;ul&gt;&lt;li&gt;query the measured data of sensor nodes&lt;/li&gt;&lt;li&gt;contribute to load sharing in the network&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -235,7 +247,7 @@
         <mxCell id="hv78FTbzO6wwOHshBAjz-2" value="Corestore&#xa;Sensor-Node 1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-800" y="949" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="hv78FTbzO6wwOHshBAjz-4" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
+        <mxCell id="hv78FTbzO6wwOHshBAjz-4" value="Local Hypercore w/ Hyperbee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="hv78FTbzO6wwOHshBAjz-3" value="Core initializing w/ PK from Sensor-Node 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="hv78FTbzO6wwOHshBAjz-2" vertex="1">
@@ -516,7 +528,7 @@
         <mxCell id="qo_IWUPF1YgZeCXnUva5-1" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-500" y="949" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-2" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-2" value="Local Hypercore /w Hyperbee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="qo_IWUPF1YgZeCXnUva5-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
