@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-12T07:45:53.110Z" agent="5.0 (Macintosh)" etag="TyA8Jnh0RmSX8Cv1jqkQ" version="20.2.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-15T13:36:51.638Z" agent="5.0 (Macintosh)" etag="FGeISgVjAkiDvqD_BfSw" version="20.2.3" type="github" pages="4">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -136,87 +136,45 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="1773" dy="1756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4194" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="O5x1GRH74DmKK4106a0T-1" value="&lt;div&gt;&lt;b&gt;Sensor-Node 1&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 2 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;mehrere HC -&amp;gt; Corestore benötigt? &lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="180" y="70" width="350" height="210" as="geometry" />
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-1" value="Sensor-Node 2" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1900" y="-760" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="O5x1GRH74DmKK4106a0T-2" value="&lt;div&gt;Node 3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;benötigt Key von Sensor-Node 1 HC und Senor-Node 2 HC um auf HB zugreifen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="610" y="70" width="270" height="120" as="geometry" />
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-2" value="Node 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1900" y="-1040" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="O5x1GRH74DmKK4106a0T-3" value="&lt;div&gt;&lt;b&gt;Sensor-Node 2&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 1 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="180" y="350" width="350" height="210" as="geometry" />
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-3" value="Node 5" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2120" y="-900" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="570" y="345" width="440" height="220" as="geometry" />
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-4" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2340" y="-1040" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-580" y="250" />
-              <mxPoint x="-30" y="250" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-5" value="Node 4" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2340" y="-760" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-2" value="Share the same PK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="uXaq-UF1QE-Ey5h3a9tN-1" vertex="1" connectable="0">
-          <mxGeometry x="-0.001" y="-2" relative="1" as="geometry">
-            <mxPoint x="3" y="8" as="offset" />
-          </mxGeometry>
+        <mxCell id="zq-1FAf6qNrCpeyFuoFa-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="180" y="70" width="830" height="495" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="O5x1GRH74DmKK4106a0T-1" value="&lt;div&gt;&lt;b&gt;Sensor-Node 1&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 2 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;mehrere HC -&amp;gt; Corestore benötigt? &lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
+          <mxGeometry width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-8" value="&lt;div style=&quot;font-size: 8px;&quot;&gt;Start announcing &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;/div&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-7" vertex="1" connectable="0">
-          <mxGeometry x="0.0155" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+        <mxCell id="O5x1GRH74DmKK4106a0T-2" value="&lt;div&gt;Node 3&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;benötigt Key von Sensor-Node 1 HC und Senor-Node 2 HC um auf HB zugreifen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
+          <mxGeometry x="430" width="270" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-1" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="O5x1GRH74DmKK4106a0T-3" value="&lt;div&gt;&lt;b&gt;Sensor-Node 2&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eigener Hypercore mit entsprechender ID und darauf aufbauender Hyperbee&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Lädt weiteren HC mit dem Key des Snesor-Node 1 um dessen Hyperbee laden zu können um die Daten abfragen zu können&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
+          <mxGeometry y="280" width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-13" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-9" vertex="1" connectable="0">
-          <mxGeometry x="-0.0948" y="-1" relative="1" as="geometry">
-            <mxPoint x="13" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="JAHHq9PrO2_97utlqQtJ-1" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="-660" y="120" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-6" value="Start lookup &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;br style=&quot;font-size: 8px;&quot;&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-3" vertex="1" connectable="0">
-          <mxGeometry x="-0.4038" y="2" relative="1" as="geometry">
-            <mxPoint x="-42" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="JAHHq9PrO2_97utlqQtJ-2" target="JAHHq9PrO2_97utlqQtJ-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-14" value="Replicate data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="uXaq-UF1QE-Ey5h3a9tN-10" vertex="1" connectable="0">
-          <mxGeometry x="-0.0397" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="JAHHq9PrO2_97utlqQtJ-2" value="Node 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="-110" y="120" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="JAHHq9PrO2_97utlqQtJ-4" value="Hyperswarm DHT" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="-310" y="50" width="10" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-4" value="Join on Topic: Discovery Key" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-390" y="10" width="170" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="uXaq-UF1QE-Ey5h3a9tN-5" value="v" style="html=1;" parent="1" vertex="1">
-          <mxGeometry x="-800" y="-30" width="110" height="50" as="geometry" />
+        <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
+          <mxGeometry x="390" y="275" width="440" height="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4659" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3978" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -555,46 +513,46 @@
             <mxPoint x="-19" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-1" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-1" value="Corestore&#xa;Sensor-Node 2" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-500" y="949" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-2" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-2" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-3" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
           <mxGeometry y="70" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-4" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-4" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-1" vertex="1">
           <mxGeometry y="100" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-5" value="Corestore&#xa;Node 3" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-5" value="Corestore&#xa;Node 3" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-800" y="1108" width="260" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-6" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-5">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-6" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-5" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-7" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-5">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-7" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-5" vertex="1">
           <mxGeometry y="70" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-9" value="Core initializing w/ PK from Sensor-Node-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-5">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-9" value="Core initializing w/ PK from Sensor-Node-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-5" vertex="1">
           <mxGeometry y="100" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-8" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-5">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-8" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-5" vertex="1">
           <mxGeometry y="130" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-10" value="Corestore&#xa;Node 4" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-10" value="Corestore&#xa;Node 4" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="-510" y="1106" width="260" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-11" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-10">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-11" value="Local Hypercore" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-10" vertex="1">
           <mxGeometry y="40" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-12" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-10">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-12" value="Core initializing w/ PK from Sensor-Node 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-10" vertex="1">
           <mxGeometry y="70" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-13" value="Core initializing w/ PK from Sensor-Node-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-10">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-13" value="Core initializing w/ PK from Sensor-Node-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-10" vertex="1">
           <mxGeometry y="100" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qo_IWUPF1YgZeCXnUva5-14" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="qo_IWUPF1YgZeCXnUva5-10">
+        <mxCell id="qo_IWUPF1YgZeCXnUva5-14" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-10" vertex="1">
           <mxGeometry y="130" width="260" height="30" as="geometry" />
         </mxCell>
       </root>
