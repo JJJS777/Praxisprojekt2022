@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-19T15:56:54.201Z" agent="5.0 (Macintosh)" etag="IH-222o_LtbpuR3eg-n-" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-19T15:57:23.940Z" agent="5.0 (Macintosh)" etag="_vSozmg9kiKtD4wqeEFY" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1351" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -961,7 +961,7 @@
         <mxCell id="HRsr6uZMeXx9bVtFUv4O-11" value="..." style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="HRsr6uZMeXx9bVtFUv4O-1">
           <mxGeometry x="160" y="60" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="HRsr6uZMeXx9bVtFUv4O-12" value="API-Stack" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" vertex="1" parent="HRsr6uZMeXx9bVtFUv4O-1">
+        <mxCell id="HRsr6uZMeXx9bVtFUv4O-12" value="API-Stack P2P-Modul" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" vertex="1" parent="HRsr6uZMeXx9bVtFUv4O-1">
           <mxGeometry width="320" height="60" as="geometry" />
         </mxCell>
       </root>
