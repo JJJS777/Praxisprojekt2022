@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-19T16:24:22.371Z" agent="5.0 (Macintosh)" etag="mfUMXPKn5GaoQMbjmCfY" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-19T16:34:14.484Z" agent="5.0 (Macintosh)" etag="LYmd4KIcz-oiPltPKWNw" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1351" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -198,7 +198,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="5028" dy="1067" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4168" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -973,13 +973,13 @@
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#808080;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;" vertex="1" parent="gUhW5xfFkw9-NHsOvD3Q-6">
           <mxGeometry x="45" y="90" width="10" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-8" value="Node&lt;sub&gt;N+1&lt;/sub&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="1">
+        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-8" value="node&lt;sub&gt;N+1 &lt;/sub&gt;:&lt;sub&gt; &lt;/sub&gt;Hypercore&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="1">
           <mxGeometry x="90" y="440" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="gUhW5xfFkw9-NHsOvD3Q-8">
-          <mxGeometry x="45" y="90" width="10" height="120" as="geometry" />
+          <mxGeometry x="45" y="60" width="10" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-10" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;fontSize=8;fontColor=#000000;" edge="1" parent="1">
+        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-10" value="coreStore.get( remotePublicKey )" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;fontSize=8;fontColor=#000000;" edge="1" parent="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-70" y="460" as="sourcePoint" />
             <mxPoint x="90" y="460" as="targetPoint" />
