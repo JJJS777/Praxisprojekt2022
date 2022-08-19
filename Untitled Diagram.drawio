@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-19T13:30:19.505Z" agent="5.0 (Macintosh)" etag="USLTKAaVILC013nKTG-V" version="20.2.3" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-08-19T13:32:33.620Z" agent="5.0 (Macintosh)" etag="EbWa_8atYUWqSC1Hi_q8" version="20.2.3" type="github" pages="7">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -572,7 +572,7 @@
         <mxCell id="trVgyP6ihohRC041n4AW-2" value="Cloud-&lt;br&gt;Platform" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="95" width="180" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="trVgyP6ihohRC041n4AW-5" value="Edge" style="swimlane;" vertex="1" parent="1">
+        <mxCell id="trVgyP6ihohRC041n4AW-5" value="Edge Peer-to-Peer Netzt" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="270" y="70" width="410" height="340" as="geometry">
             <mxRectangle x="230" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
