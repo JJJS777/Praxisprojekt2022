@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-19T15:38:16.084Z" agent="5.0 (Macintosh)" etag="whgl5-DIkQcbL1PROqQG" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-19T15:42:07.517Z" agent="5.0 (Macintosh)" etag="Sn4AEUSjmmVJSyr2bt2C" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1351" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -577,7 +577,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="Systemarchitektur">
-    <mxGraphModel dx="2102" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1261" dy="1952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -744,6 +744,9 @@
         </mxCell>
         <mxCell id="03FQWcIXpWwCXw3tsXom-61" value="N&lt;sub&gt;5&lt;/sub&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=8;" vertex="1" parent="03FQWcIXpWwCXw3tsXom-49">
           <mxGeometry x="131.07999999999998" y="277.8485714285714" width="49.285714285714285" height="49.285714285714285" as="geometry" />
+        </mxCell>
+        <mxCell id="giz6opAMuQL6CD5L-Ifc-67" value="Eigentlich macht es nicht so viel Sinn alle Ecco-Boxen einzeln via http abfragen zu können. &lt;br&gt;&lt;br&gt;Mögliche Lösung N-ECCO-Boxen zusammen fassen und dann die Daten über den zentralen Punkt abfragen zu können" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#FF0000;" vertex="1" parent="03FQWcIXpWwCXw3tsXom-49">
+          <mxGeometry x="240" y="40" width="160" height="190" as="geometry" />
         </mxCell>
         <mxCell id="03FQWcIXpWwCXw3tsXom-70" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="243" y="-610" width="34" height="260" as="geometry" />
