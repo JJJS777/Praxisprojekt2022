@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-15T13:42:56.255Z" agent="5.0 (Macintosh)" etag="OSQItSzLMUEvKOg1tUEv" version="20.2.3" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-08-19T11:59:01.808Z" agent="5.0 (Macintosh)" etag="CgUgoEmPU1phomV84ICF" version="20.2.3" type="github" pages="7">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1113" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -136,7 +136,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="2857" dy="1455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3664" dy="1903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -145,12 +145,6 @@
         </mxCell>
         <mxCell id="R7Ce7NwU5H6zyOzwsJlh-2" value="Node 3" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-1900" y="-1040" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-3" value="Node 5" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-2120" y="-900" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-4" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="-2340" y="-1040" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="R7Ce7NwU5H6zyOzwsJlh-5" value="Node 4" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="-2340" y="-760" width="160" height="60" as="geometry" />
@@ -170,23 +164,26 @@
         <mxCell id="O5x1GRH74DmKK4106a0T-4" value="&lt;div align=&quot;left&quot;&gt;nur mit dem Public Key eines Nodes hat man auf diesen lesen zugriff.&amp;nbsp; Wie kommt man an die Keys? alle Core-Key abhängigkeiten Hard coden? &lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="zq-1FAf6qNrCpeyFuoFa-1" vertex="1">
           <mxGeometry x="390" y="275" width="440" height="220" as="geometry" />
         </mxCell>
+        <mxCell id="R7Ce7NwU5H6zyOzwsJlh-4" value="Sensor-Node 1" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-2340" y="-1040" width="160" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="zq-1FAf6qNrCpeyFuoFa-2" value="Corestore" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="-2340" y="-980" width="160" height="120" as="geometry" />
+          <mxGeometry x="-2340" y="-980" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zq-1FAf6qNrCpeyFuoFa-3" value="HC w/ Hyperbee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
           <mxGeometry y="30" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zq-1FAf6qNrCpeyFuoFa-4" value="Item 2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
-          <mxGeometry y="60" width="160" height="30" as="geometry" />
+        <mxCell id="IEFjN4Ft550SaQqGyHNB-2" value="Corestore" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="-1900" y="-980" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="zq-1FAf6qNrCpeyFuoFa-5" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="zq-1FAf6qNrCpeyFuoFa-2">
-          <mxGeometry y="90" width="160" height="30" as="geometry" />
+        <mxCell id="IEFjN4Ft550SaQqGyHNB-3" value="HC w/ Hyperbee" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="IEFjN4Ft550SaQqGyHNB-2">
+          <mxGeometry y="30" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3859" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4079" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -561,6 +558,30 @@
         <mxCell id="qo_IWUPF1YgZeCXnUva5-14" value="Core initializing w/ PK from Sensor-Node-n" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="qo_IWUPF1YgZeCXnUva5-10" vertex="1">
           <mxGeometry y="100" width="260" height="30" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="P-GT8csLxZWTmNxC1nmY" name="Systemarchitektur">
+    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="_A0_I8kZ37KWG7Jkb0o5" name="ECCO-Box-Architektur">
+    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UbkjploW9XkOTzss3_vL" name="Softwarearchitektur">
+    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
