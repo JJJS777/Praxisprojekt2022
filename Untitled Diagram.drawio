@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T16:23:44.070Z" agent="5.0 (Macintosh)" etag="F9Ka_SJs4AtkhvQsJc0B" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T16:35:40.788Z" agent="5.0 (Macintosh)" etag="MfP_vnjiZX-4oyTCQa1N" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -198,7 +198,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="4096" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4254" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -735,7 +735,7 @@
         <mxCell id="NdUSqLAHfX-COyxvkVGV-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.014;exitY=0.1;exitDx=0;exitDy=0;fontSize=8;endArrow=classic;endFill=1;exitPerimeter=0;" edge="1" parent="1" source="NdUSqLAHfX-COyxvkVGV-12" target="AGEcDhdIV9XkqIyL7STR-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NdUSqLAHfX-COyxvkVGV-16" value="6. " style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="NdUSqLAHfX-COyxvkVGV-15">
+        <mxCell id="NdUSqLAHfX-COyxvkVGV-16" value="6.open replication stream (live) &lt;br&gt;to replicate all Hypercores&lt;br&gt;that are managed by the Corestore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="NdUSqLAHfX-COyxvkVGV-15">
           <mxGeometry x="-0.1378" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
