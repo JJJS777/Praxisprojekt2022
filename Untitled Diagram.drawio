@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T11:40:39.310Z" agent="5.0 (Macintosh)" etag="mpNFXlqpmeCtqqq-DGu7" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T11:44:12.546Z" agent="5.0 (Macintosh)" etag="YCQpworhTQJczIBOsYht" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -924,7 +924,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="1555" dy="452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1368" dy="335" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -971,7 +971,7 @@
           <mxGeometry x="210" y="494" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#808080;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;" parent="gUhW5xfFkw9-NHsOvD3Q-6" vertex="1">
-          <mxGeometry x="45" y="106" width="10" height="30" as="geometry" />
+          <mxGeometry x="45" y="86" width="10" height="30" as="geometry" />
         </mxCell>
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-8" value="node&lt;sub&gt;N+1 &lt;/sub&gt;:&lt;sub&gt; &lt;/sub&gt;Node&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="1" vertex="1">
           <mxGeometry x="90" y="440" width="100" height="300" as="geometry" />
