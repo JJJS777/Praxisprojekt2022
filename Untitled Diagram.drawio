@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T15:31:18.814Z" agent="5.0 (Macintosh)" etag="rlNCKB4SLbAhOp1udG70" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T15:43:31.692Z" agent="5.0 (Macintosh)" etag="gWcBusga78cM8VE93Rz5" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -198,7 +198,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3984" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4168" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -647,9 +647,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="AGEcDhdIV9XkqIyL7STR-30" value="1. write Data to Hyperbee" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="AGEcDhdIV9XkqIyL7STR-29">
+        <mxCell id="AGEcDhdIV9XkqIyL7STR-30" value="&lt;div&gt;1. create Corestore /w Hypercore and Hyperbee on top&lt;br&gt;&lt;/div&gt;1.1. write Data to Hyperbee" style="edgeLabel;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="AGEcDhdIV9XkqIyL7STR-29">
           <mxGeometry x="-0.1076" y="-2" relative="1" as="geometry">
-            <mxPoint y="12" as="offset" />
+            <mxPoint x="-80" y="7" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="AGEcDhdIV9XkqIyL7STR-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;endArrow=classic;endFill=1;" edge="1" parent="1" source="AGEcDhdIV9XkqIyL7STR-26" target="mKhUOinb8A0f9kn4ed1i-1">
@@ -684,6 +684,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="AGEcDhdIV9XkqIyL7STR-42" value="1. create Corestore /w Hypercore and Hyperbee on top" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="AGEcDhdIV9XkqIyL7STR-41">
+          <mxGeometry x="0.1081" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="AGEcDhdIV9XkqIyL7STR-33" value="Node" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.node_generic;fontSize=8;" vertex="1" parent="1">
           <mxGeometry x="-2478" y="2004" width="46" height="52" as="geometry" />
         </mxCell>
@@ -698,6 +703,9 @@
         </mxCell>
         <mxCell id="AGEcDhdIV9XkqIyL7STR-39" value="Hyperbee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=8;fillColor=#CC99FF;" vertex="1" parent="AGEcDhdIV9XkqIyL7STR-37">
           <mxGeometry x="18" y="10" width="64" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="AGEcDhdIV9XkqIyL7STR-43" value="Network" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="-2674" y="2240" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
