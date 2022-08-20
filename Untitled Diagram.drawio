@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T10:46:48.356Z" agent="5.0 (Macintosh)" etag="ogdrEYmPSD7-beuy-MTC" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T11:27:27.803Z" agent="5.0 (Macintosh)" etag="4ligql_zoaFf00H1QOWC" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -924,7 +924,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="1650" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1142" dy="196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -967,22 +967,65 @@
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Was muss das p2p Modul alles leisten? &lt;h1&gt;&lt;/h1&gt;&lt;div&gt;Nodes finden&lt;br&gt;Daten suchen / austauschen &lt;br&gt;Node hinzufügen / entfernen &lt;br&gt;Daten für andere Module aufbereiten und bereitstellen (time series Datenbanken, sind es nur neue puts?)&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=8;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="390" y="70" width="190" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-6" value="swarm : Hyperswarm" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="1" vertex="1">
-          <mxGeometry x="210" y="440" width="100" height="300" as="geometry" />
+        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-6" value="store : Corestore" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="1" vertex="1">
+          <mxGeometry x="210" y="494" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#808080;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;" parent="gUhW5xfFkw9-NHsOvD3Q-6" vertex="1">
-          <mxGeometry x="45" y="90" width="10" height="120" as="geometry" />
+          <mxGeometry x="45" y="70" width="10" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-8" value="node&lt;sub&gt;N+1 &lt;/sub&gt;:&lt;sub&gt; &lt;/sub&gt;Hypercore&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="1" vertex="1">
+        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-8" value="node&lt;sub&gt;N+1 &lt;/sub&gt;:&lt;sub&gt; &lt;/sub&gt;Node&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="1" vertex="1">
           <mxGeometry x="90" y="440" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="gUhW5xfFkw9-NHsOvD3Q-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" parent="gUhW5xfFkw9-NHsOvD3Q-8" vertex="1">
           <mxGeometry x="45" y="60" width="10" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-10" value="coreStore.get( remotePublicKey )" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;fontSize=8;fontColor=#000000;" parent="1" edge="1">
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-11" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="gUhW5xfFkw9-NHsOvD3Q-8">
+          <mxGeometry x="45" y="110" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gUhW5xfFkw9-NHsOvD3Q-10" value="create( )" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;fontSize=8;fontColor=#000000;" parent="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-70" y="460" as="sourcePoint" />
             <mxPoint x="90" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-4" value="swarm : Hyperswarm" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="440" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#808080;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;" vertex="1" parent="QDAvq0NdBVYoEpwS3TSa-4">
+          <mxGeometry x="45" y="90" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-6" value="swarm : Hyperswarm" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;fillColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="440" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#808080;fontSize=8;fontColor=#000000;strokeColor=default;strokeWidth=1;" vertex="1" parent="QDAvq0NdBVYoEpwS3TSa-6">
+          <mxGeometry x="45" y="90" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-8" value="create( this )" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;fontSize=8;fontColor=#000000;exitX=1.039;exitY=0.662;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="145.38999999999987" y="513.8599999999999" as="sourcePoint" />
+            <mxPoint x="210" y="514" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-9" value="" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;rounded=0;entryX=0.088;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="gUhW5xfFkw9-NHsOvD3Q-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="10" y="500" as="sourcePoint" />
+            <mxPoint x="130" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-10" value="initCoreStore( localDirectory )" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="QDAvq0NdBVYoEpwS3TSa-9">
+          <mxGeometry x="-0.2306" relative="1" as="geometry">
+            <mxPoint x="8" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-16" value="" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;rounded=0;entryX=0.088;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="10" y="550" as="sourcePoint" />
+            <mxPoint x="135.8800000000001" y="550.0600000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDAvq0NdBVYoEpwS3TSa-17" value="initHyperswarm( )" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="QDAvq0NdBVYoEpwS3TSa-16">
+          <mxGeometry x="-0.2306" relative="1" as="geometry">
+            <mxPoint x="8" y="-7" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
