@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T16:35:40.788Z" agent="5.0 (Macintosh)" etag="MfP_vnjiZX-4oyTCQa1N" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T16:38:50.011Z" agent="5.0 (Macintosh)" etag="UT8R5i8SZOYiSMLOnknr" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -644,6 +644,15 @@
         <mxCell id="NdUSqLAHfX-COyxvkVGV-9" value="5. find Nodes and &lt;br&gt;Join Swarm w/ K&lt;sub&gt;D&lt;/sub&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" vertex="1" connectable="0" parent="NdUSqLAHfX-COyxvkVGV-8">
           <mxGeometry x="0.2065" y="1" relative="1" as="geometry">
             <mxPoint x="15" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NdUSqLAHfX-COyxvkVGV-17" value="7. read data from Hyperbee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=8;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="AGEcDhdIV9XkqIyL7STR-33" target="NdUSqLAHfX-COyxvkVGV-1">
+          <mxGeometry x="0.0044" y="10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2290" y="2020" />
+              <mxPoint x="-2290" y="2260" />
+            </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="AGEcDhdIV9XkqIyL7STR-33" value="&lt;b&gt;Node&lt;/b&gt;" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.node_generic;fontSize=8;" vertex="1" parent="1">
