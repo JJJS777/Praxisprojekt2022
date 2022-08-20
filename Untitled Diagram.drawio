@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-20T15:51:01.087Z" agent="5.0 (Macintosh)" etag="fggo_47KGVhB6A8QQ0pd" version="20.2.3" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-20T15:53:19.974Z" agent="5.0 (Macintosh)" etag="2kZa9W5aomadX4gYS9kj" version="20.2.3" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -198,7 +198,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="3881" dy="356" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4036" dy="452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -704,8 +704,8 @@
         <mxCell id="AGEcDhdIV9XkqIyL7STR-39" value="Hyperbee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=8;fillColor=#CC99FF;" vertex="1" parent="AGEcDhdIV9XkqIyL7STR-37">
           <mxGeometry x="18" y="10" width="64" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="AGEcDhdIV9XkqIyL7STR-43" value="Network" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
-          <mxGeometry x="-2674" y="2250" width="60" height="30" as="geometry" />
+        <mxCell id="AGEcDhdIV9XkqIyL7STR-43" value="&lt;b&gt;File Look-Up&lt;/b&gt;-&lt;b&gt;Network&lt;/b&gt;&lt;br&gt;(responsible for data exchange)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="-2694" y="2250" width="104" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
