@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-26T14:10:48.201Z" agent="5.0 (Macintosh)" etag="XnWmx-T388YXlBDqONKy" version="20.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-08-30T08:08:46.167Z" agent="5.0 (Macintosh)" etag="Zysak2b95rnKy1MjGogx" version="20.2.7" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
-    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,7 +37,7 @@
         <mxCell id="oaFbPJ7K2uqsgNcsHxHo-1" value="Storage" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" parent="2KaCRzUMMeswWlVjjDwV-10" vertex="1">
           <mxGeometry x="20" y="230" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="oaFbPJ7K2uqsgNcsHxHo-2" value="Corestore" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="2KaCRzUMMeswWlVjjDwV-10" vertex="1">
+        <mxCell id="oaFbPJ7K2uqsgNcsHxHo-2" value="Corestore&lt;br&gt;(disk-storage manager for Hypercores)" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="2KaCRzUMMeswWlVjjDwV-10" vertex="1">
           <mxGeometry x="180" y="230" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="oaFbPJ7K2uqsgNcsHxHo-3" value="" style="whiteSpace=wrap;html=1;align=center;fontSize=12;" parent="2KaCRzUMMeswWlVjjDwV-10" vertex="1">
@@ -56,7 +56,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="API-Stack Options HC">
-    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -151,7 +151,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="4583" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4194" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -272,7 +272,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="Netzwerk">
-    <mxGraphModel dx="5028" dy="1067" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4336" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -827,7 +827,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="Systemarchitektur">
-    <mxGraphModel dx="1577" dy="2147" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1285" dy="2147" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1177,7 +1177,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="4611" dy="2348" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1497" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
