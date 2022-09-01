@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-31T15:57:00.872Z" agent="5.0 (Macintosh)" etag="YIyhhYrLZ-Vw3LFxD08Z" version="20.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-09-01T14:50:36.522Z" agent="5.0 (Macintosh)" etag="HQkjL08FpLyyQtksTfY3" version="20.2.7" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="771" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="3883" dy="3405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3215" dy="2897" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -290,7 +290,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Y_aPTUz5QyEOP_hmM8ay-20" value="Needed to validate&lt;br&gt;and read data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Y_aPTUz5QyEOP_hmM8ay-19">
+        <mxCell id="Y_aPTUz5QyEOP_hmM8ay-20" value="Needed to validate&lt;br&gt;and download data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Y_aPTUz5QyEOP_hmM8ay-19">
           <mxGeometry x="-0.1381" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -361,7 +361,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MPtffCs4CxeERXFP43mT-59" value="Needed to validate&lt;br&gt;and read data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MPtffCs4CxeERXFP43mT-58">
+        <mxCell id="MPtffCs4CxeERXFP43mT-59" value="Needed to validate&lt;br&gt;and download data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="MPtffCs4CxeERXFP43mT-58">
           <mxGeometry x="-0.1381" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -443,6 +443,9 @@
           <mxGeometry x="120" width="120" height="90" as="geometry">
             <mxRectangle width="120" height="90" as="alternateBounds" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="MPtffCs4CxeERXFP43mT-88" value="Quelle für annahme: " style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="-1290" width="270" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
