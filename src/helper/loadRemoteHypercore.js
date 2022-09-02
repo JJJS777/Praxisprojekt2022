@@ -1,6 +1,7 @@
 const pump = require('pump')
 const { once } = require("events");
 const initHyperbee = require('./initHyperbee')
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 
 
 module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) {
@@ -18,7 +19,7 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) 
     //**Connecting to Hyperswam */
 
     // Start swarming the hypercore.
-    swarm.join(sensorCore.discoveryKey, {
+    swarm.join(topic, {
         announce: true,
         lookup: true
     })

@@ -8,6 +8,8 @@ const { once } = require("events");
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
 
+const topic = Buffer.alloc(32).fill('sensor network')
+
 
 
 //**Run Node Programm */
@@ -57,7 +59,7 @@ async function sensorNode(nodeNumber) {
   })
 
   // Start swarming the hypercore.
-  swarm.join(localCore.discoveryKey, {
+  swarm.join(topic, {
     announce: true,
     lookup: true
   })
