@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-03T09:59:48.924Z" agent="5.0 (Macintosh)" etag="RzzL7SrDqkvFrwWpAt3K" version="20.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-09-03T10:18:05.517Z" agent="5.0 (Macintosh)" etag="iQoqAQPY34K0sOp8qo20" version="20.2.7" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1251" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="3239" dy="2803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3524" dy="2977" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -457,7 +457,7 @@
             <mxRectangle width="120" height="83" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Jl7b14W79yo1YQwslYvt-4" value="Hyperwarm DHT &#xa;(Topic ≠ Discovery Key)" style="shape=table;startSize=50;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Jl7b14W79yo1YQwslYvt-4" value="Hyperwarm DHT ohne initalen Hypercore&#xa;(Topic ≠ Discovery Key)" style="shape=table;startSize=50;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-610" y="-1700" width="240" height="383" as="geometry" />
         </mxCell>
         <mxCell id="Jl7b14W79yo1YQwslYvt-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="Jl7b14W79yo1YQwslYvt-4">
