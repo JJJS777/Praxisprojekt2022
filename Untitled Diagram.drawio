@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-03T10:35:24.012Z" agent="5.0 (Macintosh)" etag="p64xu2hyO_IX2RRKstUj" version="20.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-09-03T10:36:54.349Z" agent="5.0 (Macintosh)" etag="RsAzlJHG7yYHuoWdcdjK" version="20.2.7" type="github" pages="6">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
     <mxGraphModel dx="1251" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -151,7 +151,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GQRyNk7cbLQzCoDl-Bhn" name="Notizen">
-    <mxGraphModel dx="4235" dy="2906" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4351" dy="2977" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -512,7 +512,7 @@
             <mxRectangle width="120" height="83" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wMgIjHtKYmzko2plREhX-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="wMgIjHtKYmzko2plREhX-20" target="wMgIjHtKYmzko2plREhX-40">
+        <mxCell id="wMgIjHtKYmzko2plREhX-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="wMgIjHtKYmzko2plREhX-20" target="wMgIjHtKYmzko2plREhX-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wMgIjHtKYmzko2plREhX-20" value="&lt;div&gt;Network of Nodes sharing Public-Key from Peer-N&lt;sub&gt;1&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/sub&gt;&lt;/div&gt;&lt;div&gt;In this Network only Data from N&lt;sub&gt;1&lt;/sub&gt; can be raplicated&lt;sub&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/sub&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
