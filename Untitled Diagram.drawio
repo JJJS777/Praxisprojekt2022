@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T15:34:21.480Z" agent="5.0 (Macintosh)" etag="aOlQjLMEwP__ed5tPhYD" version="20.2.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-20T15:43:09.720Z" agent="5.0 (Macintosh)" etag="RocGIwdg9D-i6k5-hgVh" version="20.2.8" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="931" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -916,7 +916,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: Systemarchitektur">
-    <mxGraphModel dx="471" dy="1476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="761" dy="1639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -994,8 +994,8 @@
         <mxCell id="jVBg_ZHCoJBEt9OYTv_w-13" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;endArrow=none;endFill=0;" parent="BOfieVhBQfJLrjuaQHRz-1" source="jVBg_ZHCoJBEt9OYTv_w-5" target="jVBg_ZHCoJBEt9OYTv_w-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4LwIGYQtiK0X5jhV_PXL-69" value="N = Node = P2P-Modul" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="trVgyP6ihohRC041n4AW-5">
-          <mxGeometry x="320" y="23" width="90" height="20" as="geometry" />
+        <mxCell id="4LwIGYQtiK0X5jhV_PXL-69" value="N = Node = P2P-Modul&lt;br&gt;&lt;div&gt;P2P Module provides persistent storag&lt;/div&gt;&lt;div&gt;Processor-Modules localy processing of data&lt;br&gt;&lt;/div&gt;&lt;div&gt;Processors read, process and write Data&lt;br&gt;from and to P2P-Storage&lt;br&gt; &lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="trVgyP6ihohRC041n4AW-5">
+          <mxGeometry x="270" y="18" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="jVBg_ZHCoJBEt9OYTv_w-17" value="&lt;h1&gt;Beschreibung&lt;br&gt;&lt;/h1&gt;&lt;p&gt;N&lt;sub&gt;n&lt;/sub&gt; = Node bzw. ECCO-Box&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=8;" parent="1" vertex="1">
           <mxGeometry x="270" y="-810" width="190" height="120" as="geometry" />
