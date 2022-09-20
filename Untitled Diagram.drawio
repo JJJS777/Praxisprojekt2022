@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T15:44:16.743Z" agent="5.0 (Macintosh)" etag="4HApkBrrjK8bTbPhDGIB" version="20.2.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-20T16:12:29.436Z" agent="5.0 (Macintosh)" etag="Iahuk_THZMeGPRVQ1ZwZ" version="20.2.8" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
-    <mxGraphModel dx="931" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1385" dy="919" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -916,7 +916,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: Systemarchitektur">
-    <mxGraphModel dx="2239" dy="2551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="594" dy="1563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1233,29 +1233,31 @@
             <mxRectangle x="230" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="giz6opAMuQL6CD5L-Ifc-45" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=8;endArrow=none;endFill=0;" parent="giz6opAMuQL6CD5L-Ifc-38" source="giz6opAMuQL6CD5L-Ifc-46" target="giz6opAMuQL6CD5L-Ifc-60" edge="1">
+        <mxCell id="giz6opAMuQL6CD5L-Ifc-45" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=8;endArrow=none;endFill=0;startArrow=classic;startFill=1;" parent="giz6opAMuQL6CD5L-Ifc-38" source="giz6opAMuQL6CD5L-Ifc-46" target="giz6opAMuQL6CD5L-Ifc-60" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="giz6opAMuQL6CD5L-Ifc-46" value="C&lt;sub style=&quot;font-size: 8px;&quot;&gt;3&lt;/sub&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=8;" parent="giz6opAMuQL6CD5L-Ifc-38" vertex="1">
           <mxGeometry x="180" y="60" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="giz6opAMuQL6CD5L-Ifc-49" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;fontSize=8;endArrow=none;endFill=0;startArrow=classic;startFill=1;" parent="giz6opAMuQL6CD5L-Ifc-38" source="giz6opAMuQL6CD5L-Ifc-50" target="giz6opAMuQL6CD5L-Ifc-59" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="giz6opAMuQL6CD5L-Ifc-49" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;endArrow=none;endFill=0;startArrow=classic;startFill=1;" parent="giz6opAMuQL6CD5L-Ifc-38" target="giz6opAMuQL6CD5L-Ifc-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="160" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="4LwIGYQtiK0X5jhV_PXL-76" value="receives data over serial port" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="giz6opAMuQL6CD5L-Ifc-49">
+        <mxCell id="4LwIGYQtiK0X5jhV_PXL-76" value="receives data &lt;br&gt;over serial port" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="giz6opAMuQL6CD5L-Ifc-49">
           <mxGeometry x="-0.1779" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="6" y="-7" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="giz6opAMuQL6CD5L-Ifc-50" value="C&lt;sub style=&quot;font-size: 8px;&quot;&gt;4&lt;/sub&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=8;" parent="giz6opAMuQL6CD5L-Ifc-38" vertex="1">
-          <mxGeometry x="180" y="130" width="30" height="30" as="geometry" />
+          <mxGeometry x="177" y="136" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="giz6opAMuQL6CD5L-Ifc-56" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=8;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="giz6opAMuQL6CD5L-Ifc-38" source="giz6opAMuQL6CD5L-Ifc-57" target="giz6opAMuQL6CD5L-Ifc-58" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4LwIGYQtiK0X5jhV_PXL-75" value="queries data from opc-ua server" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="giz6opAMuQL6CD5L-Ifc-56">
+        <mxCell id="4LwIGYQtiK0X5jhV_PXL-75" value="queries data from &lt;br&gt;opc-ua server" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="giz6opAMuQL6CD5L-Ifc-56">
           <mxGeometry x="-0.2709" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="13" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="giz6opAMuQL6CD5L-Ifc-57" value="C&lt;sub&gt;5&lt;/sub&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=8;" parent="giz6opAMuQL6CD5L-Ifc-38" vertex="1">
@@ -1273,6 +1275,34 @@
         <mxCell id="4LwIGYQtiK0X5jhV_PXL-68" value="&lt;div&gt;C = Consumer = Consumer-Modul&lt;/div&gt;Actively query Data via OPC-UA&lt;br&gt;&lt;div&gt;or receives data over serial port&lt;/div&gt;&lt;div&gt;Pass data as time-stamped data &lt;br&gt;to the P2P Modul&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="giz6opAMuQL6CD5L-Ifc-38">
           <mxGeometry x="290" y="23" width="120" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="RN8lcnulz7yJuKMa5hw3-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=8;endArrow=classic;endFill=1;startArrow=none;startFill=0;" edge="1" parent="giz6opAMuQL6CD5L-Ifc-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="209.72000000000003" y="89" as="sourcePoint" />
+            <mxPoint x="290.00125" y="124.04048273754961" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RN8lcnulz7yJuKMa5hw3-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;fontSize=8;endArrow=classic;endFill=1;startArrow=none;startFill=0;" edge="1" parent="giz6opAMuQL6CD5L-Ifc-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="199.99660171779817" y="169.99660171779817" as="sourcePoint" />
+            <mxPoint x="286.7702987003455" y="264.39" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RN8lcnulz7yJuKMa5hw3-6" value="&lt;div&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;command-&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 6px;&quot;&gt;and-control &lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="RN8lcnulz7yJuKMa5hw3-5">
+          <mxGeometry x="-0.1779" relative="1" as="geometry">
+            <mxPoint x="-1" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RN8lcnulz7yJuKMa5hw3-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=8;endArrow=classic;endFill=1;startArrow=none;startFill=0;" edge="1" parent="giz6opAMuQL6CD5L-Ifc-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="190" as="sourcePoint" />
+            <mxPoint x="64.74000000000001" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RN8lcnulz7yJuKMa5hw3-8" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;command-&lt;br&gt;and-control &lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=6;" vertex="1" connectable="0" parent="RN8lcnulz7yJuKMa5hw3-7">
+          <mxGeometry x="-0.2709" y="1" relative="1" as="geometry">
+            <mxPoint x="-17" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="4LwIGYQtiK0X5jhV_PXL-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=6;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="giz6opAMuQL6CD5L-Ifc-67" target="03FQWcIXpWwCXw3tsXom-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -1283,7 +1313,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="WlJ_eelVZ-uwt1bojAnX" name="E2: Systemarchitektur">
-    <mxGraphModel dx="465" dy="2729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="335" dy="2560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
