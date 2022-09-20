@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T09:52:29.458Z" agent="5.0 (Macintosh)" etag="1cjhFuJkj_1QXlbFAawR" version="20.2.8" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-09-20T09:55:25.654Z" agent="5.0 (Macintosh)" etag="brhdoM6M44rgzpPVqytd" version="20.2.8" type="github" pages="7">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="499" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -15,7 +15,7 @@
             <mxRectangle width="104" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6Mo01X-mlYxBvYi0odGK-20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="6Mo01X-mlYxBvYi0odGK-18">
+        <mxCell id="6Mo01X-mlYxBvYi0odGK-20" value="&lt;b&gt;Scope&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" vertex="1" parent="6Mo01X-mlYxBvYi0odGK-18">
           <mxGeometry x="104" width="102" height="40" as="geometry">
             <mxRectangle width="102" height="40" as="alternateBounds" />
           </mxGeometry>
