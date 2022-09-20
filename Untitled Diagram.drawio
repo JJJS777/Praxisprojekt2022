@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-03T10:36:54.349Z" agent="5.0 (Macintosh)" etag="RsAzlJHG7yYHuoWdcdjK" version="20.2.7" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-09-20T09:41:37.330Z" agent="5.0 (Macintosh)" etag="z33g1hTWwk8uBqVqKgV3" version="20.2.8" type="github" pages="7">
   <diagram id="uun_jjjuWUNww76_Udy4" name="Vergleich">
-    <mxGraphModel dx="1251" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1163" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1682,6 +1682,14 @@
             <mxPoint x="8" y="-7" as="offset" />
           </mxGeometry>
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
+    <mxGraphModel dx="698" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
