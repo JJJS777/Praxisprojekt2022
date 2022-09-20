@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T11:33:36.035Z" agent="5.0 (Macintosh)" etag="Z8iuyzHhmH_VDOIIg51H" version="20.2.8" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2022-09-20T11:47:07.529Z" agent="5.0 (Macintosh)" etag="3JrKcfHbkHLMkD96Nl9_" version="20.2.8" type="github" pages="7">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="1269" dy="1067" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="6Mo01X-mlYxBvYi0odGK-1" value="Projekt Untergliederung" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;" vertex="1" parent="1">
+        <mxCell id="6Mo01X-mlYxBvYi0odGK-1" value="Projekt Untergliederung" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="120" y="110" width="600" height="670" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6Mo01X-mlYxBvYi0odGK-1">
