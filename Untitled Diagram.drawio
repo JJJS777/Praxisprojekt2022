@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T14:37:13.449Z" agent="5.0 (Macintosh)" etag="WUrJvKqDK9WjFrQL4EAU" version="20.2.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-20T15:33:59.845Z" agent="5.0 (Macintosh)" etag="JCabqA9GSwD8xEucdzuV" version="20.2.8" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="931" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -916,7 +916,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: Systemarchitektur">
-    <mxGraphModel dx="735" dy="1787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="982" dy="1808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1001,7 +1001,7 @@
           <mxGeometry x="270" y="-810" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="03FQWcIXpWwCXw3tsXom-1" value="Edge MQTT-Interface" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="270" y="-300" width="415" height="340" as="geometry">
+          <mxGeometry x="270" y="-300" width="410" height="340" as="geometry">
             <mxRectangle x="230" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -1050,7 +1050,7 @@
           <mxGeometry x="80.41000000000001" y="80.42" width="69.17" height="69.17" as="geometry" />
         </mxCell>
         <mxCell id="4LwIGYQtiK0X5jhV_PXL-70" value="&lt;div&gt;PM = Producer Modul (MQTT)&lt;br&gt;&lt;/div&gt;reads data from P2P Modul&lt;br&gt;sends data to MQTT Broker" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=6;" vertex="1" parent="03FQWcIXpWwCXw3tsXom-1">
-          <mxGeometry x="315" y="23" width="100" height="40" as="geometry" />
+          <mxGeometry x="310" y="23" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="03FQWcIXpWwCXw3tsXom-40" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;fontSize=8;endArrow=classic;endFill=1;startArrow=none;startFill=0;" parent="1" source="03FQWcIXpWwCXw3tsXom-9" edge="1">
           <mxGeometry relative="1" as="geometry">
