@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-20T13:46:16.076Z" agent="5.0 (Macintosh)" etag="E7gwepnL_-jYPkPmmIW-" version="20.2.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-20T13:47:49.344Z" agent="5.0 (Macintosh)" etag="_65AucE1mccCQJN6VD1M" version="20.2.8" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="931" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1270,7 +1270,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="otrTjjwqobNwjT9OWCsQ-1" value="Edge" style="swimlane;fillColor=none;strokeColor=#000000;rounded=1;" vertex="1" parent="1">
+        <mxCell id="otrTjjwqobNwjT9OWCsQ-1" value="Edge (decentralized network using P2P)" style="swimlane;fillColor=none;strokeColor=#000000;rounded=1;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="270" y="-1230" width="410" height="340" as="geometry">
             <mxRectangle x="230" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
