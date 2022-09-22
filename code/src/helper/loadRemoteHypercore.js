@@ -8,7 +8,7 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) 
     const sensorCore = coreStore.get(Buffer.from(remotePublicKey, "hex"))
     try {
         await sensorCore.ready()
-        console.log('Remote Core with Discovery Key: ' + sensorCore.discoveryKey.toString('hex') + ' has been Initialized')
+        console.log('Remote Core with Public Key: ' + sensorCore.key.toString('hex') + ' has been Initialized')
         console.log('Local Core is writeable: ' + sensorCore.writable)
         console.log('Local Core is readable: ' + sensorCore.readable)
     } catch (error) {
