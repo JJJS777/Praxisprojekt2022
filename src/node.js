@@ -22,14 +22,10 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pipeline(socket, stream, socket, (err) => {
-      if (err) {
-        console.error("Pipeline failed.", err);
-      } else {
-        console.log("Pipeline succeeded.");
-      }
-    });
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
   })
+
   console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
@@ -38,4 +34,15 @@ async function node(number) {
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2, swarm)
 
   console.log("finished")
+}
+
+async function replicate(socket, stream) {
+  console.log("Called replicate");
+  pipeline(socket, stream, socket, (err) => {
+    if (err) {
+      console.error("Pipeline failed.", err);
+    } else {
+      console.log("Pipeline succeeded.");
+    }
+  });
 }

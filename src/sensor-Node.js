@@ -51,13 +51,8 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pipeline(socket, stream, socket, (err) => {
-      if (err) {
-        console.error("Pipeline failed.", err);
-      } else {
-        console.log("Pipeline succeeded.");
-      }
-    });
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
   })
 
   // Start swarming the hypercore.
@@ -65,11 +60,9 @@ async function sensorNode(nodeNumber) {
     announce: true,
     lookup: true
   })
-  swarm.flush()
-
-  console.log('\n\nDATA FROM SENOR NODE 1:')
-  await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
-
+  //swarm.flush()
+  // console.log('\n\nDATA FROM SENOR NODE 1:')
+  // await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 }
 
 
@@ -77,5 +70,16 @@ async function sensorNode(nodeNumber) {
 async function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
+  });
+}
+
+async function replicate(socket, stream) {
+  console.log("Called replicate");
+  pipeline(socket, stream, socket, (err) => {
+    if (err) {
+      console.error("Pipeline failed.", err);
+    } else {
+      console.log("Pipeline succeeded.");
+    }
   });
 }
