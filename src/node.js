@@ -4,6 +4,7 @@ const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
+const pump = require('pump')
 require('dotenv').config();
 
 node()
