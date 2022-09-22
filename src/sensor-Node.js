@@ -13,7 +13,7 @@ const topic = Buffer.alloc(32).fill('sensor network')
 
 
 //**Run Node Programm */
-sensorNode()
+sensorNode('1')
 
 async function sensorNode(nodeNumber) {
   const localStore = new Corestore('./sensor-Server-Node-' + nodeNumber)
@@ -51,7 +51,7 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    const repStream = store.replicate(peerInfo.client, { live: true })
+    const repStream = localStore.replicate(peerInfo.client, { live: true })
     replicate(socket, repStream)
   })
 
