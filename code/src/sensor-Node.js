@@ -13,7 +13,7 @@ const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 byte
 
 
 //**Run Node Programm */
-sensorNode('2')
+sensorNode('1')
 
 async function sensorNode(nodeNumber) {
   const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeNumber)
