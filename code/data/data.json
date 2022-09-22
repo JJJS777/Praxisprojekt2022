@@ -1,0 +1,521 @@
+<ref *1> Peer {
+  core: Core {
+    onupdate: [Function: bound _oncoreupdate],
+    header: {
+      types: [Object],
+      userData: [],
+      tree: [Object],
+      signer: [Object],
+      hints: [Object],
+      contiguousLength: 0
+    },
+    crypto: {
+      keyPair: [Function (anonymous)],
+      validateKeyPair: [Function (anonymous)],
+      sign: [Function (anonymous)],
+      verify: [Function (anonymous)],
+      data: [Function (anonymous)],
+      parent: [Function (anonymous)],
+      tree: [Function (anonymous)],
+      randomBytes: [Function (anonymous)],
+      discoveryKey: [Function (anonymous)],
+      free: [Function (anonymous)],
+      namespace: [Function (anonymous)]
+    },
+    oplog: Oplog {
+      storage: [RandomAccessFile],
+      headerEncoding: [Object],
+      entryEncoding: [Object],
+      flushed: true,
+      byteLength: 115,
+      length: 1,
+      _headers: [Array],
+      _pageSize: 4096,
+      _entryOffset: 8192
+    },
+    tree: MerkleTree {
+      crypto: [Object],
+      fork: 0,
+      roots: [Array],
+      length: 3,
+      byteLength: 119,
+      signature: <Buffer 85 a8 0b c3 ba be fa ed 78 05 bc 2d 99 26 6a da 7f 32 94 83 dc 2c de 66 88 82 69 5e ab f7 47 c9 f9 bb 2b 12 c2 00 92 70 77 ef c7 e2 bd d3 ed 80 d1 c8 ... 14 more bytes>,
+      storage: [RandomAccessFile],
+      unflushed: [Map],
+      cache: [MaxCache],
+      flushing: null,
+      truncated: false,
+      truncateTo: 0
+    },
+    blocks: BlockStore { storage: [RandomAccessFile], tree: [MerkleTree] },
+    bitfield: Bitfield {
+      pageSize: 32768,
+      pages: [BigSparseArray],
+      unflushed: [Array],
+      storage: [RandomAccessFile],
+      resumed: true
+    },
+    defaultAuth: { sign: undefined, verify: [Function: verify] },
+    truncating: 0,
+    _maxOplogSize: 65536,
+    _autoFlush: 1,
+    _verifies: null,
+    _verifiesFlushed: null,
+    _mutex: Mutex {
+      locked: false,
+      destroyed: false,
+      _destroying: null,
+      _destroyError: null,
+      _queue: [],
+      _enqueue: [Function (anonymous)]
+    },
+    _legacy: false
+  },
+  replicator: Replicator {
+    key: <Buffer c8 1e e4 e3 f9 41 66 3f 86 d2 ec f0 09 e0 63 4b 1e f6 2c 39 29 d8 1b 65 a2 c1 35 5f 0f 77 88 e4>,
+    discoveryKey: <Buffer c5 da 94 fd 61 62 b8 35 e6 3a 64 58 54 14 55 c7 92 96 be 4d 34 ac ac c8 b2 06 3c 4b c4 ba 19 8c>,
+    core: Core {
+      onupdate: [Function: bound _oncoreupdate],
+      header: [Object],
+      crypto: [Object],
+      oplog: [Oplog],
+      tree: [MerkleTree],
+      blocks: [BlockStore],
+      bitfield: [Bitfield],
+      defaultAuth: [Object],
+      truncating: 0,
+      _maxOplogSize: 65536,
+      _autoFlush: 1,
+      _verifies: null,
+      _verifiesFlushed: null,
+      _mutex: [Mutex],
+      _legacy: false
+    },
+    eagerUpgrade: true,
+    allowFork: true,
+    onpeerupdate: [Function: bound _onpeerupdate],
+    onupload: [Function: bound _onupload],
+    peers: [ [Circular *1] ],
+    findingPeers: 0,
+    _inflight: InflightTracker { _requests: [], _free: [] },
+    _blocks: BlockTracker { _map: Map(0) {} },
+    _hashes: BlockTracker { _map: Map(0) {} },
+    _queued: [],
+    _seeks: [],
+    _upgrade: null,
+    _reorgs: [],
+    _ranges: [],
+    _hadPeers: true,
+    _ifAvailable: 0,
+    _updatesPending: 0,
+    _applyingReorg: false
+  },
+  stream: <ref *2> NoiseSecretStream {
+    _events: [Object: null prototype] {
+      data: [Function: bound _ondata],
+      end: [Function: bound _onend],
+      error: [Function: noop],
+      close: [Function: bound _shutdown]
+    },
+    _eventsCount: 4,
+    _maxListeners: undefined,
+    _duplexState: 165008,
+    _readableState: ReadableState {
+      stream: [Circular *2],
+      queue: [FastFIFO],
+      highWaterMark: 16384,
+      buffered: 0,
+      error: null,
+      pipeline: null,
+      byteLength: [Function: defaultByteLength],
+      map: null,
+      pipeTo: null,
+      afterRead: [Function: bound afterRead],
+      afterUpdateNextTick: [Function: bound updateReadNT]
+    },
+    _writableState: WritableState {
+      stream: [Circular *2],
+      queue: [FastFIFO],
+      highWaterMark: 16384,
+      buffered: 0,
+      error: null,
+      pipeline: null,
+      byteLength: [Function: defaultByteLength],
+      map: [Function: toBuffer],
+      afterWrite: [Function: bound afterWrite],
+      afterUpdateNextTick: [Function: bound updateWriteNT]
+    },
+    noiseStream: [Circular *2],
+    isInitiator: true,
+    rawStream: Bridge {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      _duplexState: 4358544,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      noiseStream: [Circular *2],
+      _ondrain: null,
+      reverse: [ReversePassThrough],
+      [Symbol(kCapture)]: false
+    },
+    publicKey: <Buffer a6 86 3d 5c c5 b7 ae 12 85 84 85 6e 70 d4 55 55 cf ce 9b df 59 a1 d1 13 73 ec 7d 36 c8 89 b8 cf>,
+    remotePublicKey: <Buffer 83 b4 c6 3a 9f df 94 26 fd 05 57 47 c5 20 e0 f1 ed 09 ae 90 04 d6 02 64 d1 89 70 f6 84 55 c3 4c>,
+    handshakeHash: <Buffer 76 8a d9 6f 8b 25 ef 75 7c f2 dc eb f4 45 44 50 2c e4 96 7f f7 29 6d b8 2d 15 ef e2 ac ac b1 c9 94 c5 b7 3b a0 dd 7f af 96 cd 61 2b 30 15 d0 b6 18 77 ... 14 more bytes>,
+    userData: Protomux {
+      isProtomux: true,
+      stream: [Circular *2],
+      corked: 0,
+      _alloc: [Function: bound alloc],
+      _safeDestroyBound: [Function: bound _safeDestroy],
+      _remoteBacklog: 0,
+      _buffered: 0,
+      _paused: false,
+      _remote: [Array],
+      _local: [Array],
+      _free: [],
+      _batch: null,
+      _batchState: null,
+      _infos: [Map],
+      _notify: [Map]
+    },
+    opened: Promise { true },
+    _rawStream: ReversePassThrough {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      _duplexState: 4359312,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      _stream: [Bridge],
+      _ondrain: null,
+      [Symbol(kCapture)]: false
+    },
+    _handshake: null,
+    _handshakePattern: null,
+    _handshakeDone: null,
+    _state: 0,
+    _len: 0,
+    _tmp: 1,
+    _message: null,
+    _openedDone: null,
+    _startDone: null,
+    _drainDone: null,
+    _outgoingPlain: null,
+    _outgoingWrapped: null,
+    _utp: null,
+    _setup: false,
+    _ended: 2,
+    _encrypt: Push {
+      key: <Buffer a8 86 68 55 fa 06 fd 6d f1 dd 9e 24 f6 b1 ff cd 57 1b 3d 2f f7 3e 94 61 95 58 aa 7b c7 cd 79 ac>,
+      state: <Buffer 1f cf 6c 8c bf 84 f6 14 7b 82 c8 2e c5 1b 71 f7 8e 8c f5 52 a3 07 ca 98 fd 1c 22 c8 7a d6 aa 50 04 00 00 00 64 f5 b1 d5 51 53 63 56 00 00 00 00 00 00 ... 2 more bytes>,
+      header: <Buffer 25 ea 2f a6 db 61 11 4a 6f 36 25 10 0f 1c b2 db e2 49 ae 36 e4 b9 7c 75>
+    },
+    _decrypt: Pull {
+      key: <Buffer d3 49 4b a1 67 17 c2 18 cc b8 cd f8 21 e5 66 93 64 b5 bf d3 06 ee b6 c3 ab 0c 18 5c 3c e1 af 37>,
+      state: <Buffer 3c a9 fd 7e 42 02 ea b3 4f 96 82 ea ef 81 6e 9d 24 4a f2 0b 21 d3 4a c8 f0 e5 ee 3c 63 ac a9 b9 02 00 00 00 59 ef cc de 99 32 d7 c9 00 00 00 00 00 00 ... 2 more bytes>,
+      final: false
+    },
+    _timeout: null,
+    _timeoutMs: 0,
+    _keepAlive: Timer {
+      ms: 5000,
+      ontimeout: [Function: sendKeepAlive],
+      context: [Circular *2],
+      interval: true,
+      done: false,
+      _timer: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 9612,
+        _onTimeout: [Function: callInterval],
+        _timerArgs: [Array],
+        _repeat: 5000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 935,
+        [Symbol(triggerId)]: 930
+      }
+    },
+    _keepAliveMs: 5000,
+    [Symbol(kCapture)]: false
+  },
+  protomux: <ref *3> Protomux {
+    isProtomux: true,
+    stream: <ref *2> NoiseSecretStream {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _duplexState: 165008,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      noiseStream: [Circular *2],
+      isInitiator: true,
+      rawStream: [Bridge],
+      publicKey: <Buffer a6 86 3d 5c c5 b7 ae 12 85 84 85 6e 70 d4 55 55 cf ce 9b df 59 a1 d1 13 73 ec 7d 36 c8 89 b8 cf>,
+      remotePublicKey: <Buffer 83 b4 c6 3a 9f df 94 26 fd 05 57 47 c5 20 e0 f1 ed 09 ae 90 04 d6 02 64 d1 89 70 f6 84 55 c3 4c>,
+      handshakeHash: <Buffer 76 8a d9 6f 8b 25 ef 75 7c f2 dc eb f4 45 44 50 2c e4 96 7f f7 29 6d b8 2d 15 ef e2 ac ac b1 c9 94 c5 b7 3b a0 dd 7f af 96 cd 61 2b 30 15 d0 b6 18 77 ... 14 more bytes>,
+      userData: [Circular *3],
+      opened: [Promise],
+      _rawStream: [ReversePassThrough],
+      _handshake: null,
+      _handshakePattern: null,
+      _handshakeDone: null,
+      _state: 0,
+      _len: 0,
+      _tmp: 1,
+      _message: null,
+      _openedDone: null,
+      _startDone: null,
+      _drainDone: null,
+      _outgoingPlain: null,
+      _outgoingWrapped: null,
+      _utp: null,
+      _setup: false,
+      _ended: 2,
+      _encrypt: [Push],
+      _decrypt: [Pull],
+      _timeout: null,
+      _timeoutMs: 0,
+      _keepAlive: [Timer],
+      _keepAliveMs: 5000,
+      [Symbol(kCapture)]: false
+    },
+    corked: 0,
+    _alloc: [Function: bound alloc],
+    _safeDestroyBound: [Function: bound _safeDestroy],
+    _remoteBacklog: 0,
+    _buffered: 0,
+    _paused: false,
+    _remote: [ [Object] ],
+    _local: [ [Channel], [Channel] ],
+    _free: [],
+    _batch: null,
+    _batchState: null,
+    _infos: Map(2) {
+      'hypercore/alpha##c5da94fd6162b835e63a6458541455c79296be4d34acacc8b2063c4bc4ba198c' => [Object],
+      'hypercore/alpha##c8823469962b759eb821744687913411fc2ab68b1bc4c4fbd03becfc4e019547' => [Object]
+    },
+    _notify: Map(3) {
+      'hypercore/alpha##' => [Function: ondiscoverykey],
+      'hypercore/alpha##c5da94fd6162b835e63a6458541455c79296be4d34acacc8b2063c4bc4ba198c' => [Function: bound _makePeer],
+      'hypercore/alpha##c8823469962b759eb821744687913411fc2ab68b1bc4c4fbd03becfc4e019547' => [Function: bound _makePeer]
+    }
+  },
+  remotePublicKey: <Buffer 83 b4 c6 3a 9f df 94 26 fd 05 57 47 c5 20 e0 f1 ed 09 ae 90 04 d6 02 64 d1 89 70 f6 84 55 c3 4c>,
+  channel: Channel {
+    userData: [Circular *1],
+    protocol: 'hypercore/alpha',
+    id: <Buffer c5 da 94 fd 61 62 b8 35 e6 3a 64 58 54 14 55 c7 92 96 be 4d 34 ac ac c8 b2 06 3c 4b c4 ba 19 8c>,
+    handshake: {
+      capability: <Buffer 9d 8b 70 8a 47 82 21 21 9a 40 f6 51 49 6c 40 0c d8 84 53 33 ad 5c 01 b3 68 b9 33 7d 7b 0b dd f3>
+    },
+    messages: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    opened: true,
+    closed: false,
+    destroyed: false,
+    onopen: [Function: onwireopen],
+    onclose: [Function: onwireclose],
+    ondestroy: [Function: noop],
+    _handshake: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    _mux: <ref *3> Protomux {
+      isProtomux: true,
+      stream: [NoiseSecretStream],
+      corked: 0,
+      _alloc: [Function: bound alloc],
+      _safeDestroyBound: [Function: bound _safeDestroy],
+      _remoteBacklog: 0,
+      _buffered: 0,
+      _paused: false,
+      _remote: [Array],
+      _local: [Array],
+      _free: [],
+      _batch: null,
+      _batchState: null,
+      _infos: [Map],
+      _notify: [Map]
+    },
+    _info: {
+      key: 'hypercore/alpha##c5da94fd6162b835e63a6458541455c79296be4d34acacc8b2063c4bc4ba198c',
+      protocol: 'hypercore/alpha',
+      id: <Buffer c5 da 94 fd 61 62 b8 35 e6 3a 64 58 54 14 55 c7 92 96 be 4d 34 ac ac c8 b2 06 3c 4b c4 ba 19 8c>,
+      pairing: 0,
+      opened: 1,
+      incoming: [],
+      outgoing: []
+    },
+    _localId: 1,
+    _remoteId: 1,
+    _active: 0,
+    _extensions: null,
+    _decBound: [Function: bound _dec],
+    _decAndDestroyBound: [Function: bound _decAndDestroy]
+  },
+  wireSync: {
+    type: 0,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwiresync],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireRequest: {
+    type: 1,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwirerequest],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireCancel: null,
+  wireData: {
+    type: 3,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwiredata],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireNoData: {
+    type: 4,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwirenodata],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireWant: {
+    type: 5,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwirewant],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireUnwant: {
+    type: 6,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwireunwant],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireBitfield: {
+    type: 7,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwirebitfield],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireRange: {
+    type: 8,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwirerange],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  wireExtension: {
+    type: 9,
+    encoding: {
+      preencode: [Function: preencode],
+      encode: [Function: encode],
+      decode: [Function: decode]
+    },
+    onmessage: [Function: onwireextension],
+    recv: [Function: recv],
+    send: [Function: send]
+  },
+  inflight: 0,
+  maxInflight: 32,
+  dataProcessing: 0,
+  canUpgrade: true,
+  needsSync: false,
+  syncsProcessing: 0,
+  remoteOpened: true,
+  remoteBitfield: RemoteBitfield {
+    pageSize: 32768,
+    pages: BigSparseArray { tiny: [TinyArray], maxLength: 4096, factor: 1 }
+  },
+  remoteFork: 0,
+  remoteLength: 0,
+  remoteCanUpgrade: false,
+  remoteUploading: true,
+  remoteDownloading: true,
+  remoteSynced: false,
+  segmentsWanted: Set(0) {},
+  broadcastedNonSparse: false,
+  lengthAcked: 0,
+  extensions: Map(1) {
+    'hyperbee' => {
+      name: 'hyperbee',
+      handlers: [HyperbeeExtension],
+      encoding: [Object],
+      session: Hypercore(
+        key: c81ee4e3f941663f86d2ecf009e0634b1ef62c3929d81b65a2c1355f0f7788e4
+        discoveryKey: c5da94fd6162b835e63a6458541455c79296be4d34acacc8b2063c4bc4ba198c
+        opened: true
+        closed: false
+        snapshotted: false
+        sparse: true
+        writable: false
+        length: 3
+        byteLength: 119
+        fork: 0
+        sessions: [ 4 ]
+        activeRequests: [ 0 ]
+        peers: [
+          Peer(
+            remotePublicKey: 83b4c63a9fdf9426fd055747c520e0f1ed09ae9004d60264d18970f68455c34c
+            remoteLength: 0
+            remoteFork: 0
+            remoteCanUpgrade: false
+          )
+        ]
+      ),
+      send: [Function: send],
+      broadcast: [Function: broadcast],
+      destroy: [Function: destroy],
+      _onmessage: [Function: _onmessage]
+    }
+  },
+  lastExtensionSent: '',
+  lastExtensionRecv: ''
+}

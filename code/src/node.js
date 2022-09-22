@@ -3,14 +3,16 @@ const chalk = require('chalk')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
+const { pipeline } = require("stream");
 const pump = require('pump')
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 require('dotenv').config();
 
-node()
+node('777')
 
 async function node(number) {
 
-  const store = new Corestore('./node-' + number)
+  const store = new Corestore('../data/nodes/node-' + number)
   try {
     await store.ready()
   } catch (error) {
@@ -22,18 +24,33 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pump(
-      socket,
-      store.replicate(peerInfo.client),
-      socket
-    )
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
   })
+
+  //**Connecting to Hyperswam */
+  // Start swarming the hypercore.
+  swarm.join(topic, {
+    announce: true,
+    lookup: true
+  })
+
   console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
-  //**TODO */
   console.log('\n\nDATA FROM SENOR NODE 2:')
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2, swarm)
 
   console.log("finished")
+}
+
+async function replicate(socket, stream) {
+  console.log("Called replicate");
+  pipeline(socket, stream, socket, (err) => {
+    if (err) {
+      console.error("Pipeline failed.", err);
+    } else {
+      console.log("Pipeline succeeded.");
+    }
+  });
 }
