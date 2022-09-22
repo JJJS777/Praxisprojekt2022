@@ -3,7 +3,7 @@ const chalk = require('chalk')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
-const pump = require('pump')
+const { pipeline } = require("stream");
 require('dotenv').config();
 
 node()
@@ -22,11 +22,13 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pump(
-      socket,
-      store.replicate(peerInfo.client),
-      socket
-    )
+    pipeline(socket, stream, socket, (err) => {
+      if (err) {
+        console.error("Pipeline failed.", err);
+      } else {
+        console.log("Pipeline succeeded.");
+      }
+    });
   })
   console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)

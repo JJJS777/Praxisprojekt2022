@@ -3,7 +3,7 @@ const readGPU = require('./helper/readMuonCPU')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
-const pump = require('pump')
+const { pipeline } = require("stream");
 const { once } = require("events");
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
@@ -51,11 +51,13 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pump(
-      socket,
-      localStore.replicate(peerInfo.client),
-      socket
-    )
+    pipeline(socket, stream, socket, (err) => {
+      if (err) {
+        console.error("Pipeline failed.", err);
+      } else {
+        console.log("Pipeline succeeded.");
+      }
+    });
   })
 
   // Start swarming the hypercore.
