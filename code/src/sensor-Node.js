@@ -15,8 +15,8 @@ const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 byte
 //**Run Node Programm */
 sensorNode('1')
 
-async function sensorNode(nodeNumber) {
-  const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeNumber)
+async function sensorNode(nodeIndex) {
+  const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeIndex)
   try {
     await store.ready()
   } catch (error) {
@@ -44,6 +44,9 @@ async function sensorNode(nodeNumber) {
     console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
+    sendMsg(socket, number)
+    readMsg(socket)
+
     const repStream = store.replicate(peerInfo.client, { live: true })
     replicate(socket, repStream)
   })
@@ -61,7 +64,7 @@ async function sensorNode(nodeNumber) {
   while (true) {
     let returnValues
 
-    if (nodeNumber == '1') {
+    if (nodeIndex == '1') {
       returnValues = await readGPU()
     } else {
       returnValues = await readCPU()
@@ -92,5 +95,30 @@ async function replicate(socket, stream) {
     } else {
       console.log("Pipeline succeeded.");
     }
+  });
+}
+
+
+async function sendMsg(socket, nodeIndex) {
+  console.log("Called sendMsg" + Date.now());
+  try {
+    socket.write(
+      JSON.stringify({
+        index: nodeIndex,
+        typ: "Normal-Node",
+        typNumber: 1,
+        msg: "empty",
+      })
+    );
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function readMsg(socket) {
+  console.log("Called readMsg" + Date.now());
+  socket.on("data", (data) => {
+    const resData = JSON.parse(data);
+    console.log("received: " + resData.typ + " " + resData.index);
   });
 }
