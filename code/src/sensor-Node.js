@@ -30,13 +30,35 @@ async function sensorNode(nodeNumber) {
     console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
     console.log('Local Core is writeable: ' + localCore.writable)
     console.log('Local Core is readable: ' + localCore.readable)
-    console.log('Local Cores Discovery Key: ' + localCore.discoveryKey.toString('hex'))
+    //console.log('Local Cores Discovery Key: ' + localCore.discoveryKey.toString('hex'))
   } catch (error) {
     console.error(error)
   }
 
+  /**Connect to DHT */
+  const swarm = new Hyperswarm() //nur ein mal je code
+
+  //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
+  // Replicate whenever a new connection is created.
+  swarm.on('connection', (socket, peerInfo) => {
+    console.log('Public Key from peerInfo-objekt on connection:'
+      + peerInfo.publicKey.toString('hex'))
+
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
+  })
+
+  // Start swarming the hypercore.
+  swarm.join(topic, {
+    announce: true,
+    lookup: true
+  })
+  //swarm.flush()
+  // console.log('\n\nDATA FROM SENOR NODE 1:')
+  // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
+
   const bee = await initHyperbee(localCore)
-  for (var i = 0; i < 2; i++) {
+  while (true) {
     let returnValues
 
     if (nodeNumber == '1') {
@@ -52,24 +74,6 @@ async function sensorNode(nodeNumber) {
     await sleep(10000)
   }
 
-  /**Connect to DHT */
-  const swarm = new Hyperswarm() //nur ein mal je code
-
-  //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
-  // Replicate whenever a new connection is created.
-  swarm.on('connection', (socket, peerInfo) => {
-    const repStream = store.replicate(peerInfo.client, { live: true })
-    replicate(socket, repStream)
-  })
-
-  // Start swarming the hypercore.
-  swarm.join(topic, {
-    announce: true,
-    lookup: true
-  })
-  //swarm.flush()
-  // console.log('\n\nDATA FROM SENOR NODE 1:')
-  // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 }
 
 
