@@ -23,7 +23,7 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    console.log('peers Noise public key from peerInfo-objekt on connection:'
+    console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
     const repStream = store.replicate(peerInfo.client, { live: true })
@@ -43,8 +43,8 @@ async function node(number) {
   // console.log('\n\nDATA FROM SENOR NODE 2:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2)
 
-  console.log('\n\nDATA FROM SENOR NODE 3:')
-  await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_3)
+  // console.log('\n\nDATA FROM SENOR NODE 3:')
+  // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_3)
 
 
   console.log("---END-OF-CODE---")

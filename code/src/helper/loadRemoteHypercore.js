@@ -28,7 +28,8 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey) {
         // console.log("Connected to peer", peer.remotePublicKey.toString('hex'));
     }
 
-    const readStream = bee.createReadStream({ live: true, limit: 5 })
+    // nur mit createHistoryStream ist live-update möglich. weiter möglichkeit sich auf änderunge zu suben?
+    const readStream = bee.createHistoryStream({ reverse: true, limit: 1 })
     for await (const entry of readStream) {
         console.log(entry)
     }
