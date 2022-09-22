@@ -3,7 +3,7 @@ const initHyperbee = require('./initHyperbee')
 
 module.exports = async function remoteSensor(coreStore, remotePublicKey) {
     //**Init Hypercore with RPK */
-    const sensorCore = coreStore.get(Buffer.from(remotePublicKey, "hex"))
+    const sensorCore = coreStore.get(Buffer.from(remotePublicKey, "hex"), { sparse: true })
     try {
         await sensorCore.ready()
         console.log('Remote Core with Public Key: ' + sensorCore.key.toString('hex') + ' has been Initialized')
@@ -28,7 +28,7 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey) {
         // console.log("Connected to peer", peer.remotePublicKey.toString('hex'));
     }
 
-    const readStream = bee.createReadStream({ live: false, limit: 5 })
+    const readStream = bee.createReadStream({ live: true, limit: 5 })
     for await (const entry of readStream) {
         console.log(entry)
     }

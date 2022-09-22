@@ -23,7 +23,7 @@ async function sensorNode(nodeNumber) {
     console.error(error)
   }
 
-  const localCore = store.get({ name: 'Local-Sensor-Core' })
+  const localCore = store.get({ name: 'Local-Sensor-Core' }, { sparse: true })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
@@ -41,7 +41,7 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    console.log('Public Key from peerInfo-objekt on connection:'
+    console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
     const repStream = store.replicate(peerInfo.client, { live: true })

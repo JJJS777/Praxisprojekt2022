@@ -23,7 +23,7 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    console.log('Public Key from peerInfo-objekt on connection:'
+    console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
     const repStream = store.replicate(peerInfo.client, { live: true })
