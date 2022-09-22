@@ -15,14 +15,14 @@ const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 byte
 sensorNode('1')
 
 async function sensorNode(nodeNumber) {
-  const localStore = new Corestore('./sensor-Server-Node-' + nodeNumber)
+  const store = new Corestore('./sensor-Server-Node-' + nodeNumber)
   try {
-    await localStore.ready()
+    await store.ready()
   } catch (error) {
     console.error(error)
   }
 
-  const localCore = localStore.get({ name: 'Local-Sensor-Core' })
+  const localCore = store.get({ name: 'Local-Sensor-Core' })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
@@ -64,7 +64,7 @@ async function sensorNode(nodeNumber) {
   })
   //swarm.flush()
   // console.log('\n\nDATA FROM SENOR NODE 1:')
-  // await remoteSensor(localStore, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
+  // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 }
 
 
