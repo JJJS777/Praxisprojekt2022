@@ -1,13 +1,8 @@
 #Local Project Folder
-sensor-Server-Node-1
-sensor-Server-Node-2
-node-3
-node-4
-node-5
-node-6
-node-7
-node-8
-node-9
+sensor-Server-Node-*
+sensor-node-*
+node-*
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,node
