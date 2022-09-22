@@ -23,11 +23,8 @@ async function node(number) {
 
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pump(
-      socket,
-      store.replicate(peerInfo.client),
-      socket
-    )
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
   })
 
   console.log('\n\nDATA FROM SENOR NODE 1:')

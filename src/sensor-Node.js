@@ -50,11 +50,8 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    pump(
-      socket,
-      store.replicate(peerInfo.client),
-      socket
-    )
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    replicate(socket, repStream)
   })
 
   // Start swarming the hypercore.
