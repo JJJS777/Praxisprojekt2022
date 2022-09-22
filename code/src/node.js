@@ -11,7 +11,7 @@ node('777')
 
 async function node(nodeIndex) {
 
-  const store = new Corestore('../data/nodes/node-' + number)
+  const store = new Corestore('../data/nodes/node-' + nodeIndex)
   try {
     await store.ready()
   } catch (error) {
@@ -26,7 +26,7 @@ async function node(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
-    sendMsg(socket, number)
+    sendMsg(socket, nodeIndex)
     readMsg(socket)
 
     const repStream = store.replicate(peerInfo.client, { live: true })
@@ -58,12 +58,12 @@ async function replicate(socket, stream) {
 }
 
 
-async function sendMsg(socket, nodeNumber) {
+async function sendMsg(socket, nodeIndex) {
   console.log("Called sendMsg" + Date.now());
   try {
     socket.write(
       JSON.stringify({
-        index: nodeNumber,
+        index: nodeIndex,
         typ: "Normal-Node",
         typNumber: 1,
         msg: "empty",
