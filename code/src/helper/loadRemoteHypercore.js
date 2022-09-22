@@ -13,7 +13,6 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey) {
         console.error(error)
     }
 
-
     //**Init and Query DB */
     const bee = await initHyperbee(sensorCore)
 
@@ -29,6 +28,7 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey) {
     }
 
     // nur mit createHistoryStream ist live-update möglich. weiter möglichkeit sich auf änderunge zu suben?
+    // hier handelt es sich doch auch um einen stream, kann man den nichr direkt pipen?
     const readStream = bee.createHistoryStream({ reverse: true, limit: 1 })
     for await (const entry of readStream) {
         console.log(entry)
