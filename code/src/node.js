@@ -38,6 +38,9 @@ async function node(number) {
   console.log('\n\nDATA FROM SENOR NODE 1:')
   await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
+  console.log('\n\nDATA FROM SENOR NODE 2:')
+  await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2, swarm)
+
   console.log("finished")
 }
 
