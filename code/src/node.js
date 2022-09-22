@@ -7,11 +7,11 @@ const { pipeline } = require("stream");
 const pump = require('pump')
 require('dotenv').config();
 
-node()
+node('777')
 
 async function node(number) {
 
-  const store = new Corestore('./node-' + number)
+  const store = new Corestore('../data/nodes/node-' + number)
   try {
     await store.ready()
   } catch (error) {
