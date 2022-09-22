@@ -44,9 +44,6 @@ async function sensorNode(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
-    sendMsg(socket, nodeIndex)
-    readMsg(socket)
-
     const repStream = store.replicate(peerInfo.client, { live: true })
     replicate(socket, repStream)
   })
@@ -100,7 +97,7 @@ async function replicate(socket, stream) {
 
 
 async function sendMsg(socket, nodeIndex) {
-  console.log("Called sendMsg" + Date.now());
+  console.log("Called sendMsg");
   try {
     socket.write(
       JSON.stringify({
@@ -116,7 +113,7 @@ async function sendMsg(socket, nodeIndex) {
 }
 
 async function readMsg(socket) {
-  console.log("Called readMsg" + Date.now());
+  console.log("Called readMsg");
   socket.on("data", (data) => {
     const resData = JSON.parse(data);
     console.log("received: " + resData.typ + " " + resData.index);
