@@ -7,8 +7,7 @@ const { pipeline } = require("stream");
 const { once } = require("events");
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
-
-const topic = Buffer.alloc(32).fill('sensor network')
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 
 
 
@@ -51,8 +50,11 @@ async function sensorNode(nodeNumber) {
   //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    const repStream = localStore.replicate(peerInfo.client, { live: true })
-    replicate(socket, repStream)
+    pump(
+      socket,
+      store.replicate(peerInfo.client),
+      socket
+    )
   })
 
   // Start swarming the hypercore.
