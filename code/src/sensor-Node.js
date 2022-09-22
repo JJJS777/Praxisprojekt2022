@@ -1,5 +1,6 @@
 const chalk = require('chalk')
-const readGPU = require('./helper/readMuonCPU')
+const readGPU = require('./helper/readGPU')
+const readCPU = require('./helper/readCPU')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
@@ -12,7 +13,7 @@ const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 byte
 
 
 //**Run Node Programm */
-sensorNode('1')
+sensorNode('2')
 
 async function sensorNode(nodeNumber) {
   const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeNumber)
@@ -36,7 +37,14 @@ async function sensorNode(nodeNumber) {
 
   const bee = await initHyperbee(localCore)
   for (var i = 0; i < 2; i++) {
-    const returnValues = await readGPU()
+    let returnValues
+
+    if (nodeNumber == '1') {
+      returnValues = await readGPU()
+    } else {
+      returnValues = await readCPU()
+    }
+
     await bee.put(returnValues.date, returnValues.temp)
     console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
     // After the append, we can see that the length has updated.

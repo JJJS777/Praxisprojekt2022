@@ -1,7 +1,5 @@
 const { once } = require("events");
 const initHyperbee = require('./initHyperbee')
-const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
-
 
 module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) {
     //**Init Hypercore with RPK */
@@ -15,12 +13,6 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey, swarm) 
         console.error(error)
     }
 
-    //**Connecting to Hyperswam */
-    // Start swarming the hypercore.
-    swarm.join(topic, {
-        announce: true,
-        lookup: true
-    })
 
     //**Init and Query DB */
     const bee = await initHyperbee(sensorCore)

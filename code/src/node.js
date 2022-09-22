@@ -5,6 +5,7 @@ const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
 const pump = require('pump')
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 require('dotenv').config();
 
 node('777')
@@ -25,6 +26,13 @@ async function node(number) {
   swarm.on('connection', (socket, peerInfo) => {
     const repStream = store.replicate(peerInfo.client, { live: true })
     replicate(socket, repStream)
+  })
+
+  //**Connecting to Hyperswam */
+  // Start swarming the hypercore.
+  swarm.join(topic, {
+    announce: true,
+    lookup: true
   })
 
   console.log('\n\nDATA FROM SENOR NODE 1:')
