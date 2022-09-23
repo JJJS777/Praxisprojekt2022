@@ -44,16 +44,15 @@ async function node(nodeIndex) {
   console.log('\n\nDATA FROM SENOR NODE 1:')
   const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
 
-  console.log(sensorCore1.length)
-
   //**Init and Query DB */
   const bee = await initHyperbee(sensorCore1)
 
   let updated = await sensorCore1.update();
-  await sensorCore1.get(sensorCore1.length - 1)
+  //await sensorCore1.get(sensorCore1.length - 1)
   console.log("core was updated?", updated, "length is", sensorCore1.length);
   console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
 
+  const [peer] = await once(bee.feed, "peer-add");
   const readStream = bee.createReadStream()
   for await (const entry of readStream) {
     console.log(entry)
