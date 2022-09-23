@@ -33,4 +33,6 @@ module.exports = async function remoteSensor(coreStore, remotePublicKey) {
     for await (const entry of readStream) {
         console.log(entry)
     }
+
+    return sensorCore
 }

@@ -38,7 +38,10 @@ async function node(nodeIndex) {
   })
 
   console.log('\n\nDATA FROM SENOR NODE 1:')
-  await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
+  const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
+
+  const updated = await sensorCore1.update();
+  console.log("core was updated?", updated, "length is", sensorCore1.length);
 
   console.log("---END-OF-CODE---")
 }
