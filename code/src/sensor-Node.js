@@ -22,7 +22,7 @@ async function sensorNode(nodeIndex) {
     console.error(error)
   }
 
-  const localCore = store.get({ name: 'Local-Sensor-Core' }, { sparse: true })
+  const localCore = store.get({ name: 'Local-Sensor-Core' })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
@@ -52,19 +52,14 @@ async function sensorNode(nodeIndex) {
     announce: true,
     lookup: true
   })
-  //swarm.flush()
+  // swarm.flush()
   // console.log('\n\nDATA FROM SENOR NODE 1:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
   const bee = await initHyperbee(localCore)
   while (true) {
-    let returnValues
 
-    if (nodeIndex == '1') {
-      returnValues = await readGPU()
-    } else {
-      returnValues = await readCPU()
-    }
+    returnValues = await readGPU()
 
     await bee.put(returnValues.date, returnValues.temp)
     console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)

@@ -49,25 +49,12 @@ async function node(nodeIndex) {
   //**Init and Query DB */
   const bee = await initHyperbee(sensorCore1)
 
-  // let updated = await sensorCore1.update();
-  // await sensorCore1.get(sensorCore1.length - 1)
-  // console.log("core was updated?", updated, "length is", sensorCore1.length);
-  // console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
+  let updated = await sensorCore1.update();
+  await sensorCore1.get(sensorCore1.length - 1)
+  console.log("core was updated?", updated, "length is", sensorCore1.length);
+  console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
 
-
-  // while (true) {
-
-  //   // nur mit createHistoryStream ist live-update möglich. weiter möglichkeit sich auf änderunge zu suben?
-  //   // hier handelt es sich doch auch um einen stream, kann man den nichr direkt pipen?
-  //   const readStream = bee.createReadStream({ reverse: true, limit: 1 })
-  //   for await (const entry of readStream) {
-  //     console.log(entry)
-  //   }
-
-  //   await sleep(5000)
-  // }
-
-  const readStream = bee.createReadStream({ reverse: true, limit: 1 })
+  const readStream = bee.createReadStream()
   for await (const entry of readStream) {
     console.log(entry)
   }
