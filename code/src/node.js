@@ -8,6 +8,7 @@ const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 byte
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
 const { once } = require("events");
+const pump = require('pump')
 
 
 
@@ -30,8 +31,8 @@ async function node(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
-    const repStream = store.replicate(peerInfo.client, { live: true })
-    replicate(socket, repStream)
+    const repStream = store.replicate(peerInfo.client)
+    pumpRep(socket, repStream)
   })
 
   //**Connecting to Hyperswam */
@@ -102,4 +103,12 @@ async function readMsg(socket) {
     const resData = JSON.parse(data);
     console.log("received: " + resData.typ + " " + resData.index);
   });
+}
+
+function pumpRep(socket, stream) {
+  pump(
+    socket,
+    stream,
+    socket
+  )
 }
