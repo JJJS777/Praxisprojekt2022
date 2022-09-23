@@ -5,7 +5,6 @@ const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
-const pump = require('pump')
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
 const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes

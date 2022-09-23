@@ -6,6 +6,10 @@ const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
 const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 require('dotenv').config();
+const initHyperbee = require('./helper/initHyperbee')
+const { once } = require("events");
+
+
 
 node('777')
 
@@ -40,10 +44,42 @@ async function node(nodeIndex) {
   console.log('\n\nDATA FROM SENOR NODE 1:')
   const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
 
-  const updated = await sensorCore1.update();
-  console.log("core was updated?", updated, "length is", sensorCore1.length);
+  console.log(sensorCore1.length)
+
+  //**Init and Query DB */
+  const bee = await initHyperbee(sensorCore1)
+
+  // let updated = await sensorCore1.update();
+  // await sensorCore1.get(sensorCore1.length - 1)
+  // console.log("core was updated?", updated, "length is", sensorCore1.length);
+  // console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
+
+
+  // while (true) {
+
+  //   // nur mit createHistoryStream ist live-update möglich. weiter möglichkeit sich auf änderunge zu suben?
+  //   // hier handelt es sich doch auch um einen stream, kann man den nichr direkt pipen?
+  //   const readStream = bee.createReadStream({ reverse: true, limit: 1 })
+  //   for await (const entry of readStream) {
+  //     console.log(entry)
+  //   }
+
+  //   await sleep(5000)
+  // }
+
+  const readStream = bee.createReadStream({ reverse: true, limit: 1 })
+  for await (const entry of readStream) {
+    console.log(entry)
+  }
 
   console.log("---END-OF-CODE---")
+}
+
+//**Helper Funktions */
+async function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 }
 
 async function replicate(socket, stream) {
