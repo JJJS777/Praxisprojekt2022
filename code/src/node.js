@@ -32,7 +32,11 @@ async function node(nodeIndex) {
       + peerInfo.publicKey.toString('hex'))
 
     const repStream = store.replicate(peerInfo.client)
-    pumpRep(socket, repStream)
+    pump(
+      socket,
+      repStream,
+      socket
+    )
   })
 
   //**Connecting to Hyperswam */
@@ -42,7 +46,7 @@ async function node(nodeIndex) {
     lookup: true
   })
 
-  console.log('\n\nDATA FROM SENOR NODE 1:')
+  console.log('\n\nDATA FROM SENOR NODE 1: ')
   const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
 
   //**Init and Query DB */

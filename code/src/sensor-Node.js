@@ -44,8 +44,12 @@ async function sensorNode(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
-    const repStream = store.replicate(peerInfo.client, { live: true })
-    pumpRep(socket, repStream)
+    const repStream = store.replicate(peerInfo.client)
+    pump(
+      socket,
+      repStream,
+      socket
+    )
   })
 
   // Start swarming the hypercore.
@@ -53,7 +57,8 @@ async function sensorNode(nodeIndex) {
     announce: true,
     lookup: true
   })
-  // swarm.flush()
+  swarm.flush()
+
   // console.log('\n\nDATA FROM SENOR NODE 1:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 
