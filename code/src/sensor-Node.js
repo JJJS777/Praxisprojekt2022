@@ -35,6 +35,18 @@ async function sensorNode(nodeIndex) {
     console.error(error)
   }
 
+  const bee = await initHyperbee(localCore)
+  for (let i = 0; i < 2; i++) {
+
+    returnValues = await readGPU()
+
+    await bee.put(returnValues.date, returnValues.temp)
+    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
+    // After the append, we can see that the length has updated.
+    console.log('Length of the first core:', localCore.length)
+    await sleep(20000)
+  }
+
   /**Connect to DHT */
   const swarm = new Hyperswarm() //nur ein mal je code
 
@@ -61,19 +73,6 @@ async function sensorNode(nodeIndex) {
 
   // console.log('\n\nDATA FROM SENOR NODE 1:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
-
-  const bee = await initHyperbee(localCore)
-  while (true) {
-
-    returnValues = await readGPU()
-
-    await bee.put(returnValues.date, returnValues.temp)
-    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
-    // After the append, we can see that the length has updated.
-    console.log('Length of the first core:', localCore.length)
-    await sleep(10000)
-  }
-
 }
 
 
