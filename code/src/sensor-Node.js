@@ -12,6 +12,7 @@ const pump = require('pump')
 
 
 
+
 //**Run Node Programm */
 sensorNode('1')
 
@@ -36,16 +37,6 @@ async function sensorNode(nodeIndex) {
   }
 
   const bee = await initHyperbee(localCore)
-  for (let i = 0; i < 2; i++) {
-
-    returnValues = await readGPU()
-
-    await bee.put(returnValues.date, returnValues.temp)
-    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
-    // After the append, we can see that the length has updated.
-    console.log('Length of the first core:', localCore.length)
-    await sleep(20000)
-  }
 
   /**Connect to DHT */
   const swarm = new Hyperswarm() //nur ein mal je code
@@ -71,18 +62,14 @@ async function sensorNode(nodeIndex) {
   })
   swarm.flush()
 
+  await readGPU(localCore, bee)
+
   // console.log('\n\nDATA FROM SENOR NODE 1:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)
 }
 
 
 //**Helper Funktions */
-async function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
 async function replicate(socket, stream) {
   console.log("Called replicate");
   pipeline(socket, stream, socket, (err) => {
