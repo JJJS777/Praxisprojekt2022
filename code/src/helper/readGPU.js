@@ -13,7 +13,7 @@ async function getGPUtemperature(core, hyperbee) {
   const dateTimeOutput = await exec('echo "Date $(date +"%d.%m.%y"), Time $(date +"%T")"')
   const temperatureOutput = await exec('echo "GPU_$(/opt/vc/bin/vcgencmd measure_temp)"')
 
-  while (true) {
+  for (let i = 0; i > 2; i++) {
     await bee.put(dateTimeOutput.stdout.trim(), temperatureOutput.stdout.trim())
     console.log("PUT Date: " + dateTimeOutput.stdout.trim() + " and " + temperatureOutput.stdout.trim())
     // After the append, we can see that the length has updated.
