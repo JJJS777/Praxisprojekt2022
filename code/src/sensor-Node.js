@@ -56,7 +56,7 @@ async function sensorNode(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
-    const repStream = store.replicate(peerInfo.client)
+    const repStream = store.replicate(peerInfo.client, { live: true })
     pump(
       socket,
       repStream,
