@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-28T17:26:11.987Z" agent="5.0 (Macintosh)" etag="4UZNJG4lMyiVpRNHhI2u" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-28T17:34:18.180Z" agent="5.0 (Macintosh)" etag="BhXytFi11Tq4tAqu8eRm" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="996" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -951,7 +951,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: ECCO-Box">
-    <mxGraphModel dx="1122" dy="1899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="548" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1269,6 +1269,9 @@
               <mxPoint x="370" y="260" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="PpCP2seTjT_tXlD_jmDp-78" value="Verarbeitung von Daten im Modul &lt;br&gt;mit lesen/schreiben auf P2P-Speicher" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;" vertex="1" parent="hyoYLbVx9gPYwMpISaHC-1">
+          <mxGeometry x="40" y="108" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="giz6opAMuQL6CD5L-Ifc-26" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="970" y="-45" width="30" height="52" as="geometry" />
