@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-28T17:34:18.180Z" agent="5.0 (Macintosh)" etag="BhXytFi11Tq4tAqu8eRm" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-28T17:35:39.795Z" agent="5.0 (Macintosh)" etag="OsxB1qsu5SA7oryszLVS" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="996" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -951,7 +951,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: ECCO-Box">
-    <mxGraphModel dx="548" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="1936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1455,14 +1455,6 @@
         <mxCell id="PpCP2seTjT_tXlD_jmDp-26" value="HELP-Box-Architektur" style="swimlane;fontSize=8;strokeColor=default;strokeWidth=1;fillColor=default;" vertex="1" parent="1">
           <mxGeometry x="863" y="70" width="740" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="PpCP2seTjT_tXlD_jmDp-27" value="&lt;div&gt;«Container»&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Processor&lt;sub&gt;N&lt;/sub&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;dropTarget=0;fontSize=8;strokeColor=#6c8ebf;strokeWidth=1;fillColor=#dae8fc;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-26">
-          <mxGeometry x="40" y="138" width="180" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="PpCP2seTjT_tXlD_jmDp-28" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=8;strokeColor=default;strokeWidth=1;fillColor=default;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-27">
-          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
-            <mxPoint x="-27" y="7" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="PpCP2seTjT_tXlD_jmDp-26" source="PpCP2seTjT_tXlD_jmDp-30" target="PpCP2seTjT_tXlD_jmDp-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -1505,15 +1497,6 @@
         </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-48" value="Interne P2P-&lt;br&gt;Schnittstelle" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-26">
           <mxGeometry x="385" y="316" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="PpCP2seTjT_tXlD_jmDp-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="PpCP2seTjT_tXlD_jmDp-26" source="PpCP2seTjT_tXlD_jmDp-27" target="PpCP2seTjT_tXlD_jmDp-47">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="325" y="320" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="130" y="260" />
-              <mxPoint x="370" y="260" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-56" value="" style="html=1;rounded=0;fontSize=8;strokeColor=default;strokeWidth=1;fillColor=default;" vertex="1" parent="1">
           <mxGeometry x="1588" y="110" width="30" height="30" as="geometry" />
