@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-28T17:19:25.889Z" agent="5.0 (Macintosh)" etag="CHb9Aw4J1NRs5OjEORwO" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-28T17:20:26.848Z" agent="5.0 (Macintosh)" etag="3KujlGqjDTWbbboMAfcZ" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="996" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -951,7 +951,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: ECCO-Box">
-    <mxGraphModel dx="812" dy="1698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1683" dy="2265" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1370,6 +1370,18 @@
         </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-7" value="" style="shape=requiredInterface;html=1;fontSize=11;align=center;fillColor=none;points=[];aspect=fixed;resizable=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;flipH=1;rotation=90;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-8">
           <mxGeometry x="28" y="38" width="5" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="PpCP2seTjT_tXlD_jmDp-9" value="" style="group;rotation=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1580" y="-620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PpCP2seTjT_tXlD_jmDp-10" value="" style="html=1;rounded=0;fillColor=none;rotation=0;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-9">
+          <mxGeometry width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PpCP2seTjT_tXlD_jmDp-11" value="" style="endArrow=none;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=2;" edge="1" parent="PpCP2seTjT_tXlD_jmDp-9" source="PpCP2seTjT_tXlD_jmDp-10" target="PpCP2seTjT_tXlD_jmDp-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PpCP2seTjT_tXlD_jmDp-12" value="" style="shape=requiredInterface;html=1;fontSize=11;align=center;fillColor=none;points=[];aspect=fixed;resizable=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;flipH=1;rotation=0;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-9">
+          <mxGeometry x="56" y="10" width="5" height="10" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
