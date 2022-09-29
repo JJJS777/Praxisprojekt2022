@@ -1,100 +1,100 @@
-<mxfile host="app.diagrams.net" modified="2022-09-29T17:45:56.967Z" agent="5.0 (Macintosh)" etag="ARiy7Gl751FnM0nwllt8" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-29T17:57:21.780Z" agent="5.0 (Macintosh)" etag="RgLS6012n6n00YpHQRLf" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="6Mo01X-mlYxBvYi0odGK-1" value="Projekt Untergliederung" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="120" y="110" width="600" height="670" as="geometry" />
+          <mxGeometry x="120" y="110" width="750" height="450" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-18" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6Mo01X-mlYxBvYi0odGK-1" vertex="1">
-          <mxGeometry y="30" width="600" height="128" as="geometry" />
+          <mxGeometry y="30" width="750" height="80" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-19" value="Ebene" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontStyle=1" parent="6Mo01X-mlYxBvYi0odGK-18" vertex="1">
-          <mxGeometry width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry width="201" height="80" as="geometry">
+            <mxRectangle width="201" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-20" value="Scope" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontStyle=1" parent="6Mo01X-mlYxBvYi0odGK-18" vertex="1">
-          <mxGeometry x="201" width="198" height="128" as="geometry">
-            <mxRectangle width="198" height="128" as="alternateBounds" />
+          <mxGeometry x="201" width="198" height="80" as="geometry">
+            <mxRectangle width="198" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-21" value="Beschreibung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;fontStyle=1" parent="6Mo01X-mlYxBvYi0odGK-18" vertex="1">
-          <mxGeometry x="399" width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry x="399" width="351" height="80" as="geometry">
+            <mxRectangle width="351" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6Mo01X-mlYxBvYi0odGK-1" vertex="1">
-          <mxGeometry y="158" width="600" height="128" as="geometry" />
+          <mxGeometry y="110" width="750" height="80" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-3" value="Ebene 3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-2" vertex="1">
-          <mxGeometry width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry width="201" height="80" as="geometry">
+            <mxRectangle width="201" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-4" value="Gesamt System" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-2" vertex="1">
-          <mxGeometry x="201" width="198" height="128" as="geometry">
-            <mxRectangle width="198" height="128" as="alternateBounds" />
+          <mxGeometry x="201" width="198" height="80" as="geometry">
+            <mxRectangle width="198" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-5" value="&lt;ul&gt;&lt;li&gt;nicht Teil dieser Arbeit.&lt;/li&gt;&lt;li&gt;Details sind dem Anhang zu entnehmen&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;align=left;fontStyle=2" parent="6Mo01X-mlYxBvYi0odGK-2" vertex="1">
-          <mxGeometry x="399" width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry x="399" width="351" height="80" as="geometry">
+            <mxRectangle width="351" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-6" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6Mo01X-mlYxBvYi0odGK-1" vertex="1">
-          <mxGeometry y="286" width="600" height="128" as="geometry" />
+          <mxGeometry y="190" width="750" height="80" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-7" value="Ebene 2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-6" vertex="1">
-          <mxGeometry width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry width="201" height="80" as="geometry">
+            <mxRectangle width="201" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-8" value="Edge" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-6" vertex="1">
-          <mxGeometry x="201" width="198" height="128" as="geometry">
-            <mxRectangle width="198" height="128" as="alternateBounds" />
+          <mxGeometry x="201" width="198" height="80" as="geometry">
+            <mxRectangle width="198" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-9" value="&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;ECCO-Boxen werden in der Edge betrieben&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;align=left;" parent="6Mo01X-mlYxBvYi0odGK-6" vertex="1">
-          <mxGeometry x="399" width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry x="399" width="351" height="80" as="geometry">
+            <mxRectangle width="351" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-10" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;align=left;" parent="6Mo01X-mlYxBvYi0odGK-1" vertex="1">
-          <mxGeometry y="414" width="600" height="128" as="geometry" />
+          <mxGeometry y="270" width="750" height="80" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-11" value="Ebene 1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-10" vertex="1">
-          <mxGeometry width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry width="201" height="80" as="geometry">
+            <mxRectangle width="201" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-12" value="ECCO-Box" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-10" vertex="1">
-          <mxGeometry x="201" width="198" height="128" as="geometry">
-            <mxRectangle width="198" height="128" as="alternateBounds" />
+          <mxGeometry x="201" width="198" height="80" as="geometry">
+            <mxRectangle width="198" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-13" value="&lt;div align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;besteht aus mehreren Modulen&lt;/li&gt;&lt;li&gt;Module kommunizieren über P2P-Modul&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;align=left;" parent="6Mo01X-mlYxBvYi0odGK-10" vertex="1">
-          <mxGeometry x="399" width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry x="399" width="351" height="80" as="geometry">
+            <mxRectangle width="351" height="80" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-14" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6Mo01X-mlYxBvYi0odGK-1" vertex="1">
-          <mxGeometry y="542" width="600" height="128" as="geometry" />
+          <mxGeometry y="350" width="750" height="100" as="geometry" />
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-15" value="Ebene 0" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-14" vertex="1">
-          <mxGeometry width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry width="201" height="100" as="geometry">
+            <mxRectangle width="201" height="100" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-16" value="P2P-Modul" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;" parent="6Mo01X-mlYxBvYi0odGK-14" vertex="1">
-          <mxGeometry x="201" width="198" height="128" as="geometry">
-            <mxRectangle width="198" height="128" as="alternateBounds" />
+          <mxGeometry x="201" width="198" height="100" as="geometry">
+            <mxRectangle width="198" height="100" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6Mo01X-mlYxBvYi0odGK-17" value="&lt;ul&gt;&lt;li&gt;teil der ECCO-Box&lt;/li&gt;&lt;li&gt;Verbindet ECCO-Boxen&lt;/li&gt;&lt;li&gt;Realisiert Dezentrale architektur&lt;br&gt;&lt;/li&gt;&lt;li&gt;verantwortlich für Speicherung und Bereitstellung der Daten&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;align=left;verticalAlign=middle;" parent="6Mo01X-mlYxBvYi0odGK-14" vertex="1">
-          <mxGeometry x="399" width="201" height="128" as="geometry">
-            <mxRectangle width="201" height="128" as="alternateBounds" />
+          <mxGeometry x="399" width="351" height="100" as="geometry">
+            <mxRectangle width="351" height="100" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>
@@ -1558,7 +1558,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="WlJ_eelVZ-uwt1bojAnX" name="E2: Edge">
-    <mxGraphModel dx="776" dy="2990" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1309" dy="3190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
