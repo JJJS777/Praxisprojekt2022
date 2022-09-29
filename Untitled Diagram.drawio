@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-29T16:36:05.977Z" agent="5.0 (Macintosh)" etag="83CMFoATnAR7E20RnsxC" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-09-29T16:43:11.478Z" agent="5.0 (Macintosh)" etag="H66-zYjqrBTscsOg6cpS" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -428,7 +428,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="E0: Netzwerk">
-    <mxGraphModel dx="4486" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4290" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -861,8 +861,8 @@
         <mxCell id="AGEcDhdIV9XkqIyL7STR-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=8;endArrow=none;endFill=0;dashed=1;" parent="1" source="AGEcDhdIV9XkqIyL7STR-26" target="AGEcDhdIV9XkqIyL7STR-33" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-3104" y="35" />
-              <mxPoint x="-2703" y="35" />
+              <mxPoint x="-3104" y="60" />
+              <mxPoint x="-2703" y="60" />
             </Array>
           </mxGeometry>
         </mxCell>
