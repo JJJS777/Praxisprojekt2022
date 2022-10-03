@@ -14,8 +14,8 @@ async function getGPUtemperature(core, hyperbee) {
   const temperatureOutput = await exec('echo "GPU_$(/opt/vc/bin/vcgencmd measure_temp)"')
 
   while (true) {
-    await bee.put(dateTimeOutput.stdout.trim(), temperatureOutput.stdout.trim())
-    console.log("PUT Date: " + dateTimeOutput.stdout.trim() + " and " + temperatureOutput.stdout.trim())
+    await bee.put(dateTimeOutput, temperatureOutput)
+    console.log("PUT Date: " + dateTimeOutput + " and " + temperatureOutput)
     // After the append, we can see that the length has updated.
     console.log('Length of the first core:', localCore.length)
     await sleep(20000)
