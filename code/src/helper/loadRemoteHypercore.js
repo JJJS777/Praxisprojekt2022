@@ -1,10 +1,8 @@
 const { once } = require("events");
-const Hypercore = require('hypercore')
 
-
-module.exports = async function remoteSensor(nodeIndex, remotePublicKey) {
+module.exports = async function remoteSensor(coreStore, remotePublicKey) {
     //**Init Hypercore with RPK */
-    const sensorCore = new Hypercore('../data/nodes/node-' + nodeIndex, Buffer.from(remotePublicKey, "hex"), { sparse: true })
+    const sensorCore = coreStore.get(Buffer.from(remotePublicKey, "hex"), { sparse: true })
     try {
         await sensorCore.ready()
         console.log('Remote Core with Public Key: ' + sensorCore.key.toString('hex') + ' has been Initialized')
