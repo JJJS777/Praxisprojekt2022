@@ -23,14 +23,16 @@ async function sensorNode(nodeIndex) {
     console.error(error)
   }
 
-  const localCore = store.get({ name: 'Local-Sensor-Core' })
+  const localCore = store.get({ name: 'Local-Sensor-Core', sparse: true })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
     console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
     console.log('Local Core is writeable: ' + localCore.writable)
     console.log('Local Core is readable: ' + localCore.readable)
-    //console.log('Local Cores Discovery Key: ' + localCore.discoveryKey.toString('hex'))
+    // clear core
+    //await localCore.clear(0, localCore.length)
+
   } catch (error) {
     console.error(error)
   }
@@ -44,7 +46,7 @@ async function sensorNode(nodeIndex) {
     console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
     // After the append, we can see that the length has updated.
     console.log('Length of the first core:', localCore.length)
-    await sleep(20000)
+    await sleep(5000)
   }
 
   /**Connect to DHT */
@@ -69,7 +71,6 @@ async function sensorNode(nodeIndex) {
     announce: true,
     lookup: true
   })
-  swarm.flush()
 
   // console.log('\n\nDATA FROM SENOR NODE 1:')
   // await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)

@@ -64,7 +64,7 @@ async function node(nodeIndex) {
   console.log("core was updated?", updated)
 
   // const [peer] = await once(bee.feed, "peer-add");
-  const readStream = bee.createReadStream()
+  const readStream = bee.createReadStream({ reverse: true, limit: 1 })
   for await (const entry of readStream) {
     console.log(entry)
   }
