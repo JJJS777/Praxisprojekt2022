@@ -1,6 +1,5 @@
 // Client
 const chalk = require('chalk')
-const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
@@ -15,14 +14,6 @@ const pump = require('pump')
 node('777')
 
 async function node(nodeIndex) {
-
-  const store = new Corestore('../data/nodes/node-' + nodeIndex)
-  try {
-    await store.ready()
-  } catch (error) {
-    console.error(error)
-  }
-
   // Create a new swarm instance.
   const swarm = new Hyperswarm()
 
@@ -31,7 +22,7 @@ async function node(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
-    const repStream = store.replicate(peerInfo.client, { live: true })
+    const repStream = sensorCore1.replicate(peerInfo.client, { live: true })
     pump(
       socket,
       repStream,
@@ -47,7 +38,7 @@ async function node(nodeIndex) {
   })
 
   console.log('\n\nDATA FROM SENOR NODE 1: ')
-  const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
+  const sensorCore1 = await remoteSensor(nodeIndex, process.env.PUBLIC_KEY_SENSOR_NODE_1)
   let updated = await sensorCore1.update();
 
   // // Note that this will never be consider downloaded as the range

@@ -1,9 +1,9 @@
 const chalk = require('chalk')
 const readGPU = require('./helper/readGPU')
 const readCPU = require('./helper/readCPU')
-const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
+const Hypercore = require('hypercore')
 const { pipeline } = require("stream");
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
@@ -16,14 +16,8 @@ const pump = require('pump')
 sensorNode('1')
 
 async function sensorNode(nodeIndex) {
-  const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeIndex)
-  try {
-    await store.ready()
-  } catch (error) {
-    console.error(error)
-  }
+  const localCore = new Hypercore('../data/nodes/sensor-Server-Node-' + nodeIndex, { sparse: true })
 
-  const localCore = store.get({ name: 'Local-Sensor-Core', sparse: true })
   try {
     await localCore.ready()
     //**DEBUG MSG: Local Hypercore is Initialized */
@@ -31,7 +25,7 @@ async function sensorNode(nodeIndex) {
     console.log('Local Core is writeable: ' + localCore.writable)
     console.log('Local Core is readable: ' + localCore.readable)
     // clear core
-    //await localCore.clear(0, localCore.length)
+    await localCore.clear(0, localCore.length)
 
   } catch (error) {
     console.error(error)
@@ -58,7 +52,7 @@ async function sensorNode(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection:'
       + peerInfo.publicKey.toString('hex'))
 
-    const repStream = store.replicate(peerInfo.client, { live: true })
+    const repStream = localCore.replicate(peerInfo.client, { live: true })
     pump(
       socket,
       repStream,
