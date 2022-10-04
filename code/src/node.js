@@ -52,7 +52,7 @@ async function node(nodeIndex) {
 
   // // Note that this will never be consider downloaded as the range
   // // will keep waiting for new blocks to be appended.
-  // await sensorCore1.download({ start: 0, end: -1 })
+  await sensorCore1.download({ start: 0, end: -1 })
 
   //**Init and Query DB */
   const bee = await initHyperbee(sensorCore1)
@@ -63,7 +63,7 @@ async function node(nodeIndex) {
   console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
   console.log("core was updated?", updated)
 
-  // const [peer] = await once(bee.feed, "peer-add");
+  // // const [peer] = await once(bee.feed, "peer-add");
   const readStream = bee.createReadStream({ reverse: true, limit: 1 })
   for await (const entry of readStream) {
     console.log(entry)
@@ -73,7 +73,6 @@ async function node(nodeIndex) {
     console.log('updated changed to: ' + updated)
   }
   console.log("---END-OF-CODE---")
-
 }
 
 //**Helper Funktions */
