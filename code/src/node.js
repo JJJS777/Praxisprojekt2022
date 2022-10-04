@@ -52,7 +52,7 @@ async function node(nodeIndex) {
 
   // // Note that this will never be consider downloaded as the range
   // // will keep waiting for new blocks to be appended.
-  await sensorCore1.download({ start: 0, end: -1 })
+  //await sensorCore1.download({ start: 0, end: -1 })
 
   //**Init and Query DB */
   const bee = await initHyperbee(sensorCore1)
