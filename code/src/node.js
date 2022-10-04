@@ -31,6 +31,12 @@ async function node(nodeIndex) {
     console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
+    // console.log('\n\nPeer-Info-Object:')
+    // console.log(peerInfo)
+
+    // console.log('\n\nSocket:')
+    // console.log(socket)
+
     const repStream = store.replicate(peerInfo.client, { live: true })
     pump(
       socket,
@@ -64,9 +70,9 @@ async function node(nodeIndex) {
   console.log("core was updated?", updated)
 
   // // const [peer] = await once(bee.feed, "peer-add");
-  const readStream = bee.createReadStream({ reverse: true, limit: 1 })
-  for await (const entry of readStream) {
-    console.log(entry)
+  const readStream = bee.createHistoryStream({ live: true })
+  for await (const { key, value } of bee.createHistoryStream({ live: true })) {
+    console.log(`${key} -> ${value}`)
   }
 
   if (updated) {
