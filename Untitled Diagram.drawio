@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T16:10:15.895Z" agent="5.0 (Macintosh)" etag="ZY1aIolAVFFennEW_uj_" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-12T21:51:14.960Z" agent="5.0 (Macintosh)" etag="vJBb1UUPcagVAgTSgBjZ" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -160,7 +160,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="E0: P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="3302" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3116" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -348,6 +348,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="F23dcrWXI7tYwa330TNb-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-1" target="F23dcrWXI7tYwa330TNb-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F23dcrWXI7tYwa330TNb-25" value="instantiate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-24">
+          <mxGeometry x="0.0546" y="-2" relative="1" as="geometry">
+            <mxPoint y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-1" value="Node" style="html=1;" vertex="1" parent="1">
           <mxGeometry x="-2190" y="449" width="110" height="50" as="geometry" />
         </mxCell>
@@ -362,12 +370,16 @@
         <mxCell id="F23dcrWXI7tYwa330TNb-2" value="Corestore" style="html=1;" vertex="1" parent="1">
           <mxGeometry x="-2020" y="449" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="F23dcrWXI7tYwa330TNb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-5" target="F23dcrWXI7tYwa330TNb-20">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="F23dcrWXI7tYwa330TNb-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-5" target="F23dcrWXI7tYwa330TNb-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1795" y="355" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="F23dcrWXI7tYwa330TNb-23" value="instantiate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-22">
-          <mxGeometry x="0.0769" relative="1" as="geometry">
-            <mxPoint x="-3" y="-39" as="offset" />
+        <mxCell id="F23dcrWXI7tYwa330TNb-27" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-26">
+          <mxGeometry x="0.2737" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-5" value="Hypercore" style="html=1;" vertex="1" parent="1">
@@ -385,10 +397,10 @@
           <mxGeometry x="-2190" y="565" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-12" value="Hyperswarm" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="700" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2190" y="680" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-20" value="Hyperbee" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1680" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2190" y="330" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
