@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T15:11:41.372Z" agent="5.0 (Macintosh)" etag="bZIrPYJiUog0Wbn4Ne1O" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-12T15:14:27.302Z" agent="5.0 (Macintosh)" etag="wGA2TMjraM9jXez_b2Nz" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="996" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -300,7 +300,7 @@
         <mxCell id="4t9rjOy6H2c8DJBezyQW-12" value="P2P-Modul" style="swimlane;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-2430" y="40" width="170" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="8QMSm4IEBs8lO0lCdCEI-1" value="Hyperbee" style="swimlane;fontSize=12;fillColor=#7EA6E0;strokeColor=#6c8ebf;" parent="1" vertex="1">
+        <mxCell id="8QMSm4IEBs8lO0lCdCEI-1" value="Hyperbee" style="swimlane;fontSize=12;fillColor=#7EA6E0;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="-2238" y="40" width="170" height="110" as="geometry" />
         </mxCell>
         <mxCell id="8QMSm4IEBs8lO0lCdCEI-2" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=12;fillColor=none;" parent="8QMSm4IEBs8lO0lCdCEI-1" vertex="1">
@@ -332,11 +332,14 @@
             <mxRectangle width="64" height="25" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="roN4V7w_VTvU35sXpyMU-1" value="" style="whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#7EA6E0;" vertex="1" parent="1">
+          <mxGeometry x="-2230" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="E0: API-Stack Options HC">
-    <mxGraphModel dx="1386" dy="902" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
