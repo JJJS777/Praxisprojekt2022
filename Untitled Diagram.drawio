@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T15:42:53.643Z" agent="5.0 (Macintosh)" etag="hhF2jv_wE6XaqnnoofL5" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-12T15:43:41.144Z" agent="5.0 (Macintosh)" etag="q0Qj8z_vP2DDh3yINoPG" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -749,7 +749,7 @@
         <mxCell id="x7AMFaH7mYMsXKSdwF_M-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=classic;endFill=1;startArrow=classic;startFill=1;" parent="3TmlsE2vNMLRQlV-ahkL-1" source="x7AMFaH7mYMsXKSdwF_M-12" target="x7AMFaH7mYMsXKSdwF_M-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7AMFaH7mYMsXKSdwF_M-9" value="Start lookup &lt;br style=&quot;font-size: 8px;&quot;&gt;a discovery key on the DHT&lt;br style=&quot;font-size: 8px;&quot;&gt;and Join swarm with the &lt;br style=&quot;font-size: 8px;&quot;&gt;discoveryKey argument&lt;br style=&quot;font-size: 8px;&quot;&gt; as the topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="x7AMFaH7mYMsXKSdwF_M-8" vertex="1" connectable="0">
+        <mxCell id="x7AMFaH7mYMsXKSdwF_M-9" value="Start announcing self and &lt;br&gt;finding Nodes on DHT.&lt;br&gt; Join swarm with Topic" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="x7AMFaH7mYMsXKSdwF_M-8" vertex="1" connectable="0">
           <mxGeometry x="-0.4038" y="2" relative="1" as="geometry">
             <mxPoint x="-42" as="offset" />
           </mxGeometry>
