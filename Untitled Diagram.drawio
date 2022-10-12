@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T16:07:59.594Z" agent="5.0 (Macintosh)" etag="ZaSDurFwKtxASNBgl_CQ" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-12T16:10:15.895Z" agent="5.0 (Macintosh)" etag="ZY1aIolAVFFennEW_uj_" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -160,7 +160,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="E0: P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="3555" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3302" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -337,7 +337,7 @@
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-4" value="instantiate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-3">
           <mxGeometry x="-0.116" y="-1" relative="1" as="geometry">
-            <mxPoint y="-45" as="offset" />
+            <mxPoint y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-1" target="F23dcrWXI7tYwa330TNb-9">
@@ -354,24 +354,24 @@
         <mxCell id="F23dcrWXI7tYwa330TNb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-2" target="F23dcrWXI7tYwa330TNb-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="F23dcrWXI7tYwa330TNb-7" value="gets Hypercore by name or PublicKey" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-6">
+        <mxCell id="F23dcrWXI7tYwa330TNb-7" value="gets HC by name or PK" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-6">
           <mxGeometry x="-0.2066" y="-1" relative="1" as="geometry">
-            <mxPoint x="12" y="-45" as="offset" />
+            <mxPoint x="12" y="-40" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-2" value="Corestore" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1980" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2020" y="449" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-5" target="F23dcrWXI7tYwa330TNb-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-23" value="instantiate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="F23dcrWXI7tYwa330TNb-22">
           <mxGeometry x="0.0769" relative="1" as="geometry">
-            <mxPoint y="-34" as="offset" />
+            <mxPoint x="-3" y="-39" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-5" value="Hypercore" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1764" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-1850" y="449" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-9" target="F23dcrWXI7tYwa330TNb-12">
           <mxGeometry relative="1" as="geometry" />
@@ -382,13 +382,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-9" value="swarm" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="600" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2190" y="565" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-12" value="Hyperswarm" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="744" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2190" y="700" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-20" value="Hyperbee" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1550" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-1680" y="449" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
