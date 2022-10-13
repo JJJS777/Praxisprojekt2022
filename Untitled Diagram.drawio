@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T21:51:14.960Z" agent="5.0 (Macintosh)" etag="vJBb1UUPcagVAgTSgBjZ" version="20.3.7" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-13T14:26:24.658Z" agent="5.0 (Macintosh)" etag="PboP1ci3Jhn8n33MBwgX" version="20.3.7" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
-    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uun_jjjuWUNww76_Udy4" name="E0: Vergleich">
-    <mxGraphModel dx="946" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -153,14 +153,14 @@
         <mxCell id="oaFbPJ7K2uqsgNcsHxHo-6" value="High-level Data Structures" style="whiteSpace=wrap;html=1;align=center;fontStyle=1;fontSize=12;" parent="2KaCRzUMMeswWlVjjDwV-10" vertex="1">
           <mxGeometry x="20" y="110" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="9APJkuDEGpzCLgwEaH0s-1" value="Fehlerhaft -&amp;gt; überarbeiten!" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="9APJkuDEGpzCLgwEaH0s-1" value="Fehlerhaft -&amp;gt; überarbeiten!" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="75" y="25" width="170" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="E0: P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="3116" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3954" dy="959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -357,7 +357,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-1" value="Node" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2430" y="529" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-2" target="F23dcrWXI7tYwa330TNb-5">
           <mxGeometry relative="1" as="geometry" />
@@ -368,12 +368,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-2" value="Corestore" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2020" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2260" y="529" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-5" target="F23dcrWXI7tYwa330TNb-20">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-1795" y="355" />
+              <mxPoint x="-2035" y="435" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -383,7 +383,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-5" value="Hypercore" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1850" y="449" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2090" y="529" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F23dcrWXI7tYwa330TNb-9" target="F23dcrWXI7tYwa330TNb-12">
           <mxGeometry relative="1" as="geometry" />
@@ -394,19 +394,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-9" value="swarm" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="565" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2430" y="645" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-12" value="Hyperswarm" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="680" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2430" y="760" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="F23dcrWXI7tYwa330TNb-20" value="Hyperbee" style="html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2190" y="330" width="110" height="50" as="geometry" />
+          <mxGeometry x="-2430" y="410" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="E0: API-Stack Options HC">
-    <mxGraphModel dx="698" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -501,7 +501,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="E0: Netzwerk">
-    <mxGraphModel dx="7289" dy="1957" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6271" dy="852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
