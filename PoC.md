@@ -15,3 +15,8 @@
 7.  help-box-9 tritt in das Netzwerk ein. Trotzt des Ausfalls von ecco-box-1 kann help-box-9 auf die Daten bis zum Zeitpunkt des Ausfalls zugreifen.
 
 8.  ecco-box-1 wird neu gestartet und tritt dem Schwarm erneut bei. Die Boxen, die die live-option implementieren schreiben wieder die neuesten Messwerte in die Konsole.
+
+# Checkliste PoC
+
+- Daten im Netzwerk verfügbar, auch wenn quelle offline
+- Live Update bzw. PubSub
