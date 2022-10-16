@@ -13,7 +13,7 @@ const pump = require('pump')
 
 
 //**Run Node Programm */
-sensorNode('1')
+eccoBox('1')
 
 async function sensorNode(nodeIndex) {
   const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeIndex)
