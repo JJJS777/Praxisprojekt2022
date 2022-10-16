@@ -15,7 +15,7 @@ const pump = require('pump')
 //**Run Node Programm */
 eccoBox('1')
 
-async function sensorNode(nodeIndex) {
+async function eccoBox(nodeIndex) {
   const store = new Corestore('../data/nodes/sensor-Server-Node-' + nodeIndex)
   try {
     await store.ready()

@@ -14,7 +14,7 @@ const pump = require('pump')
 
 helpBox('3')
 
-async function node(nodeIndex) {
+async function helpBox(nodeIndex) {
 
   const store = new Corestore('../data/nodes/node-' + nodeIndex)
   try {
