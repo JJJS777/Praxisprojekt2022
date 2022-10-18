@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-14T15:43:30.609Z" agent="5.0 (Macintosh)" etag="ri9oE_xR0wRxkMx8EWvz" version="20.4.0" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2022-10-18T13:57:37.937Z" agent="5.0 (Macintosh)" etag="9XRxw91olCjlN7kyKgfr" version="20.4.0" type="github" pages="8">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="698" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -160,7 +160,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UbkjploW9XkOTzss3_vL" name="E0: P2P-Modul Softwarearchitektur">
-    <mxGraphModel dx="3659" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3179" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -437,7 +437,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="JXnR_LFC6wYwE75qUCAt" name="E0: API-Stack Options HC">
-    <mxGraphModel dx="1178" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="698" dy="587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -532,7 +532,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="E0: Netzwerk">
-    <mxGraphModel dx="6925" dy="1278" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6125" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1057,7 +1057,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="P-GT8csLxZWTmNxC1nmY" name="E1: ECCO-Box">
-    <mxGraphModel dx="776" dy="1821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1551" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1603,6 +1603,22 @@
         </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-48" value="Interne P2P-&lt;br style=&quot;font-size: 10px;&quot;&gt;Schnittstelle" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="PpCP2seTjT_tXlD_jmDp-26" vertex="1">
           <mxGeometry x="385" y="316" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UwsjI4H9cImJETcJUVYm-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontSize=5;endArrow=none;endFill=0;" edge="1" parent="PpCP2seTjT_tXlD_jmDp-26" source="UwsjI4H9cImJETcJUVYm-1" target="PpCP2seTjT_tXlD_jmDp-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="270" />
+              <mxPoint x="370" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UwsjI4H9cImJETcJUVYm-1" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;«Container»&lt;b style=&quot;font-size: 10px;&quot;&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Processor&lt;sub style=&quot;font-size: 10px;&quot;&gt;N&lt;/sub&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;dropTarget=0;fontSize=10;strokeColor=#6c8ebf;strokeWidth=1;fillColor=#dae8fc;" vertex="1" parent="PpCP2seTjT_tXlD_jmDp-26">
+          <mxGeometry x="40" y="138" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="UwsjI4H9cImJETcJUVYm-2" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=10;strokeColor=default;strokeWidth=1;fillColor=default;" vertex="1" parent="UwsjI4H9cImJETcJUVYm-1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="PpCP2seTjT_tXlD_jmDp-56" value="" style="html=1;rounded=0;fontSize=10;strokeColor=default;strokeWidth=1;fillColor=default;" parent="1" vertex="1">
           <mxGeometry x="1600" y="290" width="30" height="30" as="geometry" />
