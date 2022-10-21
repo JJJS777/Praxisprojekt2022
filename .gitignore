@@ -2,6 +2,9 @@
 sensor-Server-Node-*
 sensor-node-*
 node-*
+help-*
+ecco-*
+nodes
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,node

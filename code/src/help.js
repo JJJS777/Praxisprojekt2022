@@ -16,7 +16,7 @@ helpBox('3')
 
 async function helpBox(nodeIndex) {
 
-  const store = new Corestore('../data/nodes/node-' + nodeIndex)
+  const store = new Corestore('../data/nodes/help-' + nodeIndex)
   try {
     await store.ready()
   } catch (error) {
