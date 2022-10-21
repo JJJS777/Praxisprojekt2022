@@ -52,7 +52,8 @@ async function helpBox(nodeIndex) {
     lookup: true
   })
 
-  console.log('\n\nDATA FROM SENOR NODE 1: ')
+  // ecco-1
+  console.log('\n\nDATA FROM ECCO 1: ')
   const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
   let updated = await sensorCore1.update();
 
@@ -61,27 +62,47 @@ async function helpBox(nodeIndex) {
   //await sensorCore1.download({ start: 0, end: -1 })
 
   //**Init and Query DB */
-  const bee = await initHyperbee(sensorCore1)
+  const eccoBeeOne = await initHyperbee(sensorCore1)
+  await queryLastX(5, eccoBeeOne)
+  // await queryLive(eccoBeeOne)
 
-  //await sensorCore1.get(sensorCore1.length - 1)
-  console.log("core was updated?", updated);
-  console.log("length is", await sensorCore1.length);
-  console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
-  console.log("core was updated?", updated)
+  // // Test für core.updated
+  // if (updated) {
+  //   console.log('updated changed to: ' + updated)
+  // }
 
-  // // const [peer] = await once(bee.feed, "peer-add");
-  const readStream = bee.createHistoryStream({ live: true })
-  for await (const { key, value } of bee.createHistoryStream({ live: true })) {
-    console.log(`${key} -> ${value}`)
-  }
+  // //await sensorCore1.get(sensorCore1.length - 1)
+  // console.log("core was updated?", updated);
+  // console.log("length is", await sensorCore1.length);
+  // console.log('How many blocks are contiguously available starting from the first block of this core?: ' + sensorCore1.contiguousLength)
+  // console.log("core was updated?", updated)
 
-  if (updated) {
-    console.log('updated changed to: ' + updated)
-  }
+
+
+  // ecco-2
+  console.log('\n\nDATA FROM ECCO 2: ')
+  const sensorCore2 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2)
+  const eccoBeeTwo = await initHyperbee(sensorCore2)
+  await queryLastX(5, eccoBeeTwo)
+
   console.log("---END-OF-CODE---")
 }
 
 //**Helper Funktions */
+
+async function queryLive(bee) {
+  for await (const { key, value } of bee.createHistoryStream({ live: true })) {
+    console.log(`${key} -> ${value}`)
+  }
+}
+
+async function queryLastX(lastX, bee) {
+  for await (const { key, value } of await bee.createReadStream({ reverse: true, limit: lastX })) {
+    console.log(`${key} -> ${value}`)
+  }
+}
+
+
 async function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
