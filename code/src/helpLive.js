@@ -1,0 +1,128 @@
+// Client
+const chalk = require('chalk')
+const Corestore = require('corestore')
+const Hyperswarm = require('hyperswarm')
+const remoteSensor = require('./helper/loadRemoteHypercore')
+const { pipeline } = require("stream");
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
+require('dotenv').config();
+const initHyperbee = require('./helper/initHyperbee')
+const { once } = require("events");
+const pump = require('pump')
+
+
+
+helpBox('4')
+
+async function helpBox(nodeIndex) {
+
+  const store = new Corestore('../data/nodes/help-' + nodeIndex)
+  try {
+    await store.ready()
+  } catch (error) {
+    console.error(error)
+  }
+
+  // Create a new swarm instance.
+  const swarm = new Hyperswarm()
+
+  // Replicate whenever a new connection is created.
+  swarm.on('connection', (socket, peerInfo) => {
+    console.log('peers Noise public key from peerInfo-objekt on connection: '
+      + peerInfo.publicKey.toString('hex'))
+
+    const repStream = store.replicate(peerInfo.client, { live: true })
+    pump(
+      socket,
+      repStream,
+      socket
+    )
+  })
+
+  //**Connecting to Hyperswam */
+  // Start swarming the hypercore.
+  swarm.join(topic, {
+    announce: true,
+    lookup: true
+  })
+
+  // ecco-1
+  console.log('\n\nDATA FROM ECCO 1: ')
+  const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
+  let updated = await sensorCore1.update();
+
+  // // Note that this will never be consider downloaded as the range
+  // // will keep waiting for new blocks to be appended.
+  // await sensorCore1.download({ start: 0, end: -1 })
+
+  //**Init and Query DB */
+  const eccoBeeOne = await initHyperbee(sensorCore1)
+  await queryLive(eccoBeeOne)
+}
+
+//**Helper Funktions */
+
+async function queryLive(bee) {
+  await once(bee.feed, "peer-add");
+  for await (const { key, value } of bee.createHistoryStream({ live: true })) {
+    console.log(`${key} -> ${value}`)
+  }
+}
+
+async function queryLastX(lastX, bee) {
+  await once(bee.feed, "peer-add");
+  for await (const { key, value } of await bee.createReadStream({ reverse: true, limit: lastX })) {
+    console.log(`${key} -> ${value}`)
+  }
+}
+
+
+async function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function replicate(socket, stream) {
+  console.log("Called replicate");
+  pipeline(socket, stream, socket, (err) => {
+    if (err) {
+      console.error("Pipeline failed.", err);
+    } else {
+      console.log("Pipeline succeeded.");
+    }
+  });
+}
+
+
+async function sendMsg(socket, nodeIndex) {
+  console.log("Called sendMsg" + Date.now());
+  try {
+    socket.write(
+      JSON.stringify({
+        index: nodeIndex,
+        typ: "Normal-Node",
+        typNumber: 1,
+        msg: "empty",
+      })
+    );
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function readMsg(socket) {
+  console.log("Called readMsg" + Date.now());
+  socket.on("data", (data) => {
+    const resData = JSON.parse(data);
+    console.log("received: " + resData.typ + " " + resData.index);
+  });
+}
+
+function pumpRep(socket, stream) {
+  pump(
+    socket,
+    stream,
+    socket
+  )
+}
