@@ -1,5 +1,6 @@
-# Praxisprojekt: Erarbeitung eines Peer-to-Peer-Konzeptes zur Speicherung und Bereitstellung von Sensordaten mit prototypischer Implementierung
+# Praxisprojekt 2022
 
+## Erarbeitung eines Peer-to-Peer-Konzeptes zur Speicherung und Bereitstellung von Sensordaten mit prototypischer Implementierung
 Im Rahmen des Praxisprojektes wurde ein alternativer Ansatz zu gängigen Internetof-
 Things Architekturen untersucht und prototypisch implementiert. Der Peer-to-Peer
 Ansatz hat das Potenzial, Systeme robuster und resistenter zu machen, in dem z.B.
