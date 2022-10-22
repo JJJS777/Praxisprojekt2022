@@ -59,7 +59,7 @@ async function helpBox(nodeIndex) {
 
   // // Note that this will never be consider downloaded as the range
   // // will keep waiting for new blocks to be appended.
-  //await sensorCore1.download({ start: 0, end: -1 })
+  // await sensorCore1.download({ start: 0, end: -1 })
 
   //**Init and Query DB */
   const eccoBeeOne = await initHyperbee(sensorCore1)
@@ -84,19 +84,19 @@ async function helpBox(nodeIndex) {
   const sensorCore2 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_2)
   const eccoBeeTwo = await initHyperbee(sensorCore2)
   await queryLastX(5, eccoBeeTwo)
-
-  console.log("---END-OF-CODE---")
 }
 
 //**Helper Funktions */
 
 async function queryLive(bee) {
+  await once(bee.feed, "peer-add");
   for await (const { key, value } of bee.createHistoryStream({ live: true })) {
     console.log(`${key} -> ${value}`)
   }
 }
 
 async function queryLastX(lastX, bee) {
+  await once(bee.feed, "peer-add");
   for await (const { key, value } of await bee.createReadStream({ reverse: true, limit: lastX })) {
     console.log(`${key} -> ${value}`)
   }

@@ -1,51 +1,34 @@
+// Client
 const chalk = require('chalk')
-const readGPU = require('./helper/readGPU')
-const readCPU = require('./helper/readCPU')
 const Corestore = require('corestore')
 const Hyperswarm = require('hyperswarm')
 const remoteSensor = require('./helper/loadRemoteHypercore')
 const { pipeline } = require("stream");
+const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
 require('dotenv').config();
 const initHyperbee = require('./helper/initHyperbee')
-const topic = Buffer.alloc(32).fill('sensor network') // A topic must be 32 bytes
-const pump = require('pump')
 const { once } = require("events");
+const pump = require('pump')
 
 
 
+helpBox('4')
 
-//**Run Node Programm */
-eccoBox('1')
+async function helpBox(nodeIndex) {
 
-async function eccoBox(nodeIndex) {
-  const store = new Corestore('../data/nodes/ecco-' + nodeIndex)
+  const store = new Corestore('../data/nodes/help-' + nodeIndex)
   try {
     await store.ready()
   } catch (error) {
     console.error(error)
   }
 
-  const localCore = store.get({ name: 'Local-Sensor-Core', sparse: true })
-  try {
-    await localCore.ready()
-    //**DEBUG MSG: Local Hypercore is Initialized */
-    console.log(chalk.red('Local Hypercore is Initialized: Sensor-Node-Public-Key: ' + localCore.key.toString('hex')))
-    console.log('Local Core is writeable: ' + localCore.writable)
-    console.log('Local Core is readable: ' + localCore.readable)
-    // clear core
-    //await localCore.clear(0, localCore.length)
+  // Create a new swarm instance.
+  const swarm = new Hyperswarm()
 
-  } catch (error) {
-    console.error(error)
-  }
-
-  /**Connect to DHT */
-  const swarm = new Hyperswarm() //nur ein mal je code
-
-  //ein mal, wenn es sich um einen SnesorNode handelt und dann noch mal, wenn remote core geladen wird?
   // Replicate whenever a new connection is created.
   swarm.on('connection', (socket, peerInfo) => {
-    console.log('peers Noise public key from peerInfo-objekt on connection:'
+    console.log('peers Noise public key from peerInfo-objekt on connection: '
       + peerInfo.publicKey.toString('hex'))
 
     const repStream = store.replicate(peerInfo.client, { live: true })
@@ -56,38 +39,26 @@ async function eccoBox(nodeIndex) {
     )
   })
 
+  //**Connecting to Hyperswam */
   // Start swarming the hypercore.
   swarm.join(topic, {
     announce: true,
     lookup: true
   })
 
-  // write to DB
-  const bee = await initHyperbee(localCore)
-
-  setInterval(async () => {
-    returnValues = await readGPU()
-    await bee.put(returnValues.date, returnValues.temp)
-    console.log("PUT Date: " + returnValues.date + " and " + returnValues.temp)
-    // After the append, we can see that the length has updated.
-    console.log('Length of the first core:', localCore.length)
-  }, 10000)
-
-
   // ecco-1
   console.log('\n\nDATA FROM ECCO 1: ')
-  await queryLastX(5,
-    await initHyperbee(
-      await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)))
+  const sensorCore1 = await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1)
+  let updated = await sensorCore1.update();
 
-  // ecco-2
-  console.log('\n\nDATA FROM ECCO 2: ')
-  await queryLastX(5,
-    await initHyperbee(
-      await remoteSensor(store, process.env.PUBLIC_KEY_SENSOR_NODE_1, swarm)))
+  // // Note that this will never be consider downloaded as the range
+  // // will keep waiting for new blocks to be appended.
+  // await sensorCore1.download({ start: 0, end: -1 })
 
+  //**Init and Query DB */
+  const eccoBeeOne = await initHyperbee(sensorCore1)
+  await queryLive(eccoBeeOne)
 }
-
 
 //**Helper Funktions */
 
@@ -104,6 +75,7 @@ async function queryLastX(lastX, bee) {
     console.log(`${key} -> ${value}`)
   }
 }
+
 
 async function sleep(ms) {
   return new Promise((resolve) => {
@@ -124,7 +96,7 @@ async function replicate(socket, stream) {
 
 
 async function sendMsg(socket, nodeIndex) {
-  console.log("Called sendMsg");
+  console.log("Called sendMsg" + Date.now());
   try {
     socket.write(
       JSON.stringify({
@@ -140,7 +112,7 @@ async function sendMsg(socket, nodeIndex) {
 }
 
 async function readMsg(socket) {
-  console.log("Called readMsg");
+  console.log("Called readMsg" + Date.now());
   socket.on("data", (data) => {
     const resData = JSON.parse(data);
     console.log("received: " + resData.typ + " " + resData.index);
