@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-04T16:08:40.109Z" agent="5.0 (Macintosh)" etag="IZR9fpBYmbSLcEpp7jZp" version="20.5.1" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-11-04T16:08:52.134Z" agent="5.0 (Macintosh)" etag="wAIr7nhANXYk8_JsP-UE" version="20.5.1" type="github" pages="9">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
     <mxGraphModel dx="1106" dy="610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2306,11 +2306,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="9XwlW-fWsGzJNzn3y-xf" name="Seite-9">
-    <mxGraphModel dx="763" dy="1590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="922" dy="1677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="qrPxPbfmZbi1SPHD0Ig9-1" value="Edge MQTT-Interface" style="swimlane;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+        <mxCell id="qrPxPbfmZbi1SPHD0Ig9-1" value="Edge MQTT" style="swimlane;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="290" y="-300" width="410" height="340" as="geometry">
             <mxRectangle x="230" y="80" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
