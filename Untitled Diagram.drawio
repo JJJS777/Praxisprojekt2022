@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-04T16:08:52.134Z" agent="5.0 (Macintosh)" etag="wAIr7nhANXYk8_JsP-UE" version="20.5.1" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2022-11-08T08:01:53.270Z" agent="5.0 (Macintosh)" etag="t9xQIovHxYl5LReHwfBe" version="20.5.1" type="github" pages="9">
   <diagram id="WkCiSp-jyLo-nHGhpcF1" name="Projekt Übersicht">
-    <mxGraphModel dx="1106" dy="610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -532,7 +532,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TWpIVF_u3TdZswTRyqDv" name="E0: Netzwerk">
-    <mxGraphModel dx="6125" dy="978" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5777" dy="438" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -711,7 +711,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="AGEcDhdIV9XkqIyL7STR-42" value="4. create Corestore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="AGEcDhdIV9XkqIyL7STR-41" vertex="1" connectable="0">
+        <mxCell id="AGEcDhdIV9XkqIyL7STR-42" value="3. create Corestore" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="AGEcDhdIV9XkqIyL7STR-41" vertex="1" connectable="0">
           <mxGeometry x="0.1081" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -724,7 +724,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NdUSqLAHfX-COyxvkVGV-9" value="3. Join Swarm &lt;br&gt;w/ Topic &amp;lt;T&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="NdUSqLAHfX-COyxvkVGV-8" vertex="1" connectable="0">
+        <mxCell id="NdUSqLAHfX-COyxvkVGV-9" value="5. Join Swarm &lt;br&gt;w/ Topic &amp;lt;T&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="NdUSqLAHfX-COyxvkVGV-8" vertex="1" connectable="0">
           <mxGeometry x="0.2065" y="1" relative="1" as="geometry">
             <mxPoint x="15" y="-12" as="offset" />
           </mxGeometry>
@@ -744,7 +744,7 @@
         <mxCell id="NdUSqLAHfX-COyxvkVGV-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=8;endArrow=classic;endFill=1;" parent="1" source="AGEcDhdIV9XkqIyL7STR-36" target="NdUSqLAHfX-COyxvkVGV-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NdUSqLAHfX-COyxvkVGV-7" value="5. create Read-HC w/ remote K&lt;sub&gt;Pub &lt;/sub&gt;and Hyperbee&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="NdUSqLAHfX-COyxvkVGV-5" vertex="1" connectable="0">
+        <mxCell id="NdUSqLAHfX-COyxvkVGV-7" value="4. create Read-HC w/ remote K&lt;sub&gt;Pub &lt;/sub&gt;and Hyperbee&lt;sub&gt;&lt;br&gt;&lt;/sub&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;" parent="NdUSqLAHfX-COyxvkVGV-5" vertex="1" connectable="0">
           <mxGeometry x="-0.0833" y="2" relative="1" as="geometry">
             <mxPoint y="-2" as="offset" />
           </mxGeometry>
